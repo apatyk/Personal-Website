@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<title>Adam Patyk</title>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/css/main.css'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:600,800" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=0">
+	<link rel="icon" type="image/png" href="/logo.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png?v=0" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png?v=0" sizes="16x16">
+	<link rel="manifest" href="/manifest.json?v=0">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg?v=0" color="#1e90ff">
+	<link rel="shortcut icon" href="/favicon.ico?v=0">
+	<meta name="theme-color" content="#1e90ff">
+</head>
+
+<div id="mobile_header"><a href='/'>Adam Patyk</a></div>
+    <input type="checkbox" id="mobile_menu">
+    <label for="mobile_menu" id="menu_button"><span>&equals;</span></label>
+    <label id="screen_shade" for="mobile_menu"></label>
+
+<body>
+    <header>
+        <a href='../'>Adam Patyk</a>
+        <nav>
+            <a href='../webdesign/'>Web Design</a>
+            <a href='../photography/'>Photography</a>
+            <a href='../about/' class="active">About</a>
+            <label for="mobile_menu" id="close_menu">&#x2715;</label>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <h1 class="heading">
+            <span>About</span>
+            <img id="design1" class="design" src="/img/X-design.svg">
+            <img id="design2" class="design" src="/img/O-design.svg">
+            <img id="design3" class="design" src="/img/X-design.svg">
+            <img id="design4" class="design" src="/img/O-design.svg">
+            <img id="design5" class="design" src="/img/X-design.svg">
+            <img id="design6" class="design" src="/img/O-design.svg">
+        </h1>
+        <article>
+            <p>My name is Adam Patyk. I am currently studying computer engineering and computer science at Clemson University. I have always been a technology enthusiast and I look forward to pursuing this interest professionally.</p>
+
+            <p>At Clemson, I am a member of the Clemson University Tiger Band and Basketball Pep Band (I play sousaphone). I am also on the video production and web development teams for the Tiger Band Media Team.</p>
+
+            <p>Currently, I am a self-employed, part-time web developer specializing in responsive design. I am also a hobbyist photographer (film and digital). Hiking, exploring the mountains, music, and droning are just a couple other ways I spend my free time.</p>
+        </article>
+    </div>
+    
+    <footer>
+        <div class="footerSocials">
+            <a href="https://twitter.com/adam_patyk" target="_blank" class="socialIcon"><img src="/img/logos/twitter.svg" alt="Twitter"></a>
+            <a href="https://www.instagram.com/adam.patyk/" target="_blank" class="socialIcon"><img src="/img/logos/instagram.svg" alt="Instagram"></a>
+            <a href="https://500px.com/adampatyk" target="_blank" class="socialIcon"><img src="/img/logos/500px.svg" alt="500px"></a>
+            <a href="https://github.com/apatyk" target="_blank" class="socialIcon"><img src="/img/logos/GitHub.svg" alt="GitHub"></a>
+        </div>
+        <p id="copyright">
+            <noscript>
+                &copy; Adam Patyk
+            </noscript>
+        </p>
+    </footer>
+</body>
+    
+<script type="text/javascript">
+    //Copyright Date
+    var startYear = 2014;
+    var currentYear = new Date().getFullYear();
+    if (startYear == currentYear) {
+        document.getElementById("copyright").innerHTML = "&copy " + startYear + " Adam Patyk";
+    }
+    else {
+        document.getElementById("copyright").innerHTML = "&copy " + startYear + " - " + currentYear + " Adam Patyk";
+    }    
+</script>
+	
+</html>
