@@ -239,6 +239,7 @@ footer p {
     padding: 0 1rem;
 }
 .socialIcon img {
+    width: inherit;
     opacity: 0.6;
     transition: opacity 300ms ease-in-out;
 }
