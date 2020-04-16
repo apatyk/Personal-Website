@@ -1,12 +1,17 @@
-$background-white: #FAFAFA;
+$background-white: #F8F8F8;
 $highlight-white: #FFFFFF;
-$off-white: #F4F4F4;
 
-$border-radius: 10px;
+$teal-1: #C3E1E5;
+$teal-2: #AAD0D4;
+$teal-3: #68B8C1;
+$teal-4: #2A8A92;
+$teal-5: #617C7E;
+
+$border-radius: 20px;
 $box-shadow: 0 3px 6px rgba(55, 55, 55, 0.5);
 
-$subheading-text: #4E4E4E;
-$text-color: #4A4A4A;
+$dark-gray: #2E2E2E;
+$light-gray: #959595;
 
 $font-family: 'Ubuntu';
 
@@ -28,11 +33,16 @@ body {
 
   background-color: $background-white;
   font-family: $font-family;
+  color: $dark-gray;
 }
 
 a {
   transition: none $transition-time $transition-timing;
   transition-property: background-color, background-image, color;
+}
+
+h1 {
+  color: $teal-4;
 }
 
 // Even smaller screens (mainly used for the horizontal card)

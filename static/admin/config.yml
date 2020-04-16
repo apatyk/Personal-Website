@@ -20,5 +20,4 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Heading, name: heading, widget: string, required: true}
           - {label: Content, name: body, widget: markdown}
