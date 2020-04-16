@@ -6,4 +6,8 @@ footer {
   background-image: url('../../static/img/MountainRange.svg');
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include tablet {
+    height: $desktop-footer-height;
+  }
 }

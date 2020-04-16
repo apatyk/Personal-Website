@@ -3,11 +3,22 @@
 .home-page { 
   margin: 1rem;
 
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
   &__content {
     border-radius: $border-radius;
 
     background: $highlight-white;
 
     padding: 1rem;
+
+    max-width: 35rem;
+  }
+
+  @include tablet {
+    min-height: inherit;
   }
 }

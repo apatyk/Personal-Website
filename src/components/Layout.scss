@@ -3,9 +3,7 @@
 .page-content {
   min-height: calc(100vh - #{$footer-height} - #{$mobile-navbar-height} - 2rem);
 
-  @include desktop {
-    min-height: calc(100vh - #{$footer-height} - 2rem);
-
-    margin-left: $desktop-navbar-width;
+  @include tablet {
+    min-height: calc(100vh - #{$desktop-footer-height} - 2rem);
   }
 }

@@ -8,7 +8,7 @@
   width: 100%;
   height: $mobile-navbar-height;
 
-  background: $teal-5;
+  background: $color-5;
 
   .container {
     height: inherit;
@@ -18,7 +18,7 @@
   &__brand {
     display: none; 
 
-    @include desktop {
+    @include tablet {
       display: flex;
       justify-content: center;
 
@@ -35,7 +35,7 @@
     justify-content: space-around;
     align-items: center;
 
-    @include desktop {
+    @include tablet {
       flex-direction: column;
 
       justify-content: center;
@@ -47,9 +47,7 @@
 
     text-align: center;
 
-    fill: $teal-2;
-
-    transition: fill $transition-timing $transition-time;
+    fill: $color-2;
 
     svg {
       height: 2.5rem;
@@ -66,7 +64,7 @@
       fill: $highlight-white;
     }
 
-    @include desktop {
+    @include tablet {
       fill: $light-gray;
 
       width: 2.5rem;
@@ -74,23 +72,21 @@
       padding: 2rem 0;
 
       &:hover {
-        fill: $teal-4;
+        fill: $color-4;
       }
   
       &.active {
-        fill: $teal-4;
+        fill: $color-4;
       }
     }
   }  
 
-  @include desktop {
+  @include tablet {
     top: 0;
 
     width: $desktop-navbar-width;
-    height: 100%;
+    height: calc(100vh - #{$desktop-footer-height});
 
-    z-index: -1;
-
-    background: $background-white;
+    background: none;
   }
 }

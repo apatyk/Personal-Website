@@ -1,11 +1,11 @@
 $background-white: #F8F8F8;
 $highlight-white: #FFFFFF;
 
-$teal-1: #C3E1E5;
-$teal-2: #AAD0D4;
-$teal-3: #68B8C1;
-$teal-4: #2A8A92;
-$teal-5: #617C7E;
+$color-1: #C3E1E5;
+$color-2: #AAD0D4;
+$color-3: #68B8C1;
+$color-4: #2A8A92;
+$color-5: #617C7E;
 
 $border-radius: 20px;
 $box-shadow: 0 3px 6px rgba(55, 55, 55, 0.5);
@@ -23,6 +23,7 @@ $transition-timing: ease-out;
 $mobile-navbar-height: 4rem;
 $desktop-navbar-width: 6rem;
 $footer-height: 8rem;
+$desktop-footer-height: 12rem;
 
 html {
   height: 100%;
@@ -41,11 +42,11 @@ a {
   text-decoration: none;
 
   transition: none $transition-time $transition-timing;
-  transition-property: background-color, background-image, color;
+  transition-property: background-color, background-image, color, fill;
 }
 
 h1 {
-  color: $teal-4;
+  color: $color-4;
 }
 
 // Even smaller screens (mainly used for the horizontal card)
