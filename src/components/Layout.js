@@ -10,7 +10,7 @@ import './Layout.scss'
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div className="whole-page">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -50,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <div className="page-content">{children}</div>
       <Footer />
     </div>
   )

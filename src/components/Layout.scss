@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+.page-content {
+  min-height: calc(100vh - #{$footer-height} - #{$mobile-navbar-height} - 2rem);
+
+  @include desktop {
+    min-height: calc(100vh - #{$footer-height} - 2rem);
+
+    margin-left: $desktop-navbar-width;
+  }
+}

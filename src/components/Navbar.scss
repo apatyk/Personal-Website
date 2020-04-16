@@ -1,5 +1,96 @@
-.navbar__item {
-  &.active {
-    color: red;
+@import '../variables.scss';
+
+.navbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: $mobile-navbar-height;
+
+  background: $teal-5;
+
+  .container {
+    height: inherit;
+    width: inherit
+  }
+
+  &__brand {
+    display: none; 
+
+    @include desktop {
+      display: flex;
+      justify-content: center;
+
+      position: absolute;
+
+      width: 6rem;
+    }
+  }
+
+  &__start {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include desktop {
+      flex-direction: column;
+
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    width: 24vw;
+
+    text-align: center;
+
+    fill: $teal-2;
+
+    transition: fill $transition-timing $transition-time;
+
+    svg {
+      height: 2.5rem;
+      width: 2.5rem;
+
+      margin: auto;
+    }
+
+    &:hover {
+      fill: $highlight-white;
+    }
+
+    &.active {
+      fill: $highlight-white;
+    }
+
+    @include desktop {
+      fill: $light-gray;
+
+      width: 2.5rem;
+
+      padding: 2rem 0;
+
+      &:hover {
+        fill: $teal-4;
+      }
+  
+      &.active {
+        fill: $teal-4;
+      }
+    }
+  }  
+
+  @include desktop {
+    top: 0;
+
+    width: $desktop-navbar-width;
+    height: 100%;
+
+    z-index: -1;
+
+    background: $background-white;
   }
 }
