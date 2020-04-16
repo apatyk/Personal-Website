@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
+import Layout from '../components/Layout'
+
 import './index-page.scss'
 
 export const IndexPageTemplate = ({
@@ -16,9 +18,11 @@ const IndexPage = ({ data }) => {
   const { html } = data.markdownRemark
 
   return (
-    <IndexPageTemplate
-      html={html}
-    />
+    <Layout>
+      <IndexPageTemplate
+        html={html}
+      />
+    </Layout>
   )
 }
 

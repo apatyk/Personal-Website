@@ -37,6 +37,8 @@ body {
 }
 
 a {
+  text-decoration: none;
+
   transition: none $transition-time $transition-timing;
   transition-property: background-color, background-image, color;
 }
