@@ -1,4 +1,7 @@
-var plugins = []
+var plugins = [{
+      plugin: require('/Users/amp/Documents/Personal Website/Personal-Website/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr'),
+      options: {"plugins":[],"fonts":[{"family":"Roboto","variants":["400","700"]}]},
+    }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
