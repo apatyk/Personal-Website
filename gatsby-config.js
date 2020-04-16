@@ -10,18 +10,18 @@ module.exports = {
     description: 'Personal Website of Adam Patyk',
   },
   plugins: [
-    'gatsby-plugin-sass',
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
           {
-            family: `Roboto`,
+            family: `Ubuntu`,
             variants: [`400`, `700`]
           },
         ],
       },
     },
+    'gatsby-plugin-sass',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -31,10 +31,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages`,
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
       },
     },
     {
@@ -46,5 +46,19 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
