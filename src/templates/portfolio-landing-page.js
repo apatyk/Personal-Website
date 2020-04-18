@@ -4,23 +4,45 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import CenteredCard from '../components/CenteredCard'
+import GalleryLink from '../components/GalleryLink'
 
 import './portfolio-landing-page.scss'
 
 export const PortfolioLandingPageTemplate = ({
+  galleries,
   html
 }) => (
   <div className="portfolio-landing-page">
     <CenteredCard content={html}></CenteredCard>
+    <div className="portfolio-landing-page__galleries">
+      {
+        galleries && galleries.map(({ 
+          title, 
+          image, 
+          link 
+        }) => (
+          <GalleryLink
+            title={title}
+            image={image}
+            link={link}
+          />
+        ))
+      }
+    </div>
   </div>
 );
 
+PortfolioLandingPageTemplate.propTypes = {
+  galleries: PropTypes.array,
+}
+
 const PortfolioLandingPage = ({ data }) => {
-  const { html } = data.markdownRemark
+  const { frontmatter, html } = data.markdownRemark
 
   return (
     <Layout>
       <PortfolioLandingPageTemplate
+        galleries={frontmatter.galleries}
         html={html}
       />
     </Layout>
@@ -30,6 +52,7 @@ const PortfolioLandingPage = ({ data }) => {
 PortfolioLandingPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
       html: PropTypes.object,
     }),
   }),
@@ -41,6 +64,13 @@ export const pageQuery = graphql`
   query PortfolioLandingPage($id: String!) {
     markdownRemark(id: { eq: $id } ) {
       html
+      frontmatter {
+        galleries {
+          title
+          link
+          image
+        }
+      }
     }
   }
 `

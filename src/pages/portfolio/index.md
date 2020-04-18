@@ -1,5 +1,18 @@
 ---
 templateKey: portfolio-landing-page
+galleries:
+  - title: Landscapes
+    link: portfolio/landscapes/
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587082802/web-portfolio/landscapes/042917_AMP_07799_upexjf.jpg
+  - title: Adventures
+    link: portfolio/adventures/
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587082812/web-portfolio/adventures/012018_AMP_03684_hxxt82.jpg
+  - title: People
+    link: portfolio/people/
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587082802/web-portfolio/042917_AMP_07799_upexjf.jpg
+  - title: Film
+    link: portfolio/film/
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587082802/web-portfolio/042917_AMP_07799_upexjf.jpg
 ---
 # Photography Portfolio
 
