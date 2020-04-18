@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CenteredCard from '../components/CenteredCard'
 
-import './portfolio-landing-page.scss'
+import './portfolio-page.scss'
 
 export const PortfolioPageTemplate = ({
   html
