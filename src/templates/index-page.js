@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import CenteredCard from '../components/CenteredCard'
 
 import './index-page.scss'
 
@@ -10,7 +11,7 @@ export const IndexPageTemplate = ({
   html
 }) => (
   <div className="home-page">
-    <div className="home-page__content" dangerouslySetInnerHTML={{ __html: html }}></div>
+    <CenteredCard content={html}></CenteredCard>
   </div>
 );
 

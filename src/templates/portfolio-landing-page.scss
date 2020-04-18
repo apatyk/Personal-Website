@@ -1,0 +1,14 @@
+@import '../variables.scss';
+
+.portfolio-landing-page { 
+  margin: 1rem;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    min-height: inherit;
+  }
+}

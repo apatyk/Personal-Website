@@ -5,5 +5,7 @@
 
   @include tablet {
     min-height: calc(100vh - #{$desktop-footer-height} - 2rem);
+
+    margin-left: $desktop-navbar-width;
   }
 }

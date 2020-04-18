@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+.centered-card {
+  border-radius: $border-radius;
+
+  background: $highlight-white;
+
+  padding: 1rem;
+
+  max-width: 35rem;
+}
