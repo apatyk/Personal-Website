@@ -4,29 +4,29 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 
-import './index-page.scss'
+import './portfolio-landing-page.scss'
 
-export const IndexPageTemplate = ({
+export const PortfolioPageTemplate = ({
   html
 }) => (
-  <div className="home-page">
-    <div className="home-page__content" dangerouslySetInnerHTML={{ __html: html }}></div>
+  <div className="portfolio-page">
+    <div className="portfolio-page__content" dangerouslySetInnerHTML={{ __html: html }}></div>
   </div>
 );
 
-const IndexPage = ({ data }) => {
+const PortfolioPage = ({ data }) => {
   const { html } = data.markdownRemark
 
   return (
     <Layout>
-      <IndexPageTemplate
+      <PortfolioPageTemplate
         html={html}
       />
     </Layout>
   )
 }
 
-IndexPage.propTypes = {
+PortfolioPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       html: PropTypes.object,
@@ -34,11 +34,11 @@ IndexPage.propTypes = {
   }),
 }
 
-export default IndexPage
+export default PortfolioPage
 
 export const pageQuery = graphql`
-query IndexPage($id: String!) {
-  markdownRemark(id: { eq: $id } ) {
+  query PortfolioPage($id: String!) {
+    markdownRemark(id: { eq: $id } ) {
       html
     }
   }
