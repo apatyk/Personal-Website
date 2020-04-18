@@ -1,12 +1,36 @@
 @import '../variables.scss';
 
 .portfolio-page { 
-  margin: 1rem;
+  &__content {
+    margin: 1rem;
 
-  display: flex;
+    display: flex;
 
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      min-height: inherit;
+    }
+  }
+
+  &__gallery {
+    position: absolute;
+
+    top: 100vh;
+    left: 0;
+
+    margin-top: -$mobile-navbar-height;
+    padding-top: 20px;
+    
+    background: $dark-gray;
+
+    @include tablet {
+      padding-left: $desktop-navbar-width;
+
+      margin: 0;
+    }
+  }
 
   @include tablet {
     min-height: inherit;
