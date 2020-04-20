@@ -1,5 +1,5 @@
 ---
-templateKey: portfolio-page
+templateKey: portfolio-page-adventures
 ---
 
 # Adventures

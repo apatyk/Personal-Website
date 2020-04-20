@@ -8,7 +8,8 @@ import PhotoGallery from '../components/PhotoGallery'
 
 import './portfolio-page.scss'
 
-export const PortfolioPageTemplate = ({
+export const FilmPortfolioPageTemplate = ({
+  clImages,
   html
 }) => (
   <div className="portfolio-page">
@@ -16,37 +17,48 @@ export const PortfolioPageTemplate = ({
       <CenteredCard content={html}></CenteredCard>
     </div>
     <div className="portfolio-page__gallery">
-      <PhotoGallery/>
+      <PhotoGallery clImages={clImages} />
     </div>
   </div>
 );
 
-const PortfolioPage = ({ data }) => {
+const FilmPortfolioPage = ({ data }) => {
   const { html } = data.markdownRemark
 
   return (
     <Layout>
-      <PortfolioPageTemplate
+      <FilmPortfolioPageTemplate
         html={html}
+        clImages={data.allCloudinaryMedia.edges}
       />
     </Layout>
   )
 }
 
-PortfolioPage.propTypes = {
+FilmPortfolioPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      html: PropTypes.object,
+      html: PropTypes.object
     }),
+    allCloudinaryMedia: PropTypes.shape({
+      clImages: PropTypes.array
+    })
   }),
 }
 
-export default PortfolioPage
+export default FilmPortfolioPage
 
 export const pageQuery = graphql`
-  query PortfolioPage($id: String!) {
+  query FilmPortfolioPage($id: String!, $page: String! = "web-portfolio/film/*") {
     markdownRemark(id: { eq: $id } ) {
       html
+    }
+    allCloudinaryMedia(filter: {public_id: {glob: $page}}) {
+      edges {
+        node {
+          secure_url
+        }
+      }
     }
   }
 `
