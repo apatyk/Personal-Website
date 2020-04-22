@@ -14,7 +14,7 @@ export const GalleryLink = ({
   return (
     <a href={link}>
       <div className="gallery-link">
-        <h2>{title}</h2>
+        <h2 className="gallery-link__text">{title}</h2>
         <Image 
           className="gallery-link__image"
           image={image}  

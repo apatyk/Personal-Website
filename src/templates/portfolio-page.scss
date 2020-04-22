@@ -24,6 +24,7 @@
     padding: 20px;
     
     background: $dark-gray;
+    background: $second-page-gradient;
 
     @include tablet {
       padding-left: $desktop-navbar-width;

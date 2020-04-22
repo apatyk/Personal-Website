@@ -1,7 +1,7 @@
 import React from 'react'
 import './PhotoGallery.scss'
 
-const ImageGallery = ( {
+const PhotoGallery = ( {
   clImages
 }) => {
     return (
@@ -17,4 +17,4 @@ const ImageGallery = ( {
         </div>
       )
   }
-  export default ImageGallery
+  export default PhotoGallery

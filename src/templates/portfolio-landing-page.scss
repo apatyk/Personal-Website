@@ -9,7 +9,32 @@
   align-items: center;
 
   &__galleries {
-    margin-top: 100vh;
+    position: absolute;
+    top: 94vh;
+    top: calc(100vh - #{$mobile-navbar-height});
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+
+    width: 85vw;
+    width: calc(100vw - 3rem);
+
+    padding: 1rem;
+    padding-bottom: $mobile-navbar-height;
+    padding-bottom: calc(#{$mobile-navbar-height} + 1rem);
+
+    background: $dark-gray;
+    background: $second-page-gradient;
+
+    @include tablet {
+      top: 100vh;
+
+      width: calc(100vw - #{$desktop-navbar-width} - 3rem);
+      
+      padding: 1rem;
+    }
   }
 
   @include tablet {
