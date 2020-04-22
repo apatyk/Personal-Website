@@ -8,7 +8,7 @@ import PhotoGallery from '../components/PhotoGallery'
 
 import './portfolio-page.scss'
 
-export const PeoplePortfolioPageTemplate = ({
+export const NaturePortfolioPageTemplate = ({
   clImages,
   html
 }) => (
@@ -22,12 +22,12 @@ export const PeoplePortfolioPageTemplate = ({
   </div>
 );
 
-const PeoplePortfolioPage = ({ data }) => {
+const NaturePortfolioPage = ({ data }) => {
   const { html } = data.markdownRemark
 
   return (
     <Layout>
-      <PeoplePortfolioPageTemplate
+      <NaturePortfolioPageTemplate
         html={html}
         clImages={data.allCloudinaryMedia.edges}
       />
@@ -35,7 +35,7 @@ const PeoplePortfolioPage = ({ data }) => {
   )
 }
 
-PeoplePortfolioPage.propTypes = {
+NaturePortfolioPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       html: PropTypes.object
@@ -46,10 +46,10 @@ PeoplePortfolioPage.propTypes = {
   }),
 }
 
-export default PeoplePortfolioPage
+export default NaturePortfolioPage
 
 export const pageQuery = graphql`
-  query PeoplePortfolioPage($id: String!, $page: String! = "web-portfolio/nature/*") {
+  query NaturePortfolioPage($id: String!, $page: String! = "web-portfolio/nature/*") {
     markdownRemark(id: { eq: $id } ) {
       html
     }
