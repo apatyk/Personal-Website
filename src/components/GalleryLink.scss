@@ -6,9 +6,14 @@
   width: 100%;
 
   border-radius: $border-radius;
+  overflow: hidden;
 
   &__image {
     width: inherit;
+
+    border-radius: $border-radius;
+
+    transition: filter $transition-time $transition-timing;
   }
 
   &__text {
@@ -22,9 +27,18 @@
     transform: translate(-50%, -50%);
 
     color: white;
-
     font-size: 18pt;
-
     text-shadow: $box-shadow;
+
+    z-index: 9;
+  }
+
+  &:hover &__image {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 }

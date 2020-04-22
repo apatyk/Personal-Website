@@ -21,14 +21,17 @@
     left: 0;
 
     margin-top: -$mobile-navbar-height;
-    padding: 20px;
+    padding: 1rem;
+    padding-bottom: $mobile-navbar-height;
+    padding-bottom: calc(#{$mobile-navbar-height} + 1rem);
     
     background: $dark-gray;
     background: $second-page-gradient;
 
     @include tablet {
-      padding-left: $desktop-navbar-width;
-
+      padding: 1rem 1rem 1rem $desktop-navbar-width;
+      padding: 1rem 1rem 1rem calc(#{$desktop-navbar-width} + 1rem);
+      
       margin: 0;
     }
   }

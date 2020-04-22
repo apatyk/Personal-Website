@@ -2,11 +2,12 @@
 
 .photo-grid {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
   .photo-item {
     border-radius: $border-radius;
+    overflow: hidden;
 
     &:nth-child(5n) {
       grid-column-end: span 2;
@@ -18,5 +19,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
   }
 }
