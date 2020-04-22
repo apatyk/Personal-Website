@@ -13,6 +13,9 @@ galleries:
   - title: Film
     link: portfolio/film/
     image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587082802/web-portfolio/042917_AMP_07799_upexjf.jpg
+  - title: Nature
+    link: portfolio/nature/
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587082802/web-portfolio/042917_AMP_07799_upexjf.jpg
 ---
 # Photography Portfolio
 
