@@ -34,7 +34,10 @@
       width: calc(100vw - #{$desktop-navbar-width} - 3rem);
       
       padding: 1rem;
+
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     }
+
   }
 
   @include tablet {

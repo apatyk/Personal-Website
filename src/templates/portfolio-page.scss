@@ -20,6 +20,8 @@
     top: 100vh;
     left: 0;
 
+    width: calc(100vw - 3rem);
+
     margin-top: -$mobile-navbar-height;
     padding: 1rem;
     padding-bottom: $mobile-navbar-height;
@@ -29,6 +31,8 @@
     background: $second-page-gradient;
 
     @include tablet {
+      width: calc(100vw - #{$desktop-navbar-width} - 3rem);
+
       padding: 1rem 1rem 1rem $desktop-navbar-width;
       padding: 1rem 1rem 1rem calc(#{$desktop-navbar-width} + 1rem);
       
