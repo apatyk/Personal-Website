@@ -23,20 +23,21 @@ $transition-timing: ease-out;
 
 $mobile-navbar-height: 4rem;
 $desktop-navbar-width: 6rem;
-$footer-height: 8rem;
-$desktop-footer-height: 12rem;
+$banner-height: 8rem;
+$desktop-banner-height: 12rem;
+$footer-height: 3rem;
 
 html {
   height: 100%;
+
+  background-color: $background-white;
+  font-family: $font-family;
+  color: $dark-gray;
 }
 
 body {
   margin: 0;
   padding: 0;
-
-  background-color: $background-white;
-  font-family: $font-family;
-  color: $dark-gray;
 }
 
 a {

@@ -1,13 +1,23 @@
 @import '../variables.scss';
 
-footer {
-  height: $footer-height;
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background-image: url('../../static/img/MountainRange.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: $footer-height;
+  width: 100%;
+
+  background: $color-5;
+  color: $highlight-white;
+
+  padding-bottom: $mobile-navbar-height;
+
+  &__content {
+    margin: 0;
+  }
 
   @include tablet {
-    height: $desktop-footer-height;
+    padding: 0;
   }
 }

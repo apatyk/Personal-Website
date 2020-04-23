@@ -9,9 +9,7 @@
     justify-content: center;
     align-items: center;
 
-    @include tablet {
-      min-height: inherit;
-    }
+    min-height: inherit;
   }
 
   &__gallery {
@@ -20,7 +18,7 @@
     top: 100vh;
     left: 0;
 
-    width: calc(100vw - 3rem);
+    width: calc(100vw - 2rem);
 
     margin-top: -$mobile-navbar-height;
     padding: 1rem;
@@ -31,7 +29,7 @@
     background: $second-page-gradient;
 
     @include tablet {
-      width: calc(100vw - #{$desktop-navbar-width} - 3rem);
+      width: calc(100vw - #{$desktop-navbar-width} - 2rem);
 
       padding: 1rem 1rem 1rem $desktop-navbar-width;
       padding: 1rem 1rem 1rem calc(#{$desktop-navbar-width} + 1rem);

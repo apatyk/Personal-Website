@@ -1,14 +1,16 @@
 @import '../variables.scss';
 
 .home-page { 
-  margin: 1rem;
+  min-height: calc(100vh - #{$desktop-banner-height} - #{$footer-height} - 2rem);;
 
-  display: flex;
+  &__content {
+    margin: 1rem;
 
-  justify-content: center;
-  align-items: center;
+    display: flex;
 
-  @include tablet {
+    justify-content: center;
+    align-items: center;
+
     min-height: inherit;
   }
 }

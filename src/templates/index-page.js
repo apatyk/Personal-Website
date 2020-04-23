@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import CenteredCard from '../components/CenteredCard'
+import Banner from '../components/Banner'
 
 import './index-page.scss'
 
@@ -11,7 +12,10 @@ export const IndexPageTemplate = ({
   html
 }) => (
   <div className="home-page">
-    <CenteredCard content={html}></CenteredCard>
+    <div className="home-page__content">
+      <CenteredCard content={html}></CenteredCard>
+    </div>
+    <Banner />
   </div>
 );
 

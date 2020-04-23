@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CenteredCard from '../components/CenteredCard'
 import GalleryLink from '../components/GalleryLink'
+import Banner from '../components/Banner'
 
 import './portfolio-landing-page.scss'
 
@@ -13,7 +14,10 @@ export const PortfolioLandingPageTemplate = ({
   html
 }) => (
   <div className="portfolio-landing-page">
-    <CenteredCard content={html}></CenteredCard>
+    <div className="portfolio-landing-page__content">
+      <CenteredCard content={html}></CenteredCard>
+    </div>
+    <Banner/>
     <div className="portfolio-landing-page__galleries">
       {
         galleries && galleries.map(({ 
