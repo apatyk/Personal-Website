@@ -3,14 +3,16 @@
 .photo-grid {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
   &__item {
-    border-radius: $border-radius;
-    overflow: hidden;
-
     &:nth-child(5n) {
       grid-column-end: span 2;
+    }
+
+    img {
+      border-radius: $border-radius;
+      overflow: hidden;
     }
   }
 

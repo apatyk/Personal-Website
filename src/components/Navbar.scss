@@ -24,8 +24,6 @@
       display: flex;
       justify-content: center;
 
-      position: absolute;
-
       width: 6rem;
     }
   }
@@ -40,7 +38,7 @@
     @include tablet {
       flex-direction: column;
 
-      justify-content: center;
+      justify-content: flex-start;
     }
   }
 
@@ -50,6 +48,8 @@
     text-align: center;
 
     fill: $color-2;
+
+    z-index: 1;
 
     svg {
       height: 2.5rem;
@@ -87,8 +87,8 @@
     top: 0;
 
     width: $desktop-navbar-width;
-    height: calc(100vh - #{$desktop-footer-height});
+    height: 100vh;
 
-    background: none;
+    background: $highlight-white;
   }
 }
