@@ -3,19 +3,19 @@ templateKey: portfolio-landing-page
 galleries:
   - title: Landscapes
     link: portfolio/landscapes/
-    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587082802/web-portfolio/landscapes/042917_AMP_07799_upexjf.jpg
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587665263/web-portfolio/landscapes/031720_AMP_2666_mymdwh.jpg
   - title: Adventures
     link: portfolio/adventures/
-    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587082812/web-portfolio/adventures/012018_AMP_03684_hxxt82.jpg
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587490785/web-portfolio/adventures/050719_AMP_09841-2_efj9wo.jpg
   - title: People
     link: portfolio/people/
-    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587082802/web-portfolio/042917_AMP_07799_upexjf.jpg
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587662177/web-portfolio/people/121619_AMP_1275_xh5km4.jpg
   - title: Film
     link: portfolio/film/
-    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587082802/web-portfolio/042917_AMP_07799_upexjf.jpg
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587491263/web-portfolio/film/AMP_AE-1_043_qm62lo.jpg
   - title: Nature
     link: portfolio/nature/
-    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587082802/web-portfolio/042917_AMP_07799_upexjf.jpg
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587491791/web-portfolio/nature/060716_AMP_1139_vmhozi.jpg
 ---
 # Photography Portfolio
 
