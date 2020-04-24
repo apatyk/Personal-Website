@@ -2,12 +2,9 @@
 
 .portfolio-page { 
   min-height: inherit;  
-  
-  &__gallery {
-    position: absolute;
 
-    top: 100vh;
-    left: 0;
+  &__gallery {
+    margin-top: 100vh;
 
     width: calc(100vw - 2rem);
 
@@ -17,7 +14,7 @@
     padding-bottom: calc(#{$mobile-navbar-height} + 1rem);
     
     background: $dark-gray;
-    background: $second-page-gradient;
+    background: $color-5;
 
     @include tablet {
       width: calc(100vw - #{$desktop-navbar-width} - 2rem);
