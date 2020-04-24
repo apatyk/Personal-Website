@@ -1,17 +1,8 @@
 @import '../variables.scss';
 
 .portfolio-page { 
-  &__content {
-    margin: 1rem;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    min-height: inherit;
-  }
-
+  min-height: inherit;  
+  
   &__gallery {
     position: absolute;
 

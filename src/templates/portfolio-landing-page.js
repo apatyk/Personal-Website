@@ -14,9 +14,10 @@ export const PortfolioLandingPageTemplate = ({
   html
 }) => (
   <div className="portfolio-landing-page">
-    <div className="portfolio-landing-page__content">
-      <CenteredCard content={html}></CenteredCard>
-    </div>
+    <CenteredCard 
+      className="portfolio-landing-page__content"
+      content={html}>
+    </CenteredCard>
     <Banner/>
     <div className="portfolio-landing-page__galleries">
       {

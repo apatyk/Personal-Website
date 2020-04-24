@@ -13,9 +13,10 @@ export const NaturePortfolioPageTemplate = ({
   html
 }) => (
   <div className="portfolio-page">
-    <div className="portfolio-page__content">
-      <CenteredCard content={html}></CenteredCard>
-    </div>
+    <CenteredCard 
+      className="portfolio-page__content"
+      content={html}>
+    </CenteredCard>
     <div className="portfolio-page__gallery">
       <PhotoGallery clImages={clImages} />
     </div>

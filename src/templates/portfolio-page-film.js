@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CenteredCard from '../components/CenteredCard'
 import PhotoGallery from '../components/PhotoGallery'
+import Banner from '../components/Banner'
 
 import './portfolio-page.scss'
 
@@ -13,9 +14,11 @@ export const FilmPortfolioPageTemplate = ({
   html
 }) => (
   <div className="portfolio-page">
-    <div className="portfolio-page__content">
-      <CenteredCard content={html}></CenteredCard>
-    </div>
+    <CenteredCard 
+      className="portfolio-page__content"
+      content={html}>
+    </CenteredCard>
+    <Banner/>
     <div className="portfolio-page__gallery">
       <PhotoGallery clImages={clImages} />
     </div>

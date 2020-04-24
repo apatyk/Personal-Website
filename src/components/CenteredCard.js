@@ -7,7 +7,12 @@ const CenteredCard = ({
   content 
 }) => {
   return (
-    <div className="centered-card" dangerouslySetInnerHTML={{ __html: content }}></div>
+    <div className="centered-card-container">
+      <div 
+        className="centered-card" 
+        dangerouslySetInnerHTML={{ __html: content }}>
+      </div>
+    </div>
   )
 }
 

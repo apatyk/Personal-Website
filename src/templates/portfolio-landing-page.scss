@@ -1,16 +1,7 @@
 @import '../variables.scss';
 
 .portfolio-landing-page { 
-  &__content {
-    margin: 1rem;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    min-height: inherit;
-  }
+  min-height: inherit;  
 
   &__galleries {
 
@@ -23,11 +14,9 @@
     width: calc(100vw - 2rem);
 
     padding: 1rem;
-    padding-bottom: $mobile-navbar-height;
-    padding-bottom: calc(#{$mobile-navbar-height} + 1rem);
 
     background: $dark-gray;
-    background: $second-page-gradient;
+    background: $color-5;
 
     @include tablet {
 

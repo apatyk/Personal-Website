@@ -1,5 +1,20 @@
 @import '../variables.scss';
 
+.centered-card-container {
+  margin: 1rem;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  min-height: inherit;
+
+  @include tablet {
+    align-items: center
+  }
+}
+
 .centered-card {
   border-radius: $border-radius;
 

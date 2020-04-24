@@ -12,9 +12,10 @@ export const IndexPageTemplate = ({
   html
 }) => (
   <div className="home-page">
-    <div className="home-page__content">
-      <CenteredCard content={html}></CenteredCard>
-    </div>
+    <CenteredCard 
+      className="home-page__content"
+      content={html}>
+    </CenteredCard>
     <Banner />
   </div>
 );
