@@ -1,5 +1,6 @@
-$background-white: #F8F8F8;
+$background-white: #F4F4F4;
 $highlight-white: #FFFFFF;
+$cloud-white: #FAFAFA;
 
 $color-1: #C3E1E5;
 $color-2: #AAD0D4;
@@ -8,8 +9,7 @@ $color-4: #2A8A92;
 $color-5: #617C7E;
 
 $border-radius: 10px;
-$box-shadow: 0 3px 6px rgba(55, 55, 55, 0.65);
-$second-page-gradient: linear-gradient(180deg, rgba(97,124,126,1) 0%, rgba(23,29,29,1) 20%, rgba(23,29,29,1) 100%);
+$box-shadow: 0 1px 25px rgba(128, 128, 128, 0.25);
 
 $dark-gray: #2E2E2E;
 $light-gray: #959595;
@@ -21,7 +21,7 @@ $max-column-width: 25rem;
 $transition-time: 200ms;
 $transition-timing: ease-out;
 
-$mobile-navbar-height: 4rem;
+$mobile-navbar-height: 5rem;
 $desktop-navbar-width: 6rem;
 $banner-height: 8rem;
 $desktop-banner-height: 12rem;
