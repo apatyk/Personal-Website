@@ -19,8 +19,7 @@
     @include tablet {
       width: calc(100vw - #{$desktop-navbar-width} - 2rem);
 
-      padding: 1rem 1rem 1rem $desktop-navbar-width;
-      padding: 1rem 1rem 1rem calc(#{$desktop-navbar-width} + 1rem);
+      padding: 1rem;
       
       margin: 0;
     }
