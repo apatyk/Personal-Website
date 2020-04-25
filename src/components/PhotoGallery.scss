@@ -22,3 +22,20 @@
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
   }
 }
+
+
+.__react_modal_image__modal_container {
+  .__react_modal_image__header {
+    background-color: transparent;
+  }
+  svg {
+    width: 3rem;
+    height: 3rem;
+
+    transition: fill $transition-timing $transition-time;
+
+    &:hover {
+      fill: $color-4;
+    }
+  }
+}
