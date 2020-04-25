@@ -1,0 +1,30 @@
+@import '../variables.scss';
+
+.cloud {
+  display: none;
+  animation: none;
+
+  @include tablet {
+    display: block;
+
+    position: absolute;
+
+    animation: cloudMovement 30s linear infinite;
+
+    z-index: -1;
+
+    svg {
+      fill: $highlight-white;
+
+      width: 15vw;
+    }
+  }
+}
+
+@keyframes cloudMovement {
+  from {
+  }
+  to {
+    left: 115vw;
+  }
+}

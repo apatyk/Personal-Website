@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Cloud from './Cloud'
+
 import './CenteredCard.scss'
 
 const CenteredCard = ({ 
@@ -12,6 +14,10 @@ const CenteredCard = ({
         className="centered-card" 
         dangerouslySetInnerHTML={{ __html: content }}>
       </div>
+      <Cloud top="0" left="-10vw" delay="0s"></Cloud>
+      <Cloud top="15vh" left="-10vw" delay="40s"></Cloud>
+      <Cloud top="30vh" left="-10vw" delay="10s"></Cloud>
+      <Cloud top="45vh" left="-10vw" delay="20s"></Cloud>
     </div>
   )
 }
