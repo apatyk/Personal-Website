@@ -19,4 +19,17 @@ galleries:
 ---
 # Photography Portfolio
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut magna tortor. Curabitur vehicula lobortis lacus, id dignissim metus interdum eu. Nam finibus lorem quis nibh pharetra, a facilisis diam mattis. Mauris sed arcu a enim vestibulum sodales. Duis feugiat nisl quam, ac lobortis erat rutrum eget. Nunc ultricies felis consectetur, venenatis risus ac, eleifend quam. Sed eros eros, pulvinar a nisl iaculis, suscipit cursus mi. Duis sodales, justo ut varius blandit, diam nisl vehicula turpis, a viverra nunc ex in enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+I like to take photos - lots of them. Ever since I got a camera in my hand when I was 7, I've been taking pictures and loving every second of it just like my dad and his dad before him and... well you get the idea; it's a family thing. Photography has led me to meet some awesome people and taken me some truly amazing places. 
+
+Here's my current gear:
+
+| Digital | Film | Lenses | Drones |
+|:------------:|:--------------------------------:|:------------------------------------------------------:|:-------------------------------------:|
+| Canon EOS RP | Canon AE1 Program<br/>Minolta SRT201 |  Canon RF 35mm f/1.8 IS Macro<br/>Canon EF 50mm f/1.8 STM | DJI Phantom 3 Standard<br/>DJI Mavic Mini |
+
+Scroll down to find some of my work ✌️
+
+---
+
+_When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence._ 
+<div align="right">- Ansel Adams</div>
