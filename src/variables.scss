@@ -51,6 +51,16 @@ h1 {
   color: $color-4;
 }
 
+table, th, td {
+  border: 1px solid $light-gray;
+  border-collapse: collapse;
+  padding: 0.5rem;
+}
+
+th {
+  background: $background-white;
+}
+
 // Even smaller screens (mainly used for the horizontal card)
 $screen-mobile-portrait: 530px;
 
