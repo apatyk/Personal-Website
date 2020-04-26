@@ -8,8 +8,6 @@
 
     padding: 0.5rem;
 
-    background: $color-5;
-
     @include tablet {
       width: calc(100vw - #{$desktop-navbar-width} - 1rem);
     }
