@@ -2,7 +2,7 @@
 
 .photo-grid {
   display: grid;
-  grid-gap: 0.5rem;
+  gap: 0.5rem;
   grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
 
   align-items: center;
@@ -50,6 +50,8 @@
 
   @include tablet {
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+
+    gap: 1rem;
   }
 }
 
