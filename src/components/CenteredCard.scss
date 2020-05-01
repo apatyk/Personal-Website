@@ -8,18 +8,19 @@
   margin: 1rem;
 
   display: flex;
+  flex-direction: column;
 
   position: relative;
 
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
 
   min-height: inherit;
 
   @include tablet {
     max-width: calc(100vw - #{$desktop-navbar-width});
 
-    align-items: center;
+    justify-content: center;;
   }
 }
 

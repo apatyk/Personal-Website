@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types'
 
 const findImageSrc = image => {
@@ -25,7 +25,7 @@ Image.propsType = {
   alt: PropTypes.string.isRequired
 }
 
-export const BackgroundImageDiv = ({ image, children, ...props }) => (
+export const BackgroundImageDiv = ({ image, children, ...props }) => !!image && (
   <div
     style={{
       backgroundImage: `url(${findImageSrc(image)})`

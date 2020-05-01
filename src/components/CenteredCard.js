@@ -6,7 +6,7 @@ import Cloud from './Cloud'
 import './CenteredCard.scss'
 
 const CenteredCard = ({ 
-  content 
+  content, children 
 }) => {
   return (
     <div className="centered-card-container">
@@ -14,6 +14,7 @@ const CenteredCard = ({
         className="centered-card" 
         dangerouslySetInnerHTML={{ __html: content }}>
       </div>
+      {children}
       <Cloud top="0" left="-15vw" delay="0s"></Cloud>
       <Cloud top="15vh" left="-15vw" delay="20s"></Cloud>
       <Cloud top="30vh" left="-15vw" delay="10s"></Cloud>
