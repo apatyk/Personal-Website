@@ -14,10 +14,10 @@ const CenteredCard = ({
         className="centered-card" 
         dangerouslySetInnerHTML={{ __html: content }}>
       </div>
-      <Cloud top="0" left="-10vw" delay="0s"></Cloud>
-      <Cloud top="15vh" left="-10vw" delay="20s"></Cloud>
-      <Cloud top="30vh" left="-10vw" delay="10s"></Cloud>
-      <Cloud top="45vh" left="-10vw" delay="5s"></Cloud>
+      <Cloud top="0" left="-15vw" delay="0s"></Cloud>
+      <Cloud top="15vh" left="-15vw" delay="20s"></Cloud>
+      <Cloud top="30vh" left="-15vw" delay="10s"></Cloud>
+      <Cloud top="45vh" left="-15vw" delay="5s"></Cloud>
     </div>
   )
 }
