@@ -2,8 +2,7 @@
 
 .centered-card-container {
   max-width: 98vw;
-  max-width: calc(100vw - #{$desktop-navbar-width});
-
+  
   overflow: hidden;
 
   margin: 1rem;
@@ -18,7 +17,9 @@
   min-height: inherit;
 
   @include tablet {
-    align-items: center
+    max-width: calc(100vw - #{$desktop-navbar-width});
+
+    align-items: center;
   }
 }
 
