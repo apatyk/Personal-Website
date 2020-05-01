@@ -8,11 +8,12 @@ import './GalleryLink.scss'
 export const GalleryLink = ({ 
   image,
   title,
-  link
+  link,
+  newTab
 }) => {
 
   return (
-    <a href={link}>
+    <a href={link} target={newTab && '_blank'}>
       <div className="gallery-link">
         <h2 className="gallery-link__text">{title}</h2>
         <Image 
