@@ -5,7 +5,6 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Card from '../components/Card'
 import PhotoGallery from '../components/PhotoGallery'
-import Banner from '../components/Banner'
 
 import './portfolio-page.scss'
 
