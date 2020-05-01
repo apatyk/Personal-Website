@@ -2,9 +2,7 @@
 
 .banner {
   height: $banner-height;
-
-  background-image: url('../../static/img/MountainRange.svg');
-  background-repeat: no-repeat;
+  background: $background-white url('../../static/img/MountainRange.svg') no-repeat;
   background-size: cover;
 
   @include tablet {
