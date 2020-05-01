@@ -6,7 +6,7 @@ galleries:
     image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587665263/web-portfolio/landscapes/031720_AMP_2666_mymdwh.jpg
   - title: Adventures
     link: portfolio/adventures/
-    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587490785/web-portfolio/adventures/050719_AMP_09841-2_efj9wo.jpg
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587490785/web-portfolio/adventures/091517_050719_AMP_09841-2_efj9wo.jpg
   - title: People
     link: portfolio/people/
     image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587688404/web-portfolio/people/121619_AMP_1275_fqipjd.jpg
@@ -19,13 +19,7 @@ galleries:
 ---
 # Photography Portfolio
 
-I like to take photos - lots of them. Ever since I got a camera in my hand when I was 7, I've been taking pictures and loving every second of it just like my dad and his dad before him and... well you get the idea; it's a family thing. Photography has led me to meet some awesome people and taken me some truly amazing places. 
-
-Here's my current gear:
-
-| Digital | Film | Lenses | Drones |
-|:------------:|:--------------------------------:|:------------------------------------------------------:|:-------------------------------------:|
-| Canon EOS RP | Canon AE1 Program<br/>Minolta SRT201 |  Canon RF 35mm f/1.8 IS Macro<br/>Canon EF 50mm f/1.8 STM | DJI Phantom 3 Standard<br/>DJI Mavic Mini |
+I like to take photos - lots of them. Ever since I first got a camera in my hand when I was 7, I've been taking pictures and loving every second of it just like my dad and his dad before him and... well you get the idea - it's a family thing. Photography has introduced me to some awesome people and taken me some truly amazing places. 
 
 Scroll down to find some of my work ✌️
 
