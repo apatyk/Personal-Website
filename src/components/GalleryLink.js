@@ -31,7 +31,7 @@ GalleryLink.defaultProps = {
 }
 
 GalleryLink.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   newTab: PropTypes.bool
