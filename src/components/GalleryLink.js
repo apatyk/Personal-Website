@@ -26,10 +26,15 @@ export const GalleryLink = ({
   )
 }
 
+GalleryLink.defaultProps = {
+  newTab: false
+}
+
 GalleryLink.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  newTab: PropTypes.bool
 }
 
 export default GalleryLink
