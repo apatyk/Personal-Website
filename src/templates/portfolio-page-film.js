@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import CenteredCard from '../components/CenteredCard'
+import Card from '../components/Card'
 import PhotoGallery from '../components/PhotoGallery'
 import Banner from '../components/Banner'
 
@@ -14,11 +14,10 @@ export const FilmPortfolioPageTemplate = ({
   html
 }) => (
   <div className="portfolio-page">
-    <CenteredCard 
+    <Card 
       className="portfolio-page__content"
       content={html}>
-    </CenteredCard>
-    <Banner/>
+    </Card>
     <div className="portfolio-page__gallery">
       <PhotoGallery clImages={clImages} />
     </div>

@@ -1,0 +1,38 @@
+@import '../variables.scss';
+
+.card-container {
+  max-width: 98vw;
+  
+  overflow: hidden;
+
+  margin: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  @include tablet {
+    max-width: calc(100vw - #{$desktop-navbar-width});
+
+    justify-content: center;
+  }
+}
+
+.card {
+  border-radius: $border-radius;
+
+  background: $highlight-white url('../../static/img/MountainRange.svg') no-repeat bottom;
+  background-size: contain;
+
+  margin: 1rem 0;
+  padding: 2rem;
+  padding-bottom: 5rem;
+
+  max-width: 35rem;
+
+  box-shadow: $box-shadow;
+}
