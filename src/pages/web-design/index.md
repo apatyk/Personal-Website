@@ -1,6 +1,6 @@
 ---
 templateKey: web-design-page
-galleries:
+webGalleries:
   - title: Ferguson Box
     link: http://www.fergusonbox.com
     image: ../../img/FergusonBoxWebsite.jpg

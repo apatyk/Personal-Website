@@ -10,7 +10,7 @@ import Banner from '../components/Banner'
 import './web-design-page.scss'
 
 export const WebDesignPageTemplate = ({
-  galleries,
+  webGalleries,
   html
 }) => (
   <div className="web-design-page">
@@ -21,15 +21,17 @@ export const WebDesignPageTemplate = ({
     <Banner/>
     <div className="web-design-page__galleries">
       {
-        galleries && galleries.map(({ 
+        webGalleries && webGalleries.map(({ 
           title, 
           image, 
-          link 
+          link,
+          newTab
         }) => (
           <GalleryLink
             title={title}
             image={image}
             link={link}
+            newTab={newTab}
           />
         ))
       }
@@ -38,7 +40,7 @@ export const WebDesignPageTemplate = ({
 );
 
 WebDesignPageTemplate.propTypes = {
-  galleries: PropTypes.array,
+  webGalleries: PropTypes.array,
 }
 
 const WebDesignPage = ({ data }) => {
@@ -47,7 +49,7 @@ const WebDesignPage = ({ data }) => {
   return (
     <Layout>
       <WebDesignPageTemplate
-        galleries={frontmatter.galleries}
+        webGalleries={frontmatter.webGalleries}
         html={html}
       />
     </Layout>
@@ -70,7 +72,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id } ) {
       html
       frontmatter {
-        galleries {
+        webGalleries {
           title
           link
           image {
@@ -81,6 +83,7 @@ export const pageQuery = graphql`
               }
             }
           }
+          newTab
         }
       }
     }
