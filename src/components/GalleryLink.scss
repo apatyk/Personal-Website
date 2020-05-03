@@ -8,6 +8,8 @@
   &__image {
     width: inherit;
 
+    filter: grayscale(0%) brightness(65%);
+
     transition: filter $transition-time $transition-timing;
   }
 
@@ -31,8 +33,7 @@
   }
 
   &:hover &__image {
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%) brightness(50%);
   }
 
   &:active {
