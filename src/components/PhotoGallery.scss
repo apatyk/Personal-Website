@@ -8,6 +8,7 @@
   align-items: center;
 
   &__item {
+
     &:nth-child(3n+1) {
       grid-column-end: span 2;
       grid-row-end: span 2;
@@ -46,12 +47,35 @@
         grid-row-end: span 2;
       }
     }
+
+    @include xl-desktop {
+      &:nth-child(3n+1) {
+        grid-column-end: span 1;
+        grid-row-end: span 1;
+      }
+      &:nth-child(10n+4) {
+        grid-column-end: span 1;
+        grid-row-end: span 1;
+      }
+      &:nth-child(7n+5) {
+        grid-column-end: span 1;
+        grid-row-end: span 1;
+      }
+      &:nth-child(7n) {
+        grid-column-end: span 1;
+        grid-row-end: span 1;
+      }
+    }
   }
 
   @include tablet {
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
 
     gap: 1rem;
+  }
+
+  @include xl-desktop {
+    grid-template-columns: repeat(auto-fill, minmax(19%, 1fr));
   }
 }
 
