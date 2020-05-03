@@ -16,6 +16,9 @@ galleries:
   - title: Nature
     link: portfolio/nature/
     image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587491791/web-portfolio/nature/060716_AMP_1139_vmhozi.jpg
+  - title: Drone
+    link: portfolio/drone/
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1588468978/web-portfolio/drone/061618_AMP_0171_qmw587.jpg
 ---
 # Photography Portfolio
 
