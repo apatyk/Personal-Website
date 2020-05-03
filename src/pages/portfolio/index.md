@@ -9,7 +9,7 @@ galleries:
     image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587490785/web-portfolio/adventures/091517_050719_AMP_09841-2_efj9wo.jpg
   - title: People
     link: portfolio/people/
-    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587688404/web-portfolio/people/121619_AMP_1275_fqipjd.jpg
+    image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1588472714/web-portfolio/people/aaa_121619_AMP_1275_wspoqd.jpg
   - title: Film
     link: portfolio/film/
     image: https://res.cloudinary.com/dw2p9qk1k/image/upload/v1588469463/web-portfolio/film/AMP_AE-1_043_haf8rs.jpg
