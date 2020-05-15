@@ -20,7 +20,7 @@
   @include tablet {
     max-width: calc(100vw - #{$desktop-navbar-width});
 
-    justify-content: center;;
+    justify-content: center;
   }
 }
 
