@@ -32,4 +32,6 @@ webGalleries:
 ---
 # Web Design Portfolio
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut magna tortor. Curabitur vehicula lobortis lacus, id dignissim metus interdum eu. Nam finibus lorem quis nibh pharetra, a facilisis diam mattis. Mauris sed arcu a enim vestibulum sodales. Duis feugiat nisl quam, ac lobortis erat rutrum eget. Nunc ultricies felis consectetur, venenatis risus ac, eleifend quam. Sed eros eros, pulvinar a nisl iaculis, suscipit cursus mi. Duis sodales, justo ut varius blandit, diam nisl vehicula turpis, a viverra nunc ex in enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+I started learning HTML and CSS in 7th grade after a friend in science class mentioned that it was super easy to make your own website. I became fascinated by the creations that are possible with these tools. My curiosity kept me learning everything I could and my creativity kept me experimenting and creating. Before I had even realized it, I had a passion for web design.
+
+Check out some of the web design work I've done below 👊
