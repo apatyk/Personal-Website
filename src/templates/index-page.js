@@ -16,7 +16,8 @@ export const IndexPageTemplate = ({
   <div className="home-page">
     <CenteredCard 
       className="home-page__content"
-      content={html}>
+      content={html}
+      displayScrollIndicator={false}>
         <SocialMediaRow
           className="home-page__content__social-media"
           socialMedia={socialMedia}

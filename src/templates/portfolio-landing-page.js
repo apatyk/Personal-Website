@@ -16,7 +16,8 @@ export const PortfolioLandingPageTemplate = ({
   <div className="portfolio-landing-page">
     <CenteredCard 
       className="portfolio-landing-page__content"
-      content={html}>
+      content={html}
+      displayScrollIndicator={true}>
     </CenteredCard>
     <Banner/>
     <div className="portfolio-landing-page__galleries">

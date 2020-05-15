@@ -6,7 +6,8 @@ import Cloud from './Cloud'
 import './CenteredCard.scss'
 
 const CenteredCard = ({ 
-  content
+  content,
+  displayScrollIndicator
 }) => {
   return (
     <>
@@ -20,13 +21,19 @@ const CenteredCard = ({
       <Cloud top="30vh" left="-15vw" delay="10s"></Cloud>
       <Cloud top="45vh" left="-15vw" delay="5s"></Cloud>
     </div>
-    <div className="scroll-indicator"></div>
+    {displayScrollIndicator ? (
+      <div className="scroll-indicator"></div>
+      ) : (
+        <></>
+      )
+    }
     </>
   )
 }
 
 CenteredCard.propTypes = {
-  content: PropTypes.object.isRequired
+  content: PropTypes.object.isRequired,
+  displayScrollIndicator: PropTypes.bool.isRequired
 }
 
 export default CenteredCard

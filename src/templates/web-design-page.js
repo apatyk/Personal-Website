@@ -16,7 +16,8 @@ export const WebDesignPageTemplate = ({
   <div className="web-design-page">
     <CenteredCard 
       className="web-design-page__content"
-      content={html}>
+      content={html}
+      displayScrollIndicator={true}>
     </CenteredCard>
     <Banner/>
     <div className="web-design-page__galleries">
