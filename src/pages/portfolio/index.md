@@ -22,7 +22,7 @@ galleries:
 ---
 # Photography Portfolio
 
-I like to take photos - lots of them. Ever since I first got a camera in my hand when I was 7, I've been taking pictures and loving every second of it just like my dad and his dad before him and... well you get the idea - it's a family thing. Photography has introduced me to some awesome people and taken me some truly amazing places. 
+I'm passionate about taking photos - a lot of them. Ever since I first got a camera in my hand when I was 7, I've been taking pictures and loving every second of it just like my dad and his dad before him and... well you get the idea - it's a family thing. Photography has introduced me to some awesome people and taken me to some truly amazing places. 
 
 Scroll down to find some of my work ✌️
 
