@@ -20,7 +20,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Ubuntu`,
+            family: `Noto Sans`,
             variants: [`400`]
           },
         ],
