@@ -29,15 +29,23 @@ export const IndexPageTemplate = ({
     {
       resume && resume.map(({
         heading,
-        more
+        more,
+        skills
       }) => (
         <Card
           heading={heading}
           more={more}
+          skills={skills}
           background={false}
         />
       ))
     }
+    <Card>
+      <SocialMediaRow
+        className="home-page__content__social-media"
+        socialMedia={socialMedia}
+      />
+    </Card>
   </div>
 );
 
@@ -94,6 +102,10 @@ query IndexPage($id: String!) {
             subheading
             description
             details
+          }
+          skills {
+            skillName
+            rating
           }
         }
       }

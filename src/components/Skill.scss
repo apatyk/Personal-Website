@@ -1,0 +1,30 @@
+@import '../variables.scss';
+
+.skill {
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+
+  &__rating {
+    display: flex;
+
+    &__element {
+      display: block;
+
+      height: 2rem;
+      width: 2rem;
+
+      border-radius: 0.5rem;
+
+      margin: 0.1rem;
+
+      &.fill {
+        background: $color-3;
+      }
+      &.no-fill {
+        background: gray;
+      }
+    }
+  }
+}

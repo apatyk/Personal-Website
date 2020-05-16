@@ -31,13 +31,19 @@ resume:
     description: Clemson University Tiger Band | Sept 2016 - July 2019
     details: I designed and developed a completely new website for Tiger Band, Clemson University Drumline, and Clemson University Tiger Band Association (CUTBA) working on a team of 3 students. We also worked continuously throughout this time on updates and improvements wherever possible. Overall, we helped to improve the web experience for Tiger Band.
 - heading: Skills
-  more:
-  - subheading: C
-  - subheading: HTML
-  - subheading: CSS
-  - subheading: SASS
-  - subheading: Python
-  - subheading: React
+  skills:
+  - skillName: C
+    rating: 5
+  - skillName: HTML
+    rating: 5
+  - skillName: CSS
+    rating: 5
+  - skillName: SASS
+    rating: 4
+  - skillName: Python
+    rating: 3
+  - skillName: React
+    rating: 3
 ---
 # Hello World!
 
