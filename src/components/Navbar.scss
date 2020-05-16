@@ -8,7 +8,7 @@
   width: 100%;
   height: $mobile-navbar-height;
 
-  background: $color-5;
+  background: $color-4;
   box-shadow: $box-shadow;
 
   z-index: 9;
@@ -48,7 +48,7 @@
 
     text-align: center;
 
-    fill: $color-3;
+    fill: $color-2;
 
     z-index: 1;
 
@@ -75,11 +75,11 @@
       padding: 2rem 0;
 
       &:hover {
-        fill: $color-4;
+        fill: $color-3;
       }
   
       &.active {
-        fill: $color-4;
+        fill: $color-3;
       }
     }
   }  
