@@ -36,23 +36,23 @@
   box-shadow: $box-shadow;
 }
 .scroll-indicator {
-  position: absolute;
-  left: 50%;
-  
-  transform: translateX(-50%);
-  bottom: 0.25rem;
-
-  width: 2rem;
-  height: 2rem;
-
-  background: url('../../static/img/mouse.svg') no-repeat;
-  background-size: contain;
-
-  animation: bounce 1.2s 6s 5;
-  transform-origin: center bottom;
+  display: none;
 
   @include tablet {
+    position: absolute;
     left: calc(50% + #{$desktop-navbar-width} / 2);
+    
+    transform: translateX(-50%);
+    bottom: 0.25rem;
+
+    width: 2rem;
+    height: 2rem;
+
+    background: url('../../static/img/mouse.svg') no-repeat;
+    background-size: contain;
+
+    animation: bounce 1.2s 6s 5;
+    transform-origin: center bottom;
   }
 }
 

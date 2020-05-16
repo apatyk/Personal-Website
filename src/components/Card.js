@@ -19,7 +19,7 @@ const Card = ({
     paddingBottom: '2rem'
   };
 
-  if (heading) {
+  if (heading || more || skills) {
     return (
       <div className="card-container">
         <div 
