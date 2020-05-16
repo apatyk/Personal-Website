@@ -38,6 +38,8 @@
 .scroll-indicator {
   position: absolute;
   left: 50%;
+  
+  transform: translateX(-50%);
   bottom: 0.25rem;
 
   width: 2rem;
@@ -46,8 +48,12 @@
   background: url('../../static/img/mouse.svg') no-repeat;
   background-size: contain;
 
-  animation: bounce 1.2s 5s 5;
+  animation: bounce 1.2s 6s 5;
   transform-origin: center bottom;
+
+  @include tablet {
+    left: calc(50% + #{$desktop-navbar-width} / 2);
+  }
 }
 
 
@@ -57,30 +63,30 @@
   38%,
   to {
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 
   25%,
   28% {
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(0, -15px, 0) scaleY(1.05);
+    transform: translate3d(-50%, -15px, 0) scaleY(1.05);
   }
 
   55% {
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(0, -7px, 0) scaleY(1.02);
+    transform: translate3d(-50%, -7px, 0) scaleY(1.02);
   }
 
   65% {
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 0, 0) scaleY(0.97);
+    transform: translate3d(-50%, 0, 0) scaleY(0.97);
   }
 
   75% {
-    transform: translate3d(0, -2px, 0) scaleY(1.01);
+    transform: translate3d(-50%, -2px, 0) scaleY(1.01);
   }
   85% {
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 }
