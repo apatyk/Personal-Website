@@ -15,7 +15,8 @@ export const NaturePortfolioPageTemplate = ({
   <div className="portfolio-page">
     <Card 
       className="portfolio-page__content"
-      content={html}>
+      content={html}
+      background={true}>
     </Card>
     <div className="portfolio-page__gallery">
       <PhotoGallery clImages={clImages} />
