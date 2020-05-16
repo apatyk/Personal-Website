@@ -7,7 +7,8 @@ import './CenteredCard.scss'
 
 const CenteredCard = ({ 
   content,
-  displayScrollIndicator
+  displayScrollIndicator,
+  children
 }) => {
   return (
     <>
@@ -20,6 +21,7 @@ const CenteredCard = ({
       <Cloud top="15vh" left="-15vw" delay="20s"></Cloud>
       <Cloud top="30vh" left="-15vw" delay="10s"></Cloud>
       <Cloud top="45vh" left="-15vw" delay="5s"></Cloud>
+      {children}
     </div>
     {displayScrollIndicator ? (
       <div className="scroll-indicator"></div>
