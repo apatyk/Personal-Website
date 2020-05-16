@@ -34,4 +34,4 @@ webGalleries:
 
 I started learning HTML and CSS in 7th grade after a friend in science class mentioned that it was super easy to make your own website. I became fascinated by the creations that are possible with these tools. My curiosity kept me learning everything I could and my creativity kept me experimenting and creating. Before I had even realized it, I had a passion for web design.
 
-Check out some of the web design work I've done below 👊
+Check out some of the web design work I've done below 👇
