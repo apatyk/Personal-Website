@@ -16,6 +16,28 @@ socialMedia:
 - icon: ../img/logos/GitHub.svg
   link: https://github.com/apatyk
   newTab: true
+resume:
+- heading: Education
+  more:
+  - subheading: Clemson University
+    description: Bachelor of Science, Computer Engineering
+    details: Calhoun Honors College | May 2020 | 4.0 GPA
+- heading: Experience
+  more:
+  - subheading: Full Stack Engineer
+    description: Clemson University Tiger Band | Sept 2016 - July 2019
+    details: I designed and developed a completely new website for Tiger Band, Clemson University Drumline, and Clemson University Tiger Band Association (CUTBA) working on a team of 3 students. We also worked continuously throughout this time on updates and improvements wherever possible. Overall, we helped to improve the web experience for Tiger Band.
+  - subheading: Full Stack Engineer
+    description: Clemson University Tiger Band | Sept 2016 - July 2019
+    details: I designed and developed a completely new website for Tiger Band, Clemson University Drumline, and Clemson University Tiger Band Association (CUTBA) working on a team of 3 students. We also worked continuously throughout this time on updates and improvements wherever possible. Overall, we helped to improve the web experience for Tiger Band.
+- heading: Skills
+  more:
+  - subheading: C
+  - subheading: HTML
+  - subheading: CSS
+  - subheading: SASS
+  - subheading: Python
+  - subheading: React
 ---
 # Hello World!
 
