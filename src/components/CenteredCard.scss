@@ -46,7 +46,7 @@
   background: url('../../static/img/mouse.svg') no-repeat;
   background-size: contain;
 
-  animation: bounce 1.2s infinite 1s;
+  animation: bounce 1.2s 5s 5;
   transform-origin: center bottom;
 }
 
