@@ -70,6 +70,8 @@ resume:
 
 ## I'm Adam.
 
-I live in South Carolina and I study computer engineering at Clemson University. I've always been enthusiastic about technology and I look forward to pursuing this interest professionally. 
+I'm a computer engineer, web designer, and photographer from upstate South Carolina. 
 
-I enjoy photography (film and digital) following a passion that's been in the family for generations. Web design, hiking, exploring the mountains, and droning are just a couple other ways I spend my free time.
+I graduated with my B.S. in Computer Engineering from Clemson University in 2020.  I’m currently pursuing an M.S. at Clemson in Computer Engineering specializing in Intelligent Systems. After graduation, I aspire to work professionally developing computer vision software with machine learning. 
+
+When I’m not behind a computer, you can find me hiking or exploring with a camera in my hand. Oh, and I really like the mountains.
