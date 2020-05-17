@@ -39,6 +39,8 @@
   display: none;
 
   @include tablet {
+    display: block;
+
     position: absolute;
     left: calc(50% + #{$desktop-navbar-width} / 2);
     
