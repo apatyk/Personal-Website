@@ -4,13 +4,12 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import CenteredCard from '../components/CenteredCard'
-import GalleryLink from '../components/GalleryLink'
+import Galleries from '../components/Galleries'
 import Banner from '../components/Banner'
 
 import './portfolio-landing-page.scss'
 
 export const PortfolioLandingPageTemplate = ({
-  galleries,
   html
 }) => (
   <div className="portfolio-landing-page">
@@ -20,35 +19,16 @@ export const PortfolioLandingPageTemplate = ({
       displayScrollIndicator={true}>
     </CenteredCard>
     <Banner/>
-    <div className="portfolio-landing-page__galleries">
-      {
-        galleries && galleries.map(({ 
-          title, 
-          image, 
-          link 
-        }) => (
-          <GalleryLink
-            title={title}
-            image={image}
-            link={link}
-          />
-        ))
-      }
-    </div>
+    <Galleries/>
   </div>
 );
 
-PortfolioLandingPageTemplate.propTypes = {
-  galleries: PropTypes.array,
-}
-
 const PortfolioLandingPage = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark
+  const { html } = data.markdownRemark
 
   return (
     <Layout>
       <PortfolioLandingPageTemplate
-        galleries={frontmatter.galleries}
         html={html}
       />
     </Layout>
@@ -58,8 +38,7 @@ const PortfolioLandingPage = ({ data }) => {
 PortfolioLandingPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-      html: PropTypes.object,
+      html: PropTypes.object
     }),
   }),
 }
@@ -70,13 +49,6 @@ export const pageQuery = graphql`
   query PortfolioLandingPage($id: String!) {
     markdownRemark(id: { eq: $id } ) {
       html
-      frontmatter {
-        galleries {
-          title
-          link
-          image
-        }
-      }
     }
   }
 `

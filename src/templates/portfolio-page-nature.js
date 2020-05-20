@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Card from '../components/Card'
 import PhotoGallery from '../components/PhotoGallery'
+import Galleries from '../components/Galleries'
 
 import './portfolio-page.scss'
 
@@ -21,6 +22,7 @@ export const NaturePortfolioPageTemplate = ({
     <div className="portfolio-page__gallery">
       <PhotoGallery clImages={clImages} />
     </div>
+    <Galleries/>
   </div>
 );
 
