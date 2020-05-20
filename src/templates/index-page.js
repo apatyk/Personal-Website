@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import CenteredCard from '../components/CenteredCard'
-import Card from '../components/Card'
 import Banner from '../components/Banner'
+import Card from '../components/Card'
+import CenteredCard from '../components/CenteredCard'
+import Layout from '../components/Layout'
 import SocialMediaRow from '../components/SocialMediaRow'
 
 import './index-page.scss'

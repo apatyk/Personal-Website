@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import Card from '../components/Card'
-import PhotoGallery from '../components/PhotoGallery'
 import Banner from '../components/Banner'
+import Card from '../components/Card'
 import Galleries from '../components/Galleries'
+import Layout from '../components/Layout'
+import PhotoGallery from '../components/PhotoGallery'
 
 import './portfolio-page.scss'
 
