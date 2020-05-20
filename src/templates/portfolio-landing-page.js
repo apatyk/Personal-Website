@@ -4,8 +4,8 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import CenteredCard from '../components/CenteredCard'
-import Galleries from '../components/Galleries'
 import Banner from '../components/Banner'
+import Galleries from '../components/Galleries'
 
 import './portfolio-landing-page.scss'
 
