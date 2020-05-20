@@ -2,14 +2,14 @@ import React from 'react'
 
 import './Galleries.scss'
 
-import scss from '../variables.scss';
+import vars from '../variables.scss';
 import GalleryLink from '../components/GalleryLink'
 
 export const Galleries = ({
   colorBackground
 }) => {
   return (
-    <div className="galleries" style={colorBackground ? {background: scss.bluecolor} : null }>
+    <div className="galleries" style={colorBackground ? {background: vars.bluecolor} : null }>
       <GalleryLink title={"Landscapes"} link={"/portfolio/landscapes/"} image={"https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587665263/web-portfolio/landscapes/031720_AMP_2666_mymdwh.jpg"}/>
       <GalleryLink title={"Adventures"} link={"/portfolio/adventures/"} image={"https://res.cloudinary.com/dw2p9qk1k/image/upload/v1587490785/web-portfolio/adventures/091517_050719_AMP_09841-2_efj9wo.jpg"}/>
       <GalleryLink title={"People"} link={"/portfolio/people/"} image={"https://res.cloudinary.com/dw2p9qk1k/image/upload/v1588472714/web-portfolio/people/aaa_121619_AMP_1275_wspoqd.jpg"}/>
