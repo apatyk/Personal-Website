@@ -7,6 +7,10 @@ $color-2: #59A5D8;
 $color-3: #386FA4;
 $color-4: #133C55;
 
+:export {
+  bluecolor: $color-4;
+}
+
 /*
 $color-1: #C3E1E5;
 $color-2: #AAD0D4;
