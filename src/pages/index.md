@@ -61,7 +61,7 @@ resume:
     rating: 4
   - skillName: Python
     rating: 3
-  - skillName: ReactJS
+  - skillName: GatsbyJS
     rating: 3
   - skillName: TensorFlow
     rating: 2
@@ -72,6 +72,8 @@ resume:
 
 I'm a computer engineer, web designer, and photographer from upstate South Carolina. 
 
-I graduated with my B.S. in Computer Engineering from Clemson University in 2020.  I’m currently pursuing an M.S. at Clemson in Computer Engineering specializing in Intelligent Systems. After graduation, I aspire to work professionally developing computer vision software with machine learning. 
+I graduated with my B.S. in Computer Engineering from Clemson University in 2020.  I’m currently pursuing an M.S. at Clemson in Computer Engineering specializing in Intelligent Systems. 
+
+After graduation, I aspire to work professionally developing computer vision software utilizing machine learning. I am also passionate about embedded systems and network security.
 
 When I’m not behind a computer, you can find me hiking or exploring with a camera in my hand. Oh, and I really like the mountains.
