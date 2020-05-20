@@ -13,10 +13,6 @@ webGalleries:
     link: https://www.ricca-casslake.com
     image: ../../img/CassLakeRentalsWebsite.jpg
     newTab: true
-  - title: City Compressor
-    link: https://citycompressor.com
-    image: ../../img/CityCompressorWebsite.jpg
-    newTab: true
   - title: Mount Dora Community Trust
     link: https://mountdoracommunitytrust.com
     image: ../../img/MDCTWebsite.jpg
@@ -26,8 +22,8 @@ webGalleries:
     image: ../../img/ClemsonTigerBandWebsite.jpg
     newTab: true
   - title: Clemson University Vocal Arts
-    link: /
-    image: ../../img/ClemsonTigerBandWebsite.jpg
+    link: http://www.clemsonchoirs.com
+    image: ../../img/ClemsonVocalArtsWebsite.jpg
     newTab: true
 ---
 # Web Design Portfolio
