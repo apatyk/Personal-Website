@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Galleries.scss'
 
-import vars from '../variables.scss';
+import vars from '../_export.scss';
 import GalleryLink from '../components/GalleryLink'
 
 export const Galleries = ({
