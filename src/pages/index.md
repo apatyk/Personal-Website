@@ -65,6 +65,17 @@ resume:
     rating: 3
   - skillName: TensorFlow
     rating: 2
+- heading: Adventure Stats
+  more:
+  - subheading: U.S. States Visited
+    description: 29/50
+    image: 
+  - subheading: U.S. National Parks Visited
+    description: 16/62
+  - subheading: U.S. National Forests Visited
+    description: 12/154
+  - subheading: Countries Visited
+    description: 3/196
 ---
 # Hello World!
 
