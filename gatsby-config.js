@@ -48,7 +48,14 @@ module.exports = {
         name: 'images',
       },
     },
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        useMozJpeg: true,
+        stripMetadata: true,
+        defaultQuality: 100,
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',

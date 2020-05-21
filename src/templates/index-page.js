@@ -88,8 +88,8 @@ query IndexPage($id: String!) {
           icon {
             publicURL
             childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
+              fluid(maxWidth: 320, quality: 100) {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
@@ -102,6 +102,7 @@ query IndexPage($id: String!) {
             subheading
             description
             details
+            image
           }
           skills {
             skillName

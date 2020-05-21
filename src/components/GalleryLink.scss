@@ -8,7 +8,7 @@
   &__image {
     width: inherit;
 
-    filter: grayscale(0%) brightness(65%);
+    filter: grayscale(0%) brightness(65%) blur(0);
 
     transition: filter $transition-time $transition-timing;
   }
@@ -16,12 +16,12 @@
   &__text {
     position: absolute;
 
-    left: 50%;
     top: 50%;
+    top: calc(50% - 0.5em);
+
+    width: 100%;
 
     margin: 0;
-
-    transform: translate(-50%, -50%);
 
     color: white;
     font-size: 18pt;
@@ -33,7 +33,7 @@
   }
 
   &:hover &__image {
-    filter: grayscale(100%) brightness(50%);
+    filter: grayscale(100%) brightness(50%) blur(1px);
   }
 
   &:active {
