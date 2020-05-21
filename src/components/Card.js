@@ -30,12 +30,14 @@ const Card = ({
               more && more.map(({
                 subheading,
                 description,
-                details
+                details,
+                image
               }) => (
                 <CardSubsection
                   subheading={subheading}
                   description={description}
                   details={details}
+                  image={image}
                 />
               ))
             }
