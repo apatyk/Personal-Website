@@ -69,11 +69,9 @@ resume:
   more:
   - subheading: U.S. States Visited
     description: 29/50
-    image: 
+    image: StatesVisited.jpg
   - subheading: U.S. National Parks Visited
     description: 16/62
-  - subheading: U.S. National Forests Visited
-    description: 12/154
   - subheading: Countries Visited
     description: 3/196
 ---
