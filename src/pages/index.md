@@ -21,7 +21,7 @@ resume:
   more:
   - subheading: Clemson University
     description: Bachelor of Science, Computer Engineering
-    details: Calhoun Honors College | May 2020 | 4.0 GPA
+    details: Clemson University Honors College | May 2020 | 4.0 GPA
 - heading: Experience
   more:
   - subheading: Freelance Web Designer
