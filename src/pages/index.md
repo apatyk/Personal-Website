@@ -67,7 +67,7 @@ resume:
     rating: 2
 - heading: Adventure Stats
   more:
-  - subheading: "U.S. States Visited: 29/50"
+  - subheading: "U.S. States Visited: 30/50"
     image: StatesVisited.jpg
   - subheading: "U.S. National Parks Visited: 16/62"
   - subheading: "Countries Visited: 3/196"
