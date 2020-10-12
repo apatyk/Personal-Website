@@ -33,12 +33,15 @@ resume:
   - subheading: Undergraduate Teaching Assistant
     description: Clemson University General Engineering | Aug 2018 - May 2020
     details: As an undergraduate teaching assistant (UTA), I was responsible for tutoring out-of-class hours as well as helping teach students MATLAB and assisting professors in the classroom environment.
-  - subheading: IT Intern
-    description: Addison Homes | Jun 2019 - Present
-    details: I maintain and upgrade computer hardware and software around the office including network and security systems. I also optimize the use of technologies such as VpNs in new ways to increase the efficiency of day-to-day operations. My responsibilities also include thoroughly documenting any new IT procedures and aiding employees with problems and questions regarding technology.
   - subheading: Full Stack Engineer
     description: Clemson University Vocal Arts | Feb 2020 - May 2020
     details: I designed and implemented a new Clemson University Vocal Arts department website with a fellow student. This website was created using GatsbyJS and Netlify CMS to allow the administrators easy access to edit content all while making the website incredibly performant.
+  - subheading: IT Intern
+    description: Addison Homes | Jun 2019 - Present
+    details: I maintain and upgrade computer hardware and software around the office including network and security systems. I also optimize the use of technologies such as VPNs in new ways to increase the efficiency of day-to-day operations. My responsibilities also include thoroughly documenting any new IT procedures and aiding employees with problems and questions regarding technology.
+  - subheading: Graduate Research Assistant
+    description: Clemson University | August 2020 - Present
+    details: I work on a team developing and implementing a computer vision inspection system to learn part appearance variability deployed at Samsung Electronics Home Appliance America (SEHA) in Newberry, SC.
 - heading: Skills
   skills:
   - skillName: C
@@ -60,7 +63,7 @@ resume:
   - skillName: SASS
     rating: 4
   - skillName: Python
-    rating: 3
+    rating: 4
   - skillName: GatsbyJS
     rating: 3
   - skillName: TensorFlow
@@ -80,6 +83,6 @@ I'm a computer engineer, web designer, and photographer from upstate South Carol
 
 I graduated with my B.S. in Computer Engineering from Clemson University in 2020.  I’m currently pursuing an M.S. at Clemson in Computer Engineering specializing in Intelligent Systems. 
 
-After graduation, I aspire to work professionally developing computer vision software utilizing machine learning. I am also passionate about embedded systems and network security.
+After graduation, I aspire to work professionally developing computer vision software utilizing machine learning. I also enjoy working with embedded systems and network security.
 
 When I’m not behind a computer, you can find me hiking or exploring with a camera in my hand. Oh, and I really like the mountains.
