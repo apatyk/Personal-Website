@@ -21,11 +21,14 @@ resume:
   more:
   - subheading: Clemson University
     description: Bachelor of Science, Computer Engineering
-    details: Clemson University Honors College | May 2020 | 4.0 GPA
+    details: Clemson Honors College | May 2020 | 4.0 GPA | _Summa Cum Laude_
+  - subheading: Clemson University
+    description: Master of Science, Computer Engineering
+    details: Intelligent Systems Focus | August 2021 | _Magna Cum Laude_
 - heading: Experience
   more:
   - subheading: Freelance Web Designer
-    description: Self-employed | May 2016 - Present
+    description: Self-employed | May 2016 - January 2021
     details: I design creative, cutting-edge websites for a mobile- and Internet-driven world. I've developed and launched websites for a variety of clients using everything from HTML5 and CSS3 written from scratch to Javascript and PHP to, most recently, ReactJS and Netlify CMS.
   - subheading: Full Stack Engineer
     description: Clemson University Tiger Band | Sep 2016 - Jul 2019
@@ -40,7 +43,7 @@ resume:
     description: Addison Homes | Jun 2019 - Present
     details: I maintain and upgrade computer hardware and software around the office including network and security systems. I also optimize the use of technologies such as VPNs in new ways to increase the efficiency of day-to-day operations. My responsibilities also include thoroughly documenting any new IT procedures and aiding employees with problems and questions regarding technology.
   - subheading: Graduate Research Assistant
-    description: Clemson University | August 2020 - Present
+    description: Clemson University | August 2020 - August 2021
     details: I work on a team developing and implementing a computer vision inspection system to learn part appearance variability deployed at Samsung Electronics Home Appliance America (SEHA) in Newberry, SC.
 - heading: Skills
   skills:
@@ -64,15 +67,19 @@ resume:
     rating: 4
   - skillName: Python
     rating: 4
-  - skillName: GatsbyJS
-    rating: 3
   - skillName: TensorFlow
-    rating: 2
+    rating: 4
+  - skillName: PyTorch
+    rating: 3
+  - skillName: GatsbyJS/React.js
+    rating: 3
+  - skillName: Swift
+    rating: 1
 - heading: Adventure Stats
   more:
-  - subheading: "U.S. States Visited: 30/50"
+  - subheading: "U.S. States Visited: 46/50"
     image: StatesVisited.jpg
-  - subheading: "U.S. National Parks Visited: 16/62"
+  - subheading: "U.S. National Parks Visited: 27/63"
   - subheading: "Countries Visited: 3/196"
 ---
 # Hello World!
@@ -81,8 +88,6 @@ resume:
 
 I'm a computer engineer, web designer, and photographer from upstate South Carolina. 
 
-I graduated with my B.S. in Computer Engineering from Clemson University in 2020.  I’m currently pursuing an M.S. at Clemson in Computer Engineering specializing in Intelligent Systems. 
-
-After graduation, I aspire to work professionally developing computer vision software utilizing machine learning. I also enjoy working with embedded systems and network security.
+I graduated with my B.S. in Computer Engineering in 2020 and my M.S. in Computer Engineering specializing in Intelligent Systems in 2021 from Clemson University. I aspire to work professionally developing computer vision software utilizing machine learning.
 
 When I’m not behind a computer, you can find me hiking or exploring with a camera in my hand. Oh, and I really like the mountains.
