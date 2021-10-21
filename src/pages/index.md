@@ -21,10 +21,10 @@ resume:
   more:
   - subheading: Clemson University
     description: Bachelor of Science, Computer Engineering
-    details: Clemson Honors College | May 2020 | 4.0 GPA | _Summa Cum Laude_
+    details: Clemson Honors College | May 2020 | 4.0 GPA | Summa Cum Laude
   - subheading: Clemson University
     description: Master of Science, Computer Engineering
-    details: Intelligent Systems Focus | August 2021 | _Magna Cum Laude_
+    details: Intelligent Systems Focus | August 2021 | Magna Cum Laude
 - heading: Experience
   more:
   - subheading: Freelance Web Designer

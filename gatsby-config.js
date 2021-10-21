@@ -16,13 +16,10 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Noto Sans`,
-            variants: [`400,700`]
-          },
+          `Noto Sans\:400,700`
         ],
       },
     },
