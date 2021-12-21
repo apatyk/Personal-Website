@@ -18,9 +18,8 @@
   }
 
   @include tablet {
-    width: calc(100% - #{$desktop-navbar-width});
+    width: 100%;
 
     padding: 0;
-    padding-left: $desktop-navbar-width;
   }
 }

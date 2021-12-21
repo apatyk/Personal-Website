@@ -1,0 +1,29 @@
+@import '../variables.scss';
+
+.button-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 1rem 0;
+}
+
+.button {
+  border-radius: 2rem;
+
+  background: $highlight-white;
+
+  padding: 1rem 0;
+  min-width: 12rem;
+
+  text-align: center;
+    
+  color: $dark-gray;
+  font-weight: bold;
+  box-shadow: $box-shadow;
+
+  &:hover {
+
+  }
+}

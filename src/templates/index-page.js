@@ -2,10 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
+import Layout from '../components/Layout'
+import AboveFoldContent from '../components/AboveFoldContent'
 import Banner from '../components/Banner'
 import Card from '../components/Card'
-import AboveFoldContent from '../components/AboveFoldContent'
-import Layout from '../components/Layout'
+import Button from '../components/Button'
 import SocialMediaRow from '../components/SocialMediaRow'
 
 import './index-page.scss'
@@ -19,13 +20,21 @@ export const IndexPageTemplate = ({
       className="home-page__content"
       content={html ? html : null}>
     </AboveFoldContent>
+    <Button 
+      title='Portfolio' 
+      link='#'>
+    </Button>
+    <Button 
+      title='Buy Prints' 
+      link='#'>
+    </Button>
+    <Banner />
     <Card>
       <SocialMediaRow
         className="home-page__content__social-media"
         socialMedia={socialMedia}
       />
     </Card>
-    <Banner />
   </div>
 );
 
