@@ -1,11 +1,11 @@
 @import '../variables.scss';
 
 .page-content {
-  min-height: calc(100vh - #{$desktop-banner-height} - #{$mobile-navbar-height});
+  min-height: calc(100vh - #{$desktop-banner-height} - #{$navbar-height});
 
   @include tablet {
-    min-height: calc(100vh - #{$desktop-banner-height} - #{$footer-height} + 1rem);
+    min-height: calc(100vh - #{$desktop-banner-height} - #{$footer-height} - #{$navbar-height} + 1rem);
 
-    margin-left: $desktop-navbar-width;
+    margin-top: $navbar-height;
   }
 }

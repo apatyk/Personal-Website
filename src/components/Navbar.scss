@@ -6,7 +6,7 @@
   left: 0;
 
   width: 100%;
-  height: $mobile-navbar-height;
+  height: $navbar-height;
 
   background: $color-4;
   box-shadow: $box-shadow;
@@ -15,12 +15,12 @@
 
   .container {
     height: inherit;
-    width: inherit
+    width: inherit;
+
+    display: flex;
   }
 
   &__brand {
-    display: none; 
-
     @include tablet {
       display: flex;
       justify-content: center;
@@ -37,58 +37,39 @@
     align-items: center;
 
     @include tablet {
-      flex-direction: column;
+      flex-direction: row;
 
       justify-content: flex-start;
     }
   }
 
   &__item {
-    width: 24vw;
-
     text-align: center;
-
-    fill: $color-2;
 
     z-index: 1;
 
-    svg {
-      height: 2.5rem;
-      width: 2.5rem;
+    min-width: 2rem;
 
-      margin: auto;
-    }
+    font-weight: bold;
 
-    &:hover {
-      fill: $highlight-white;
-    }
-
-    &.active {
-      fill: $highlight-white;
-    }
+    color: $dark-gray;
 
     @include tablet {
-      fill: $dark-gray;
-
-      width: 2.5rem;
-
       padding: 2rem 0;
+      margin: 0 1rem;
 
       &:hover {
-        fill: $color-3;
+        color: $color-2
       }
   
       &.active {
-        fill: $color-3;
+        text-decoration: underline;
       }
     }
   }  
 
   @include tablet {
     top: 0;
-
-    width: $desktop-navbar-width;
-    height: 100vh;
 
     background: $highlight-white;
   }

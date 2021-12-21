@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 
 import Banner from '../components/Banner'
 import Card from '../components/Card'
-import CenteredCard from '../components/CenteredCard'
+import AboveFoldContent from '../components/AboveFoldContent'
 import Layout from '../components/Layout'
 import SocialMediaRow from '../components/SocialMediaRow'
 
@@ -12,46 +12,25 @@ import './index-page.scss'
 
 export const IndexPageTemplate = ({
   html,
-  socialMedia,
-  resume
+  socialMedia
 }) => (
   <div className="home-page">
-    <CenteredCard 
+    <AboveFoldContent 
       className="home-page__content"
-      content={html ? html : null}
-      displayScrollIndicator={true}>
-        <SocialMediaRow
-          className="home-page__content__social-media"
-          socialMedia={socialMedia}
-        />
-    </CenteredCard>
-    <Banner />
-    {
-      resume && resume.map(({
-        heading,
-        more,
-        skills
-      }) => (
-        <Card
-          heading={heading}
-          more={more}
-          skills={skills}
-          background={false}
-        />
-      ))
-    }
+      content={html ? html : null}>
+    </AboveFoldContent>
     <Card>
       <SocialMediaRow
         className="home-page__content__social-media"
         socialMedia={socialMedia}
       />
     </Card>
+    <Banner />
   </div>
 );
 
 IndexPageTemplate.propTypes = {
-  socialMedia: PropTypes.array,
-  resume: PropTypes.array
+  socialMedia: PropTypes.array
 }
 
 const IndexPage = ({ data }) => {
@@ -62,7 +41,6 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         html={html}
         socialMedia={frontmatter.socialMedia}
-        resume={frontmatter.resume}
       />
     </Layout>
   )
@@ -71,8 +49,7 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      html: PropTypes.object,
-      frontmatter: PropTypes.object
+      html: PropTypes.object
     }),
   }),
 }
@@ -95,19 +72,6 @@ query IndexPage($id: String!) {
           }
           link
           newTab
-        }
-        resume {
-          heading
-          more {
-            subheading
-            description
-            details
-            image
-          }
-          skills {
-            skillName
-            rating
-          }
         }
       }
     }

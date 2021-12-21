@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Banner from '../components/Banner'
-import CenteredCard from '../components/CenteredCard'
+import AboveFoldContent from '../components/AboveFoldContent'
 import GalleryLink from '../components/GalleryLink'
 import Layout from '../components/Layout'
 
@@ -14,11 +14,10 @@ export const WebDesignPageTemplate = ({
   html
 }) => (
   <div className="web-design-page">
-    <CenteredCard 
+    <AboveFoldContent 
       className="web-design-page__content"
-      content={html}
-      displayScrollIndicator={true}>
-    </CenteredCard>
+      content={html}>
+    </AboveFoldContent>
     <Banner/>
     <div className="web-design-page__galleries">
       {
