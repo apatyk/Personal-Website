@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../img/logo.svg'
+import { StaticImage } from 'gatsby-plugin-image'
 import { Location } from '@reach/router'
 
 import './Navbar.scss'
@@ -17,7 +17,7 @@ const Navbar = () => {
           <div className="container">
             <div className="navbar__brand">
               <Link to="/" className="navbar__item" title="Logo">
-                <img src={logo} alt="Adam Patyk"/>
+                <StaticImage src='../img/logo.svg' alt="A."/>
               </Link>
             </div>
             <div className="navbar__start">

@@ -3,9 +3,15 @@
 .page-content {
   min-height: calc(100vh - #{$desktop-banner-height} - #{$navbar-height});
 
+  background: linear-gradient(180deg, $highlight-white, $highlight-white, 85%, $color-1, 85%, $color-1);
+
   @include tablet {
     min-height: calc(100vh - #{$desktop-banner-height} - #{$footer-height} - #{$navbar-height} + 1rem);
 
     margin-top: $navbar-height;
+  }
+
+  @include xl-desktop {
+    min-height: calc(100vh - #{$xl-desktop-banner-height} - #{$footer-height} - #{$navbar-height} + 1rem);
   }
 }

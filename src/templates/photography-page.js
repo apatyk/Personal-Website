@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import AboveFoldContent from '../components/AboveFoldContent'
 import Banner from '../components/Banner'
+import Button from '../components/Button'
 import Layout from '../components/Layout'
 
 import './photography-page.scss'
@@ -15,6 +16,10 @@ const PhotographyPageTemplate = ({
     <AboveFoldContent 
       className="photography-page__content"
       content={html}>
+      <Button 
+        title='Portfolio' 
+        link='#'>
+      </Button>
     </AboveFoldContent>
     <Banner/>
   </div>

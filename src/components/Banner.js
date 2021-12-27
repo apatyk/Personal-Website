@@ -2,12 +2,16 @@ import React from 'react'
 
 import './Banner.scss'
 
-const Banner = class extends React.Component {
-  render() {
-    return (
-      <div className="banner"></div>
-    )
-  }
+const Banner = ({
+  children
+}) => {
+  return (
+    <>
+    <div className="banner">
+    {children}
+    </div>
+    </>
+  )
 }
 
 export default Banner

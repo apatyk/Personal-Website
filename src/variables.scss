@@ -2,20 +2,22 @@ $background-white: #F5F5F5;
 $highlight-white: #FFFFFF;
 
 $color-1: #064635;
-$color-2: #519259;
-$color-3: #386FA4;
-$color-4: #133C55;
+$color-2: #205F48;
+$color-3: #227649;
+$color-4: #499159;
+$color-5: #79AF80;
+$color-6: #D8E8DA;
 
 $border-radius: 10px;
-$box-shadow: 0 0px 25px rgba(0, 0, 0, 0.25);
+$box-shadow: 0 0px 25px rgba(0, 0, 0, 0.5);
+$sky-gradient: linear-gradient(180deg, $highlight-white, 20%, $color-6);
 
 $dark-gray: #2E2E2E;
-$light-gray: #959595;
+$light-gray: #6a6a6a;
 
 $font-family: -apple-system, BlinkMacSystemFont,
-“Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
-“Fira Sans”, “Droid Sans”, “Helvetica Neue”,
-sans-serif;
+'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
 $max-column-width: 25rem;
 
@@ -24,8 +26,9 @@ $transition-timing: ease-out;
 
 $navbar-height: 5rem;
 $desktop-navbar-width: 6rem;
-$banner-height: 8rem;
-$desktop-banner-height: 12rem;
+$banner-height: 25rem;
+$desktop-banner-height: 40rem;
+$xl-desktop-banner-height: 55rem;
 $footer-height: 3rem;
 
 html {

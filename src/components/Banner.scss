@@ -2,10 +2,19 @@
 
 .banner {
   height: $banner-height;
-  background: $background-white url('../../static/img/MountainRange.svg') no-repeat;
+  background: url('../../static/img/trees.svg') no-repeat top center;
+  background: url('../../static/img/trees.svg') no-repeat top center, $sky-gradient;
   background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include tablet {
     height: $desktop-banner-height;
+  }
+
+  @include xl-desktop {
+    height: $xl-desktop-banner-height;
   }
 }

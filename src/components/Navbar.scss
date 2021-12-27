@@ -8,7 +8,7 @@
   width: 100%;
   height: $navbar-height;
 
-  background: $color-4;
+  background: $color-3;
   box-shadow: $box-shadow;
 
   z-index: 9;
@@ -24,8 +24,9 @@
     @include tablet {
       display: flex;
       justify-content: center;
+      align-items: center;
 
-      width: 6rem;
+      width: 4rem;
     }
   }
 
@@ -52,18 +53,35 @@
 
     font-weight: bold;
 
-    color: $dark-gray;
+    color: $light-gray;
 
     @include tablet {
-      padding: 2rem 0;
       margin: 0 1rem;
 
+      position: relative;
+
       &:hover {
-        color: $color-2
+        color: $color-3
+      }
+
+      &.active {
+        color: $dark-gray;
       }
   
-      &.active {
-        text-decoration: underline;
+      &.active::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+
+        display: block;
+
+        border-radius: 100%;
+
+        background: $color-3;
+
+        position: absolute;
+          left: calc(50% - 3px);
+          bottom: -0.6em;
       }
     }
   }  

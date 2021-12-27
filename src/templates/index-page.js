@@ -20,15 +20,16 @@ const IndexPageTemplate = ({
       className="home-page__content"
       content={html ? html : null}>
     </AboveFoldContent>
-    <Button 
-      title='Portfolio' 
-      link='#'>
-    </Button>
-    <Button 
-      title='Buy Prints' 
-      link='#'>
-    </Button>
-    <Banner />
+    <Banner>
+      <Button 
+        title='Portfolio' 
+        link='#'>
+      </Button>
+      <Button 
+        title='Buy Prints' 
+        link='#'>
+      </Button>
+    </Banner>
     <Card>
       <SocialMediaRow
         className="home-page__content__social-media"
