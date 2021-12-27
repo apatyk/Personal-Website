@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Banner from '../components/Banner'
 import AboveFoldContent from '../components/AboveFoldContent'
+import Banner from '../components/Banner'
 import GalleryLink from '../components/GalleryLink'
 import Layout from '../components/Layout'
 
 import './web-design-page.scss'
 
-export const WebDesignPageTemplate = ({
+const WebDesignPageTemplate = ({
   webGalleries,
   html
 }) => (
@@ -67,7 +67,7 @@ WebDesignPage.propTypes = {
 
 export default WebDesignPage
 
-export const pageQuery = graphql`
+export const query = graphql`
   query WebDesignPage($id: String!) {
     markdownRemark(id: { eq: $id } ) {
       html

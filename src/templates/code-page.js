@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Banner from '../components/Banner'
 import AboveFoldContent from '../components/AboveFoldContent'
+import Banner from '../components/Banner'
 import Layout from '../components/Layout'
 
 import './code-page.scss'
 
-export const CodePageTemplate = ({
+const CodePageTemplate = ({
   html
 }) => (
   <div className="code-page">
@@ -42,7 +42,7 @@ CodePage.propTypes = {
 
 export default CodePage
 
-export const pageQuery = graphql`
+export const query = graphql`
   query CodePage($id: String!) {
     markdownRemark(id: { eq: $id } ) {
       html

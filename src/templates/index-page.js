@@ -2,16 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
 import AboveFoldContent from '../components/AboveFoldContent'
 import Banner from '../components/Banner'
-import Card from '../components/Card'
 import Button from '../components/Button'
+import Card from '../components/Card'
+import Layout from '../components/Layout'
 import SocialMediaRow from '../components/SocialMediaRow'
 
 import './index-page.scss'
 
-export const IndexPageTemplate = ({
+const IndexPageTemplate = ({
   html,
   socialMedia
 }) => (
@@ -65,7 +65,7 @@ IndexPage.propTypes = {
 
 export default IndexPage
 
-export const pageQuery = graphql`
+export const query = graphql`
 query IndexPage($id: String!) {
   markdownRemark(id: { eq: $id } ) {
       html

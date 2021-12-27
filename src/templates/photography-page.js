@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Banner from '../components/Banner'
 import AboveFoldContent from '../components/AboveFoldContent'
+import Banner from '../components/Banner'
 import Layout from '../components/Layout'
 
 import './photography-page.scss'
 
-export const PhotographyPageTemplate = ({
+const PhotographyPageTemplate = ({
   html
 }) => (
   <div className="photography-page">
@@ -42,7 +42,7 @@ PhotographyPage.propTypes = {
 
 export default PhotographyPage
 
-export const pageQuery = graphql`
+export const query = graphql`
   query PhotographyPage($id: String!) {
     markdownRemark(id: { eq: $id } ) {
       html
