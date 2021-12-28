@@ -8,23 +8,18 @@ import Skill from './Skill.js'
 
 const Card = ({ 
   content, 
-  background,
+
   heading,
   more,
   skills,
   children
 }) => {
-  const noBackground = {
-    backgroundImage: 'none',
-    paddingBottom: '2rem'
-  };
 
   if (heading || more || skills) {
     return (
       <div className="card-container">
         <div 
-          className="card"
-          style={background ? null : noBackground }>
+          className="card">
             <h2 className="card__heading">{heading}</h2>
             {
               more && more.map(({
@@ -67,7 +62,6 @@ const Card = ({
           ) : (
             <div 
               className="card" 
-              style={background ? null : noBackground }
               dangerouslySetInnerHTML={{ __html: content }}>
             </div>
           )
@@ -81,8 +75,7 @@ Card.propTypes = {
   content: PropTypes.object,
   heading: PropTypes.string,
   more: PropTypes.array,
-  skills: PropTypes.array,
-  background: PropTypes.bool.isRequired
+  skills: PropTypes.array
 }
 
 export default Card

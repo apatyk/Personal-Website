@@ -19,6 +19,10 @@ a {
   transition-property: background-color, background-image, color, fill;
 }
 
+p {
+  font-size: 13pt;
+}
+
 h1 {
   color: $dark-gray;
   font-size: 36pt;

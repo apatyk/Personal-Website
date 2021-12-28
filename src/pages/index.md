@@ -10,10 +10,10 @@ socialMedia:
 - icon: ../img/logos/instagram.svg
   link: https://www.instagram.com/adam.patyk/
   newTab: true
-- icon: ../img/logos/LinkedIn.png
+- icon: ../img/logos/linkedin.svg
   link: https://www.linkedin.com/in/adampatyk/
   newTab: true
-- icon: ../img/logos/GitHub.svg
+- icon: ../img/logos/github.svg
   link: https://github.com/apatyk
   newTab: true
 ---

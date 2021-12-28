@@ -74,11 +74,6 @@ query IndexPage($id: String!) {
         socialMedia {
           icon {
             publicURL
-            childImageSharp {
-              fluid(maxWidth: 320, quality: 100) {
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
-            }
           }
           link
           newTab

@@ -9,8 +9,8 @@ const Button = ({
 }) => {
 
   return (
-    <div class='button-container'>
-      <a href={link} class='button'>
+    <div className='button-container'>
+      <a href={link} className='button'>
         {title}
       </a>
     </div>
