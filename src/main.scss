@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+
+  background-color: $background-white;
+  font-family: $font-family;
+  color: $dark-gray;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+a {
+  text-decoration: none;
+
+  transition: none $transition-time $transition-timing;
+  transition-property: background-color, background-image, color, fill;
+}
+
+h1 {
+  color: $dark-gray;
+  font-size: 36pt;
+  margin: 0;
+
+  @include tablet {
+    font-size: 56pt;
+  }
+
+  @include desktop {
+    font-size: 72pt;
+  }
+}
+
+table, th, td {
+  border: 1px solid $light-gray;
+  border-collapse: collapse;
+  padding: 0.5rem;
+}
+
+th {
+  background: $background-white;
+}

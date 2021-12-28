@@ -1,9 +1,7 @@
 @import '../variables.scss';
+@import '../main.scss';
+
 
 .photography-page { 
   min-height: inherit;  
-
-  &__button {
-    justify-content: flex-start;
-  }
 }

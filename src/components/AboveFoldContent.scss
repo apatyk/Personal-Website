@@ -19,7 +19,5 @@
 
   @include tablet {
     max-height: calc(100vh - #{$navbar-height});
-
-    justify-content: top;
   }
 }

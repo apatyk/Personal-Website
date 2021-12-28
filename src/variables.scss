@@ -9,7 +9,7 @@ $color-5: #79AF80;
 $color-6: #D8E8DA;
 
 $border-radius: 10px;
-$box-shadow: 0 0px 25px rgba(0, 0, 0, 0.5);
+$box-shadow: 0 0px 20px rgba(0, 0, 0, 0.4);
 $sky-gradient: linear-gradient(180deg, $highlight-white, 20%, $color-6);
 
 $dark-gray: #2E2E2E;
@@ -24,49 +24,12 @@ $max-column-width: 25rem;
 $transition-time: 200ms;
 $transition-timing: ease-out;
 
-$navbar-height: 5rem;
+$navbar-height: 3.5rem;
 $desktop-navbar-width: 6rem;
 $banner-height: 25rem;
 $desktop-banner-height: 40rem;
 $xl-desktop-banner-height: 55rem;
 $footer-height: 3rem;
-
-html {
-  height: 100%;
-
-  background-color: $background-white;
-  font-family: $font-family;
-  color: $dark-gray;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: subpixel-antialiased;
-}
-
-a {
-  text-decoration: none;
-
-  transition: none $transition-time $transition-timing;
-  transition-property: background-color, background-image, color, fill;
-}
-
-h1 {
-  color: $dark-gray;
-  font-size: 72pt;
-  margin: 0
-}
-
-table, th, td {
-  border: 1px solid $light-gray;
-  border-collapse: collapse;
-  padding: 0.5rem;
-}
-
-th {
-  background: $background-white;
-}
 
 // Even smaller screens (mainly used for the horizontal card)
 $screen-mobile-portrait: 530px;
@@ -78,7 +41,7 @@ $screen-mobile: 576px;
 $screen-tablet: 768px;
 
 // Tablets and small desktops
-$screen-desktop: 992px;
+$screen-desktop: 925px;
 
 // Large tablets and desktops
 $screen-xl-desktop: 2000px;
