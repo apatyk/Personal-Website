@@ -3,13 +3,5 @@
 .page-content {
   margin-top: $navbar-height;
 
-  min-height: calc(100vh - #{$desktop-banner-height} - #{$navbar-height});
-
-  @include tablet {
-    min-height: calc(100vh - #{$desktop-banner-height} - #{$footer-height} - #{$navbar-height} + 1rem);
-  }
-
-  @include xl-desktop {
-    min-height: calc(100vh - #{$xl-desktop-banner-height} - #{$footer-height} - #{$navbar-height} + 1rem);
-  }
+  min-height: calc(100vh - #{$footer-height} - #{$navbar-height} - 2rem);
 }

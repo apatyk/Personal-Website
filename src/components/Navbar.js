@@ -18,11 +18,11 @@ class Navbar extends Component {
   render() { 
     return (
       <nav
-        className="navbar"
+        className={`navbar ${this.state.open && 'open'}`}
         role="navigation"
         aria-label="main-navigation"
       >
-      <div className={`navbar__hamburger-menu ${this.state.scrolling && 'scrolling'}`}>
+      <div className={`navbar__hamburger-menu`}>
           <HamburgerMenu
             isOpen={this.state.open}
             menuClicked={() => this.setState({ open: !this.state.open })}

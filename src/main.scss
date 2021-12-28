@@ -25,8 +25,16 @@ p {
 
 h1 {
   color: $dark-gray;
-  font-size: 36pt;
   margin: 0;
+  font-size: 23pt;
+
+  @include sm-mobile {
+    font-size: 27pt;
+  }
+
+  @include mobile {
+    font-size: 36pt;
+  }
 
   @include tablet {
     font-size: 56pt;
@@ -34,6 +42,14 @@ h1 {
 
   @include desktop {
     font-size: 72pt;
+  }
+}
+
+h2 {
+  font-size: 16pt;
+
+  @include tablet {
+    font-size: 18pt;
   }
 }
 

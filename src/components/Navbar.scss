@@ -13,6 +13,16 @@
 
   z-index: 9;
 
+  &.open + div {
+    overflow: hidden;
+    height: calc(100vh - #{$footer-height} - #{$navbar-height} - 2rem);
+
+    @include tablet {
+      overflow: auto;
+      height: auto;
+    }
+  }
+
   &__hamburger-menu {
     width: 2rem;
 
@@ -32,7 +42,7 @@
   .container {
     position: fixed;
     height: 90vh;
-    height: calc(100vh - $navbar-height);
+    height: calc(100vh - $navbar-height - 2rem);
     width: 94vw;
     width: calc(100vw - 2rem);
 
@@ -44,7 +54,7 @@
     padding: 1rem;
 
     transition: left $transition-time;
-    left: calc(-100vw - 2rem);
+    left: calc(-100vw - 1rem);
 
     &.open {
       left: 0;
@@ -59,6 +69,8 @@
       position: fixed;
       left: calc(-100vw - 2rem);
       top: 0;
+
+      pointer-events: none;
 
       width: 100vw;
       height: 100vh;
@@ -81,6 +93,7 @@
       flex-direction: row;
 
       padding: 0;
+      margin: 0;
 
       background: none;
 
@@ -148,7 +161,7 @@
 
     min-width: 2rem;
 
-    font-size: 28pt;
+    font-size: 18pt;
     font-weight: bold;
 
     color: $light-gray;
@@ -165,6 +178,8 @@
       content: "";
       width: 12px;
       height: 12px;
+
+      pointer-events: none;
 
       display: block;
 
@@ -183,6 +198,10 @@
         left: calc(50% - 3px);
         bottom: -0.6em;
       }
+    }
+
+    @include mobile {
+      font-size: 28pt;
     }
 
     @include tablet {

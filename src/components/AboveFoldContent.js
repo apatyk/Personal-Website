@@ -5,11 +5,12 @@ import './AboveFoldContent.scss'
 
 const AboveFoldContent = ({ 
   content,
-  children
+  children,
+  ...props
 }) => {
   return (
     <>
-    <div className="above-fold-container">
+    <div className={`above-fold-container ${props.className}`}>
       <div 
         className="above-fold-content" 
         dangerouslySetInnerHTML={{ __html: content }}>
