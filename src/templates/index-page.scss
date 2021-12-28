@@ -4,4 +4,7 @@
 
 .home-page { 
   min-height: inherit;  
+
+  background: linear-gradient(180deg, $background-white, $background-white, 75%, $color-1, 75%, $color-1);
+
 }

@@ -113,13 +113,15 @@
   &__start {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
     height: inherit;
 
     * {
-      padding: 1em;
+      padding: 2em;
+
+      border-bottom: 2px solid rgba(106, 106, 106, 0.4);
     }
 
     @include tablet {
@@ -130,6 +132,9 @@
 
       * {
         padding: 0;
+        margin: 0;
+
+        border: none;
       }
     }
   }
@@ -147,6 +152,10 @@
     font-weight: bold;
 
     color: $light-gray;
+
+    &:last-child {
+      border: none;
+    }
 
     &.active {
       color: $dark-gray;
@@ -177,7 +186,6 @@
     }
 
     @include tablet {
-      
 
       margin: 0 1rem;
 

@@ -2,8 +2,7 @@
 
 .banner {
   height: $banner-height;
-  background: url('../../static/img/trees.svg') no-repeat top center;
-  background: url('../../static/img/trees.svg') no-repeat top center, $sky-gradient;
+  background: $background-white url('../../static/img/trees.svg') no-repeat top center;
   background-size: cover;
 
   display: flex;
