@@ -19,5 +19,7 @@
 
   @include tablet {
     max-height: calc(100vh - #{$navbar-height});
+
+    padding: 1rem 2rem;
   }
 }

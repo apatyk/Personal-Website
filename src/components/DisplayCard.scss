@@ -15,7 +15,7 @@
   overflow: hidden;
 
   &__text {
-    width: 20rem;
+    width: auto;
     height: auto;
 
     padding: 0 2rem;
@@ -26,15 +26,19 @@
 
     z-index: 1;
 
+    flex-grow: 1;
+
     @include tablet {
+      width: 40vw;
+
       font-size: 18pt;
+
+      padding: 0 4.5vw;
     }
   }
-
+  
   &__image {
     z-index: 1;
-
-    position: relative;
   }
 
   &__image::after {
@@ -87,9 +91,9 @@
   @include tablet {
     flex-direction: row;
 
-    margin: 2rem 5rem;
+    margin: 2rem;
 
-    max-width: $screen-xl-desktop;
+    max-height: 720px;
 
     &:nth-child(2n) {
       flex-direction: row-reverse;
