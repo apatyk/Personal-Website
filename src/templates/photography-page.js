@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import AboveFoldContent from '../components/AboveFoldContent'
-import Banner from '../components/Banner'
 import Button from '../components/Button'
 import Layout from '../components/Layout'
 
@@ -21,7 +20,6 @@ const PhotographyPageTemplate = ({
         link='#'>
       </Button>
     </AboveFoldContent>
-    <Banner/>
   </div>
 );
 

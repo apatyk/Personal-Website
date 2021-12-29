@@ -1,29 +1,25 @@
 ---
 templateKey: web-design-page
-webGalleries:
+websites:
+  - title: Clemson University Tiger Band
+    link: http://tband.people.clemson.edu
+    image: ../../img/ClemsonTigerBandWebsite.png
+    accentColor: FC6600
+    newTab: true
   - title: Ferguson Box
     link: http://www.fergusonbox.com
-    image: ../../img/FergusonBoxWebsite.jpg
-    newTab: true
-  - title: Hildreth Wood Products
-    link: http://www.hildrethwoodproducts.com
-    image: ../../img/HildrethWoodProductsWebsite.jpg
-    newTab: true
-  - title: Cass Lake Rentals
-    link: https://www.ricca-casslake.com
-    image: ../../img/CassLakeRentalsWebsite.jpg
+    image: ../../img/FergusonBoxWebsite.png
+    accentColor: 117550
     newTab: true
   - title: Mount Dora Community Trust
     link: https://mountdoracommunitytrust.com
-    image: ../../img/MDCTWebsite.jpg
-    newTab: true
-  - title: Clemson University Tiger Band
-    link: http://tband.people.clemson.edu
-    image: ../../img/ClemsonTigerBandWebsite.jpg
+    accentColor: 8FB254
+    image: ../../img/MDCTWebsite.png
     newTab: true
   - title: Clemson University Vocal Arts
     link: http://www.clemsonchoirs.com
-    image: ../../img/ClemsonVocalArtsWebsite.jpg
+    image: ../../img/ClemsonVocalArtsWebsite.png
+    accentColor: 3C224E
     newTab: true
 ---
 # Web Design.

@@ -3,14 +3,13 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import AboveFoldContent from '../components/AboveFoldContent'
-import Banner from '../components/Banner'
-import GalleryLink from '../components/GalleryLink'
+import DisplayCard from '../components/DisplayCard'
 import Layout from '../components/Layout'
 
 import './web-design-page.scss'
 
 const WebDesignPageTemplate = ({
-  webGalleries,
+  websites,
   html
 }) => (
   <div className="web-design-page">
@@ -18,19 +17,20 @@ const WebDesignPageTemplate = ({
       className="web-design-page__content"
       content={html}>
     </AboveFoldContent>
-    <Banner/>
-    <div className="web-design-page__galleries">
+    <div className="web-design-page__gallery">
       {
-        webGalleries && webGalleries.map(({ 
+        websites && websites.map(({ 
           title, 
           image, 
           link,
+          accentColor,
           newTab
         }) => (
-          <GalleryLink
+          <DisplayCard
             title={title}
             image={image}
             link={link}
+            accentColor={accentColor}
             newTab={newTab}
           />
         ))
@@ -40,7 +40,7 @@ const WebDesignPageTemplate = ({
 );
 
 WebDesignPageTemplate.propTypes = {
-  webGalleries: PropTypes.array,
+  websites: PropTypes.array,
 }
 
 const WebDesignPage = ({ data }) => {
@@ -49,7 +49,7 @@ const WebDesignPage = ({ data }) => {
   return (
     <Layout>
       <WebDesignPageTemplate
-        webGalleries={frontmatter.webGalleries}
+        websites={frontmatter.websites}
         html={html}
       />
     </Layout>
@@ -72,17 +72,19 @@ export const query = graphql`
     markdownRemark(id: { eq: $id } ) {
       html
       frontmatter {
-        webGalleries {
+        websites {
           title
           link
           image {
-            publicURL
             childImageSharp {
-              fluid(maxWidth: 1920, quality: 80) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(
+                width: 1920
+                quality: 75
+                placeholder: DOMINANT_COLOR
+              )
             }
           }
+          accentColor
           newTab
         }
       }

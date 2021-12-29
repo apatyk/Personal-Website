@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import AboveFoldContent from '../components/AboveFoldContent'
-import Banner from '../components/Banner'
 import Layout from '../components/Layout'
 
 import './code-page.scss'
@@ -16,7 +15,6 @@ const CodePageTemplate = ({
       className="code-page__content"
       content={html}>
     </AboveFoldContent>
-    <Banner/>
   </div>
 );
 
