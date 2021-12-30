@@ -1,5 +1,20 @@
 ---
 templateKey: index-page
+buttons:
+- buttonTitle: Portfolio
+  buttonLink: https://adampatyk.myportfolio.com
+- buttonTitle: Buy Prints
+  buttonLink: https://adampatyk.darkroom.tech/
+contentTitle: About Me.
+cards:
+- heading: Hello, I'm Adam!
+  text: I’m a computer engineer, photographer, and outdoor enthusiast from upstate South Carolina. When I’m not behind a computer, you can find me hiking or exploring with a camera in my hand.
+  details: 
+  - line: 'U.S. States Visited: 46/50'
+  - line: 'U.S. National Parks Visited: 26/63'
+  - line: 'Countries Visited: 3/196'
+- image: ../img/StatesVisited.png
+  imageAltText: Shaded map of the United States of states I have visited.
 socialMedia:
 - icon: ../img/logos/facebook.svg
   link: https://www.facebook.com/adam.patyk.18

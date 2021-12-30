@@ -29,14 +29,15 @@ export const DisplayCard = ({
 }
 
 DisplayCard.defaultProps = {
-  newTab: false
+  newTab: true,
+  accentColor: 'FFFFFF'
 }
 
 DisplayCard.propTypes = {
   image: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  accentColor: PropTypes.string.isRequired,
+  accentColor: PropTypes.string,
   newTab: PropTypes.bool
 }
 

@@ -3,37 +3,39 @@ import PropTypes from 'prop-types'
 
 import './Card.scss'
 
-import CardSubsection from './CardSubsection.js'
 import Skill from './Skill.js'
+import Image from './Image.js'
 
 const Card = ({ 
   content, 
-
   heading,
-  more,
+  text,
+  details,
+  image,
+  imageAltText,
   skills,
   children
 }) => {
 
-  if (heading || more || skills) {
+  if (heading || image || skills) {
     return (
       <div className="card-container">
-        <div 
-          className="card">
-            <h2 className="card__heading">{heading}</h2>
+        <div className="card">
             {
-              more && more.map(({
-                subheading,
-                description,
-                details,
-                image
+              !!heading ? (
+                <>
+                <h2 className="card__heading">{heading}</h2>
+                <p className="card_text">{text}</p>
+                </>
+              ) : (
+                null
+              )
+            }
+            {
+              details && details.map(({
+                line
               }) => (
-                <CardSubsection
-                  subheading={subheading}
-                  description={description}
-                  details={details}
-                  image={image}
-                />
+                <p className="card__details">{line}</p>
               ))
             }
             {
@@ -47,6 +49,17 @@ const Card = ({
                 />
               ))
             }
+            {
+              !!image ? (
+                <Image 
+                  className="card__image"
+                  image={image}  
+                  alt={imageAltText}
+                />
+              ) : (
+                null
+              )
+           }
         </div>
       </div>
     )
@@ -74,7 +87,10 @@ const Card = ({
 Card.propTypes = {
   content: PropTypes.object,
   heading: PropTypes.string,
-  more: PropTypes.array,
+  text: PropTypes.string,
+  details: PropTypes.array,
+  image: PropTypes.object,
+  imageAltText: PropTypes.string,
   skills: PropTypes.array
 }
 

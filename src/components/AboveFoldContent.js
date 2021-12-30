@@ -22,7 +22,7 @@ const AboveFoldContent = ({
 }
 
 AboveFoldContent.propTypes = {
-  content: PropTypes.object.isRequired
+  content: PropTypes.string
 }
 
 export default AboveFoldContent

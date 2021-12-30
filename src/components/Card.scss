@@ -25,23 +25,27 @@
 .card {
   border-radius: $border-radius;
 
-  background: $highlight-white url('../../static/img/MountainRange.svg') no-repeat bottom;
-  background-size: contain;
+  background: $highlight-white;
 
   margin: 0;
-  padding: 2rem;
-  padding-bottom: 6rem;
+  padding: 1rem;
 
   width: 90%;
-  width: calc(100% - 4rem);
+  width: calc(100% - 2rem);
 
   box-shadow: $box-shadow;
 
   &__heading {
-    color: $color-3;
+    color: $dark-gray;
+  }
+
+  &__details {
+    font-weight: bold;
   }
 
   @include tablet {
-    width: 35rem;
+    max-width: 640px;
+
+    padding: 2rem;
   }
 }

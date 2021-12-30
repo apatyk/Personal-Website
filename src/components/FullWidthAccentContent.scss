@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+.full-width-content {
+  padding: 1rem;
+
+  background: $color-1;
+
+  &__title {
+    color: $highlight-white;
+  }
+
+  @include tablet {
+    padding: 1rem 2rem;
+  }
+}
