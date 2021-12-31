@@ -1,9 +1,9 @@
 import React from 'react'
-import ModalImage from "react-modal-image";
 
-import './PhotoGallery.scss'
+import './PhotoTiles.scss'
+import Image from './Image'
 
-const PhotoGallery = ( {
+const PhotoTiles = ( {
   clImages
 }) => {
 
@@ -11,10 +11,10 @@ const PhotoGallery = ( {
 
     return (
         <div>
-          <div className="photo-grid">
+          <div className="photo-tiles">
             {clImages && clImages.map((image, index) => (
                 <div className="photo-grid__item" key={`${index}-cl`}>
-                  <ModalImage className="photo-grid__image" small={image.node.secure_url} large={image.node.secure_url} hideDownload={true} hideZoom={true} />
+                  <img className="photo-grid__image" src={image.node.secure_url}/>
                 </div>
               ))
             }
@@ -22,4 +22,4 @@ const PhotoGallery = ( {
         </div>
       )
   }
-  export default PhotoGallery
+  export default PhotoTiles
