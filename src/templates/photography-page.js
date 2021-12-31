@@ -11,6 +11,7 @@ import PhotoTiles from '../components/PhotoTiles'
 import './photography-page.scss'
 
 const PhotographyPageTemplate = ({
+  clImages,
   html,
   details,
   img
@@ -19,13 +20,13 @@ const PhotographyPageTemplate = ({
     <AboveFoldContent 
       className="photography-page__content"
       content={html}>
-      <PhotoTiles></PhotoTiles>
       <Button 
         title='Portfolio' 
         link='#'
         invert={true}>
       </Button>
     </AboveFoldContent>
+    <PhotoTiles clImages={clImages}></PhotoTiles>
     <Card
       heading="Gear"
       details={details}
@@ -45,6 +46,7 @@ const PhotographyPage = ({ data }) => {
     <Layout>
       <PhotographyPageTemplate
         html={html}
+        clImages={data.allCloudinaryMedia.edges}
         details={frontmatter.details}
         img={frontmatter.img}
       />
@@ -58,13 +60,16 @@ PhotographyPage.propTypes = {
       html: PropTypes.object,
       frontmatter: PropTypes.object
     }),
+    allCloudinaryMedia: PropTypes.shape({
+      clImages: PropTypes.array
+    })
   }),
 }
 
 export default PhotographyPage
 
 export const query = graphql`
-  query PhotographyPage($id: String!) {
+  query PhotographyPage($id: String!, $page: String! = "web-portfolio/*") {
     markdownRemark(id: { eq: $id } ) {
       html
       frontmatter {
@@ -79,6 +84,14 @@ export const query = graphql`
               placeholder: TRACED_SVG
             )
           }
+        }
+      }
+    }
+    allCloudinaryMedia(sort: {order: ASC, fields: secure_url}, filter: {public_id: {glob: $page}}) {
+      edges {
+        node {
+          secure_url
+          resource_type
         }
       }
     }

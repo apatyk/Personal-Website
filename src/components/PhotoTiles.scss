@@ -1,2 +1,38 @@
 @import '../variables.scss';
 
+.photo-tiles-container {
+  position: absolute;
+  top: calc($navbar-height + 14rem);
+
+  width: calc(100vw - 1rem);
+  height: calc(100vh - $navbar-height - 16rem);
+
+  overflow: hidden;
+
+  @include tablet {
+    top: calc($navbar-height + 18rem);
+
+    height: calc(100vh - $navbar-height - 20rem);
+  }
+}
+
+.photo-tiles {
+  position: absolute;
+  
+  left: -10vw;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  width: 120vw;
+
+  &__item {
+    display: block;
+    margin: 1rem;
+  }
+
+  &__image {
+    height: 18vw;
+  }
+}

@@ -12,7 +12,7 @@ const AboveFoldContent = ({
     <>
     <div className={`above-fold-container ${props.className}`}>
       <div 
-        className="above-fold-content" 
+        className={`above-fold-content`}
         dangerouslySetInnerHTML={{ __html: content }}>
       </div>
       {children}

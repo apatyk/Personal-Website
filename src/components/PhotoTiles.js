@@ -1,7 +1,6 @@
 import React from 'react'
 
 import './PhotoTiles.scss'
-import Image from './Image'
 
 const PhotoTiles = ( {
   clImages
@@ -10,11 +9,11 @@ const PhotoTiles = ( {
     if (!clImages) return <></>
 
     return (
-        <div>
+        <div className="photo-tiles-container">
           <div className="photo-tiles">
             {clImages && clImages.map((image, index) => (
-                <div className="photo-grid__item" key={`${index}-cl`}>
-                  <img className="photo-grid__image" src={image.node.secure_url}/>
+                <div className="photo-tiles__item" key={`${index}-cl`}>
+                  <img className="photo-tiles__image" src={image.node.secure_url} alt={image.node.resource_type}/>
                 </div>
               ))
             }
