@@ -3,5 +3,5 @@
 .page-content {
   margin-top: $navbar-height;
 
-  min-height: calc(100vh - #{$footer-height} - #{$navbar-height} - 2rem);
+  min-height: calc(100vh - #{$navbar-height} - 2rem);
 }

@@ -1,5 +1,12 @@
 ---
 templateKey: photography-page
+details:
+- line: Canon EOS RP
+- line: Samyang RF 14mm f/2.8
+- line: Canon RF 35mm f/1.8 IS Macro
+- line: Canon RF 50mm f/1.8
+- line: Canon RF 70-200mm f/4L
+img: ../../img/ProfilePhoto.jpg
 ---
 # Photography.
 

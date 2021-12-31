@@ -31,4 +31,17 @@
   &:active {
     background: $color-3;
   }
+
+  &.inverted {
+    background: $color-3;
+    color: $highlight-white;
+
+    &:hover {
+      background: $color-4
+    }
+
+    &:active {
+      background: $color-3
+    }
+  }
 }

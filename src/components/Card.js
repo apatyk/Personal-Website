@@ -20,7 +20,8 @@ const Card = ({
   if (heading || image || skills) {
     return (
       <div className="card-container">
-        <div className="card">
+        <div className={`card ${heading && image && 'split'}`}>
+          <div className="card__content">
             {
               !!heading ? (
                 <>
@@ -35,9 +36,10 @@ const Card = ({
               details && details.map(({
                 line
               }) => (
-                <p className="card__details">{line}</p>
+                  <p className="card__details">{line}</p>
               ))
             }
+            </div>
             {
               skills && skills.map(({
                 skillName,

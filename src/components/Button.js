@@ -5,12 +5,13 @@ import './Button.scss'
 
 const Button = ({ 
   title,
-  link
+  link,
+  invert
 }) => {
 
   return (
     <div className='button-container'>
-      <a href={link} className='button'>
+      <a href={link} className={`button ${invert && 'inverted'}`}>
         {title}
       </a>
     </div>
@@ -19,7 +20,8 @@ const Button = ({
 
 Button.propTypes = {
   title: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string.isRequired,
+  invert: PropTypes.bool
 }
 
 export default Button
