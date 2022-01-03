@@ -11,7 +11,7 @@ const Button = ({
 
   return (
     <div className='button-container'>
-      <a href={link} className={`button ${invert && 'inverted'}`}>
+      <a href={link} className={`button ${invert && 'inverted'}`} target="_blank" rel="noreferrer">
         {title}
       </a>
     </div>

@@ -13,6 +13,7 @@ import './photography-page.scss'
 const PhotographyPageTemplate = ({
   clImages,
   html,
+  portfolioLink,
   details,
   img
 }) => (
@@ -22,7 +23,7 @@ const PhotographyPageTemplate = ({
       content={html}>
       <Button 
         title='Portfolio' 
-        link='#'
+        link={portfolioLink}
         invert={true}>
       </Button>
     </AboveFoldContent>
@@ -48,6 +49,7 @@ const PhotographyPage = ({ data }) => {
         html={html}
         clImages={data.allCloudinaryMedia.edges}
         details={frontmatter.details}
+        portfolioLink={frontmatter.portfolioLink}
         img={frontmatter.img}
       />
     </Layout>
@@ -73,6 +75,7 @@ export const query = graphql`
     markdownRemark(id: { eq: $id } ) {
       html
       frontmatter {
+        portfolioLink
         details {
           line
         }

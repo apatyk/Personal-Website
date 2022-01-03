@@ -2,34 +2,41 @@
 
 .photo-tiles-container {
   position: absolute;
-  top: calc($navbar-height + 14rem);
+  top: calc($navbar-height + 17rem);
 
   width: calc(100vw - 1rem);
-  height: calc(100vh - $navbar-height - 16rem);
+  height: calc(100vh - $navbar-height - 18rem);
 
   overflow: hidden;
+  z-index: -1;
+
+  @include sm-mobile {
+    top: calc($navbar-height + 15rem);
+
+    height: calc(100vh - $navbar-height - 16rem);
+  }
 
   @include tablet {
-    top: calc($navbar-height + 18rem);
+    top: calc($navbar-height + 17rem);
 
-    height: calc(100vh - $navbar-height - 20rem);
+    height: calc(100vh - $navbar-height - 19rem);
   }
 }
 
 .photo-tiles {
-  position: absolute;
-  
-  left: -10vw;
-
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 
-  width: 120vw;
+  width: 100vw;
 
   &__item {
     display: block;
-    margin: 1rem;
+    margin: 0.25rem;
+
+    @include tablet {
+      margin: 0.5rem;
+    }
   }
 
   &__image {

@@ -1,5 +1,6 @@
 ---
 templateKey: photography-page
+portfolioLink: https://adampatyk.myportfolio.com/
 details:
 - line: Canon EOS RP
 - line: Samyang RF 14mm f/2.8
