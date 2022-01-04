@@ -6,6 +6,7 @@ import AboveFoldContent from '../components/AboveFoldContent'
 import Button from '../components/Button'
 import Card from '../components/Card'
 import Layout from '../components/Layout'
+import PhotoRow from '../components/PhotoRow'
 import PhotoTiles from '../components/PhotoTiles'
 
 import './photography-page.scss'
@@ -15,7 +16,8 @@ const PhotographyPageTemplate = ({
   html,
   portfolioLink,
   details,
-  img
+  cardPhoto,
+  inspiration
 }) => (
   <div className="photography-page">
     <AboveFoldContent 
@@ -31,11 +33,12 @@ const PhotographyPageTemplate = ({
     <Card
       heading="Gear"
       details={details}
-      image={img}>
+      image={cardPhoto}>
     </Card>
     <Card
       heading="Inspiration"
       text="I draw inspiration from the amazing world around us and some other incredible photographers.">
+        <PhotoRow elements={inspiration}></PhotoRow>
     </Card>
   </div>
 );
@@ -50,7 +53,8 @@ const PhotographyPage = ({ data }) => {
         clImages={data.allCloudinaryMedia.edges}
         details={frontmatter.details}
         portfolioLink={frontmatter.portfolioLink}
-        img={frontmatter.img}
+        cardPhoto={frontmatter.cardPhoto}
+        inspiration={frontmatter.inspiration}
       />
     </Layout>
   )
@@ -79,7 +83,7 @@ export const query = graphql`
         details {
           line
         }
-        img {
+        cardPhoto {
           childImageSharp {
             gatsbyImageData(
               width: 640
@@ -87,6 +91,18 @@ export const query = graphql`
               placeholder: TRACED_SVG
             )
           }
+        }
+        inspiration {
+          image {
+            childImageSharp {
+              gatsbyImageData(
+                width: 500
+                quality: 50
+                placeholder: TRACED_SVG
+              )
+            }
+          }
+          caption
         }
       }
     }

@@ -62,6 +62,15 @@ const Card = ({
                 null
               )
            }
+           {
+            !!children ? (
+              <>
+              {children}
+              </>
+            ) : (
+              null
+            )
+           }
         </div>
       </div>
     )

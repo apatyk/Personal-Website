@@ -7,7 +7,16 @@ details:
 - line: Canon RF 35mm f/1.8 IS Macro
 - line: Canon RF 50mm f/1.8
 - line: Canon RF 70-200mm f/4L
-img: ../../img/ProfilePhoto.jpg
+cardPhoto: ../../img/ProfilePhoto.jpg
+inspiration:
+- image: ../../img/photographers/chris-burkard.png
+  caption: Chris Burkard
+- image: ../../img/photographers/peter-mckinnon.jpg
+  caption: Peter McKinnon
+- image: ../../img/photographers/karl-shakur.jpg
+  caption: Karl Shakur
+- image: ../../img/photographers/ansel-adams.jpg
+  caption: Ansel Adams
 ---
 # Photography.
 
