@@ -52,9 +52,9 @@ class Navbar extends Component {
                 <Link className={`navbar__item ${pathname.includes('web') && 'active'}`} to="/web-design">
                   Web Design
                 </Link>
-                <Link className={`navbar__item ${pathname.includes('code') && 'active'}`} to="/code">
+                {/* <Link className={`navbar__item ${pathname.includes('code') && 'active'}`} to="/code">
                   Code
-                </Link>
+                </Link> */}
               </div>
             </div>
           )}
