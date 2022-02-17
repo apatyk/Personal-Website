@@ -8,7 +8,7 @@ buttons:
 contentTitle: About Me.
 cards:
 - heading: Hello, I'm Adam!
-  text: I’m a photographer, computer engineer, and outdoor enthusiast from upstate South Carolina. When I’m not behind a computer, you can find me hiking or exploring with a camera in my hand. I have a goal to visit all 50 states before I'm 25 and I'm getting pretty close. Track my progress on the map below.
+  text: I’m a photographer, software engineer, and outdoor enthusiast from upstate South Carolina now living in Colorado. When I’m not behind a computer, you can find me hiking or exploring with a camera in my hand. I have a goal to visit all 50 states before I'm 25 and I'm getting pretty close. Track my progress on the map below.
 - heading: Adventure Stats
   details: 
   - line: 'U.S. States Visited: 46/50'
@@ -34,5 +34,5 @@ socialMedia:
   newTab: true
 ---
 # Photographer.
-# Computer Engineer.
+# Software Engineer.
 # Outdoor Enthusiast.
