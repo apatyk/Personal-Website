@@ -58,6 +58,13 @@ $screen-xl-desktop: 2000px;
 		@content;
 	}
  }
+
+ // Small devices in landscape orientation
+@mixin mobile-landscape {
+	@media (min-width: #{$screen-mobile-portrait}) and (orientation: landscape) {
+		@content;
+	}
+ }
  
  // Medium devices
  @mixin tablet {

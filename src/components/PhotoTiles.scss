@@ -40,6 +40,22 @@
   }
 
   &__image {
-    height: 18vw;
+    height: calc((100vh - $navbar-height - 19rem) / 3);
+
+    @include sm-mobile {
+      height: calc((100vh - $navbar-height - 19rem) / 4);
+    }
+
+    @include tablet {
+      height: calc((100vh - $navbar-height - 19rem) / 4);
+    }
+
+    @include mobile-landscape {
+      height: calc((100vh - $navbar-height - 19rem) * 2);
+    }
+
+    @include desktop {
+      height: calc((100vh - $navbar-height - 19rem) / 3);
+    }
   }
 }

@@ -215,6 +215,10 @@
       &:hover {
         color: $color-3
       }
+
+      &:active {
+        color: $dark-gray
+      }
     }
   }  
 }
