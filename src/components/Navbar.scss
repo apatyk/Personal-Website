@@ -44,7 +44,7 @@
     height: 90vh;
     height: calc(100vh - $navbar-height - 2rem);
     width: 94vw;
-    width: calc(100vw - 2rem);
+    width: calc(100vw - 3rem);
 
     z-index: -1;
 
@@ -131,6 +131,8 @@
 
     height: inherit;
 
+    margin-top: -2em;
+
     * {
       padding: 2em;
 
@@ -142,6 +144,8 @@
 
       justify-content: flex-start;
       align-items: center;
+
+      margin-top: 0;
 
       * {
         padding: 0;
