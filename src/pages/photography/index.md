@@ -7,6 +7,7 @@ details:
 - line: Canon RF 35mm f/1.8 IS Macro
 - line: Canon RF 50mm f/1.8
 - line: Canon RF 70-200mm f/4L
+- line: DJI Mavic Mini 2
 cardPhoto: ../../img/ProfilePhoto.jpg
 inspiration:
 - image: ../../img/photographers/chris-burkard.png
@@ -20,4 +21,4 @@ inspiration:
 ---
 # Photography.
 
-I’m really passionate about photography and I’ve been taking photos for over a decade. I can’t go anywhere without a camera. Find my full portfolio below.
+I’m really passionate about photography and I’ve been taking photos for over a decade. I can’t go anywhere without a camera. Check out my full portfolio!

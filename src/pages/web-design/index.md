@@ -9,7 +9,7 @@ websites:
   - title: Ferguson Box
     link: http://www.fergusonbox.com
     image: ../../img/FergusonBoxWebsite.png
-    accentColor: 117550
+    accentColor: 11754F
     newTab: true
   - title: Mount Dora Community Trust
     link: https://mountdoracommunitytrust.com
