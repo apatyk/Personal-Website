@@ -7,7 +7,7 @@ import Button from '../components/Button'
 import Card from '../components/Card'
 import Layout from '../components/Layout'
 import PhotoRow from '../components/PhotoRow'
-import PhotoTiles from '../components/PhotoTiles'
+import PhotoBackground from '../components/PhotoBackground'
 
 import './photography-page.scss'
 
@@ -29,7 +29,7 @@ const PhotographyPageTemplate = ({
         invert={true}>
       </Button>
     </AboveFoldContent>
-    <PhotoTiles clImages={clImages}></PhotoTiles>
+    <PhotoBackground clImages={clImages}></PhotoBackground>
     <Card
       heading="Gear"
       details={details}
