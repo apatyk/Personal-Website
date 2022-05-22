@@ -4,27 +4,19 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-require('dotenv').config();
+require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
     title: 'Adam Patyk',
-    description:
-      'Personal Website of Adam Patyk',
+    description: 'Personal Website of Adam Patyk',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-postcss',
+    `gatsby-plugin-image`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Noto Sans\:400,700`
-        ],
-      },
-    },
-    {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,
@@ -90,8 +82,8 @@ module.exports = {
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         resourceType: `image`,
         prefix: `web-portfolio/`,
-        maxResults: 100
-      }
+        maxResults: 20,
+      },
     },
   ],
 }

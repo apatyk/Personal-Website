@@ -6,7 +6,7 @@ import './Skill.scss'
 class Skill extends Component {
   render() {
     let ratingUI = []
-  
+
     for (let i = 0; i < this.props.rating; i++)
       ratingUI.push(<div className="skill__rating__element fill"></div>)
 
@@ -24,7 +24,7 @@ class Skill extends Component {
 
 Skill.propTypes = {
   skillName: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired
+  rating: PropTypes.number.isRequired,
 }
 
 export default Skill

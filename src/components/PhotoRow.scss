@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.photo-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 45%;
+
+    margin: 1px;
+
+    &__image {
+      aspect-ratio: 1;
+      width: 90%;
+
+      border-radius: $border-radius;
+    }
+
+    &__caption {
+      text-align: center;
+      margin: 0.1rem 0;
+    }
+
+    @include tablet {
+      margin: 0.1rem;
+
+      width: auto;
+    }
+  }
+
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+}

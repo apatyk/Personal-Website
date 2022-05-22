@@ -1,39 +1,26 @@
-import React from 'react';
+import React from 'react'
 import PropTypes from 'prop-types'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-const findImageSrc = image => {
-  if (!image) return image
-  if (!!image.childImageSharp) return image.childImageSharp.fluid.src;
-  if (!!image.publicURL) return image.publicURL;
+// NEEDED TO SUPPORT BOTH RASTER (GATSBY-IMAGE) AND VECTOR (SVG) IMAGES
 
-  return image;
+const Image = ({ image, alt, ...props }) => {
+  if (!image.childImageSharp && image.extension === 'svg') {
+    return <img src={image.publicURL} alt={alt} {...props} />
+  } else {
+    return (
+      <GatsbyImage
+        alt={alt}
+        image={getImage(image.childImageSharp)}
+        {...props}
+      />
+    )
+  }
 }
-
-const Image = ({ image, alt, ...props }) => !!image && (
-  <img
-    alt={alt}
-    src={findImageSrc(image)}
-    {...props}
-  />
-);
 
 Image.propsType = {
-  image: PropTypes.oneOf([
-    PropTypes.object,
-    PropTypes.string
-  ]).isRequired,
-  alt: PropTypes.string.isRequired
+  image: PropTypes.object.isRequired,
+  alt: PropTypes.string.isRequired,
 }
 
-export const BackgroundImageDiv = ({ image, children, ...props }) => !!image && (
-  <div
-    style={{
-      backgroundImage: `url(${findImageSrc(image)})`
-    }}
-    {...props}
-  >
-    {children}
-  </div>
-)
-
-export default Image;
+export default Image

@@ -1,0 +1,47 @@
+@import '../variables.scss';
+
+.button-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 0.5rem 0;
+}
+
+.button {
+  border-radius: 2rem;
+
+  background: $highlight-white;
+
+  padding: 1rem 0;
+  min-width: 12rem;
+
+  text-align: center;
+    
+  color: $dark-gray;
+  font-weight: bold;
+  box-shadow: $box-shadow;
+
+  &:hover {
+    background: $color-4;
+    color: white;
+  }
+
+  &:active {
+    background: $color-3;
+  }
+
+  &.inverted {
+    background: $color-3;
+    color: $highlight-white;
+
+    &:hover {
+      background: $color-4
+    }
+
+    &:active {
+      background: $color-3
+    }
+  }
+}

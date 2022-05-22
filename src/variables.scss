@@ -1,69 +1,36 @@
-$background-white: #F4F4F4;
+$background-white: #F5F5F5;
 $highlight-white: #FFFFFF;
-$cloud-white: #FDFDFD;
 
-$color-1: #84D2F6;
-$color-2: #59A5D8;
-$color-3: #386FA4;
-$color-4: #133C55;
+$color-1: #064635;
+$color-2: #205F48;
+$color-3: #227649;
+$color-4: #499159;
+$color-5: #79AF80;
+$color-6: #D8E8DA;
 
 $border-radius: 10px;
-$box-shadow: 0 1px 25px rgba(128, 128, 128, 0.5);
+$box-shadow: 0 0px 20px rgba(0, 0, 0, 0.4);
 
 $dark-gray: #2E2E2E;
-$light-gray: #959595;
+$light-gray: #6a6a6a;
 
-$font-family: 'Noto Sans', sans-serif;
+$font-family: -apple-system, BlinkMacSystemFont,
+'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
 $max-column-width: 25rem;
 
 $transition-time: 200ms;
 $transition-timing: ease-out;
 
-$mobile-navbar-height: 5rem;
-$desktop-navbar-width: 6rem;
-$banner-height: 8rem;
-$desktop-banner-height: 12rem;
+$navbar-height: 3.5rem;
+$banner-height: 25rem;
+$desktop-banner-height: 40rem;
+$xl-desktop-banner-height: 58rem;
 $footer-height: 3rem;
 
-html {
-  height: 100%;
-
-  background-color: $background-white;
-  font-family: $font-family;
-  color: $dark-gray;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: subpixel-antialiased;
-}
-
-a {
-  text-decoration: none;
-
-  transition: none $transition-time $transition-timing;
-  transition-property: background-color, background-image, color, fill;
-}
-
-h1 {
-  color: $color-3;
-  font-size: 28pt;
-}
-
-table, th, td {
-  border: 1px solid $light-gray;
-  border-collapse: collapse;
-  padding: 0.5rem;
-}
-
-th {
-  background: $background-white;
-}
-
 // Even smaller screens (mainly used for the horizontal card)
-$screen-mobile-portrait: 530px;
+$screen-mobile-portrait: 374px;
 
 // Small tablets and large smartphones (landscape view)
 $screen-mobile: 576px;
@@ -72,7 +39,7 @@ $screen-mobile: 576px;
 $screen-tablet: 768px;
 
 // Tablets and small desktops
-$screen-desktop: 992px;
+$screen-desktop: 925px;
 
 // Large tablets and desktops
 $screen-xl-desktop: 2000px;
@@ -88,6 +55,13 @@ $screen-xl-desktop: 2000px;
 // Small devices
 @mixin mobile {
 	@media (min-width: #{$screen-mobile}) {
+		@content;
+	}
+ }
+
+ // Small devices in landscape orientation
+@mixin mobile-landscape {
+	@media (min-width: #{$screen-mobile-portrait}) and (orientation: landscape) {
 		@content;
 	}
  }

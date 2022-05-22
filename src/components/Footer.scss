@@ -8,19 +8,14 @@
   height: $footer-height;
   width: 100%;
 
-  background: $background-white;
-  color: $dark-gray;
-
-  padding-bottom: $mobile-navbar-height;
+  background: $color-1;
+  color: $highlight-white;
 
   &__content {
     margin: 0;
   }
 
   @include tablet {
-    width: calc(100% - #{$desktop-navbar-width});
-
-    padding: 0;
-    padding-left: $desktop-navbar-width;
+    width: 100%;
   }
 }

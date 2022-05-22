@@ -1,0 +1,102 @@
+@import '../variables.scss';
+@import '../main.scss';
+
+.display-card {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  position: relative;
+
+  margin: 1rem 0;
+
+  box-shadow: $box-shadow;
+
+  overflow: hidden;
+
+  &__text {
+    width: auto;
+    height: auto;
+
+    padding: 0 2rem;
+
+    text-align: center;
+
+    color: white;
+
+    z-index: 1;
+
+    flex-grow: 1;
+
+    @include tablet {
+      width: 40vw;
+
+      font-size: 18pt;
+
+      padding: 0 4.5vw;
+    }
+  }
+  
+  &__image {
+    z-index: 1;
+  }
+
+  &__image::after {
+    transition: none $transition-timing $transition-time;
+    transition-property: background;
+
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    background: transparent url('../../static/img/open.svg') no-repeat center center;
+    background-size: 0px;
+  }
+
+  &__link:hover &__image::after {
+    background: rgba(0, 0, 0, 0.6) url('../../static/img/open.svg') no-repeat center center;
+    background-size: 6rem;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+    
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  @include mobile {
+    margin: 1rem;
+
+    border-radius: $border-radius;
+  }
+
+  @include tablet {
+    flex-direction: row;
+
+    margin: 2rem;
+
+    max-height: 720px;
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+}

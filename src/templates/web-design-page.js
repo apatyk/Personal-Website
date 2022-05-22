@@ -2,46 +2,35 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Banner from '../components/Banner'
-import CenteredCard from '../components/CenteredCard'
-import GalleryLink from '../components/GalleryLink'
+import AboveFoldContent from '../components/AboveFoldContent'
+import DisplayCard from '../components/DisplayCard'
 import Layout from '../components/Layout'
 
 import './web-design-page.scss'
 
-export const WebDesignPageTemplate = ({
-  webGalleries,
-  html
-}) => (
+const WebDesignPageTemplate = ({ websites, html }) => (
   <div className="web-design-page">
-    <CenteredCard 
+    <AboveFoldContent
       className="web-design-page__content"
       content={html}
-      displayScrollIndicator={true}>
-    </CenteredCard>
-    <Banner/>
-    <div className="web-design-page__galleries">
-      {
-        webGalleries && webGalleries.map(({ 
-          title, 
-          image, 
-          link,
-          newTab
-        }) => (
-          <GalleryLink
+    ></AboveFoldContent>
+    <div className="web-design-page__gallery">
+      {websites &&
+        websites.map(({ title, image, link, accentColor, newTab }) => (
+          <DisplayCard
             title={title}
             image={image}
             link={link}
+            accentColor={accentColor}
             newTab={newTab}
           />
-        ))
-      }
+        ))}
     </div>
   </div>
-);
+)
 
 WebDesignPageTemplate.propTypes = {
-  webGalleries: PropTypes.array,
+  websites: PropTypes.array,
 }
 
 const WebDesignPage = ({ data }) => {
@@ -49,10 +38,7 @@ const WebDesignPage = ({ data }) => {
 
   return (
     <Layout>
-      <WebDesignPageTemplate
-        webGalleries={frontmatter.webGalleries}
-        html={html}
-      />
+      <WebDesignPageTemplate websites={frontmatter.websites} html={html} />
     </Layout>
   )
 }
@@ -68,22 +54,25 @@ WebDesignPage.propTypes = {
 
 export default WebDesignPage
 
-export const pageQuery = graphql`
+export const query = graphql`
   query WebDesignPage($id: String!) {
-    markdownRemark(id: { eq: $id } ) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        webGalleries {
+        websites {
           title
           link
           image {
-            publicURL
             childImageSharp {
-              fluid(maxWidth: 1920, quality: 80) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(
+                width: 1920
+                quality: 75
+                placeholder: DOMINANT_COLOR
+                layout: CONSTRAINED
+              )
             }
           }
+          accentColor
           newTab
         }
       }

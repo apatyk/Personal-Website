@@ -1,5 +1,27 @@
 @import '../variables.scss';
+@import '../main.scss';
+
 
 .home-page { 
-  min-height: inherit;  
+  min-height: calc(100vh - #{$banner-height} - #{$navbar-height} - 2rem);
+
+  @include tablet {
+    min-height: calc(100vh - #{$desktop-banner-height} - #{$navbar-height} - 2rem);
+  }
+
+  @include xl-desktop {
+    min-height: calc(100vh - #{$xl-desktop-banner-height} - #{$navbar-height} - 2rem);
+  }
+
+  &__content {
+    h1 {
+      margin: 0.5rem 0;
+    }
+
+    @include sm-mobile {
+      h1 {
+        margin: 0.25rem 0;
+      }
+    }
+  }
 }
