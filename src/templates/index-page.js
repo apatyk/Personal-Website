@@ -17,45 +17,30 @@ const IndexPageTemplate = ({
   buttons,
   contentTitle,
   cards,
-  socialMedia
+  socialMedia,
 }) => (
   <div className="home-page">
-    <AboveFoldContent 
+    <AboveFoldContent
       className="home-page__content"
-      content={html ? html : null}>
-    </AboveFoldContent>
+      content={html ? html : null}
+    ></AboveFoldContent>
     <Banner>
-      {
-        buttons && buttons.map(({
-          buttonTitle,
-          buttonLink
-        }) => (
-          <Button 
-            title={buttonTitle}
-            link={buttonLink}>
-          </Button>
-        ))
-      }
+      {buttons &&
+        buttons.map(({ buttonTitle, buttonLink }) => (
+          <Button title={buttonTitle} link={buttonLink}></Button>
+        ))}
     </Banner>
-    <FullWidthAccentContent
-    title={contentTitle}>
-      {
-        cards && cards.map(({
-          heading,
-          text,
-          details,
-          image,
-          imageAltText
-        }) => (
+    <FullWidthAccentContent title={contentTitle}>
+      {cards &&
+        cards.map(({ heading, text, details, image, imageAltText }) => (
           <Card
-          heading={heading}
-          text={text}
-          details={details}
-          image={image}
-          imageAltText={imageAltText}>
-        </Card>
-        ))
-      }
+            heading={heading}
+            text={text}
+            details={details}
+            image={image}
+            imageAltText={imageAltText}
+          ></Card>
+        ))}
       <Card>
         <SocialMediaRow
           className="home-page__content__social-media"
@@ -64,13 +49,13 @@ const IndexPageTemplate = ({
       </Card>
     </FullWidthAccentContent>
   </div>
-);
+)
 
 IndexPageTemplate.propTypes = {
   buttons: PropTypes.array,
   contentTitle: PropTypes.string,
   cards: PropTypes.array,
-  socialMedia: PropTypes.array
+  socialMedia: PropTypes.array,
 }
 
 const IndexPage = ({ data }) => {
@@ -93,7 +78,7 @@ IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
-      html: PropTypes.object
+      html: PropTypes.object,
     }),
   }),
 }
@@ -101,8 +86,8 @@ IndexPage.propTypes = {
 export default IndexPage
 
 export const query = graphql`
-query IndexPage($id: String!) {
-  markdownRemark(id: { eq: $id } ) {
+  query IndexPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         buttons {
@@ -118,11 +103,7 @@ query IndexPage($id: String!) {
           }
           image {
             childImageSharp {
-              gatsbyImageData(
-                width: 800
-                quality: 75
-                placeholder: TRACED_SVG
-              )
+              gatsbyImageData(width: 800, quality: 75, placeholder: TRACED_SVG)
             }
           }
           imageAltText

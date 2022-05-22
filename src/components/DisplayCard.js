@@ -5,24 +5,15 @@ import Image from './Image'
 
 import './DisplayCard.scss'
 
-export const DisplayCard = ({ 
-  image,
-  title,
-  link,
-  accentColor,
-  newTab
-}) => {
-
+export const DisplayCard = ({ image, title, link, accentColor, newTab }) => {
   return (
-
-    <div className="display-card" style={{backgroundColor: '#' + accentColor}}>
+    <div
+      className="display-card"
+      style={{ backgroundColor: '#' + accentColor }}
+    >
       <h2 className="display-card__text">{title}</h2>
       <a href={link} target={newTab && '_blank'} className="display-card__link">
-        <Image 
-          className="display-card__image"
-          image={image}  
-          alt={title}
-        />
+        <Image className="display-card__image" image={image} alt={title} />
       </a>
     </div>
   )
@@ -30,7 +21,7 @@ export const DisplayCard = ({
 
 DisplayCard.defaultProps = {
   newTab: true,
-  accentColor: 'FFFFFF'
+  accentColor: 'FFFFFF',
 }
 
 DisplayCard.propTypes = {
@@ -38,7 +29,7 @@ DisplayCard.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   accentColor: PropTypes.string,
-  newTab: PropTypes.bool
+  newTab: PropTypes.bool,
 }
 
 export default DisplayCard

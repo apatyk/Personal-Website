@@ -6,90 +6,54 @@ import './Card.scss'
 import Skill from './Skill.js'
 import Image from './Image.js'
 
-const Card = ({ 
-  content, 
+const Card = ({
+  content,
   heading,
   text,
   details,
   image,
   imageAltText,
   skills,
-  children
+  children,
 }) => {
-
   if (heading || image || skills) {
     return (
       <div className="card-container">
         <div className={`card ${heading && image && 'split'}`}>
           <div className="card__content">
-            {
-              !!heading ? (
-                <>
+            {!!heading ? (
+              <>
                 <h2 className="card__heading">{heading}</h2>
                 <p className="card_text">{text}</p>
-                </>
-              ) : (
-                null
-              )
-            }
-            {
-              details && details.map(({
-                line
-              }) => (
-                  <p className="card__details">{line}</p>
-              ))
-            }
-            </div>
-            {
-              skills && skills.map(({
-                skillName,
-                rating
-              }) => (
-                <Skill
-                  skillName={skillName}
-                  rating={rating}
-                />
-              ))
-            }
-            {
-              !!image ? (
-                <Image 
-                  className="card__image"
-                  image={image}  
-                  alt={imageAltText}
-                />
-              ) : (
-                null
-              )
-           }
-           {
-            !!children ? (
-              <>
-              {children}
               </>
-            ) : (
-              null
-            )
-           }
+            ) : null}
+            {details &&
+              details.map(({ line }) => (
+                <p className="card__details">{line}</p>
+              ))}
+          </div>
+          {skills &&
+            skills.map(({ skillName, rating }) => (
+              <Skill skillName={skillName} rating={rating} />
+            ))}
+          {!!image ? (
+            <Image className="card__image" image={image} alt={imageAltText} />
+          ) : null}
+          {!!children ? <>{children}</> : null}
         </div>
       </div>
     )
-  }
-  else {
+  } else {
     return (
       <div className="card-container">
-        {
-          content == null ? (
-              <>
-                {children}
-              </>
-          ) : (
-            <div 
-              className="card" 
-              dangerouslySetInnerHTML={{ __html: content }}>
-            </div>
-          )
-        }
+        {content == null ? (
+          <>{children}</>
+        ) : (
+          <div
+            className="card"
+            dangerouslySetInnerHTML={{ __html: content }}
+          ></div>
+        )}
       </div>
     )
   }
@@ -102,7 +66,7 @@ Card.propTypes = {
   details: PropTypes.array,
   image: PropTypes.object,
   imageAltText: PropTypes.string,
-  skills: PropTypes.array
+  skills: PropTypes.array,
 }
 
 export default Card

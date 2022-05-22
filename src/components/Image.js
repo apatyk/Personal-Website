@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import PropTypes from 'prop-types'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
@@ -6,16 +6,21 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Image = ({ image, alt, ...props }) => {
   if (!image.childImageSharp && image.extension === 'svg') {
-      return <img src={image.publicURL} alt={alt} {...props}/>
+    return <img src={image.publicURL} alt={alt} {...props} />
+  } else {
+    return (
+      <GatsbyImage
+        alt={alt}
+        image={getImage(image.childImageSharp)}
+        {...props}
+      />
+    )
   }
-  else {
-    return <GatsbyImage alt={alt} image={getImage(image.childImageSharp)} {...props}/>
-  }
-};
+}
 
 Image.propsType = {
   image: PropTypes.object.isRequired,
-  alt: PropTypes.string.isRequired
+  alt: PropTypes.string.isRequired,
 }
 
-export default Image;
+export default Image

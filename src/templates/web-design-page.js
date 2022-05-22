@@ -8,24 +8,15 @@ import Layout from '../components/Layout'
 
 import './web-design-page.scss'
 
-const WebDesignPageTemplate = ({
-  websites,
-  html
-}) => (
+const WebDesignPageTemplate = ({ websites, html }) => (
   <div className="web-design-page">
-    <AboveFoldContent 
+    <AboveFoldContent
       className="web-design-page__content"
-      content={html}>
-    </AboveFoldContent>
+      content={html}
+    ></AboveFoldContent>
     <div className="web-design-page__gallery">
-      {
-        websites && websites.map(({ 
-          title, 
-          image, 
-          link,
-          accentColor,
-          newTab
-        }) => (
+      {websites &&
+        websites.map(({ title, image, link, accentColor, newTab }) => (
           <DisplayCard
             title={title}
             image={image}
@@ -33,11 +24,10 @@ const WebDesignPageTemplate = ({
             accentColor={accentColor}
             newTab={newTab}
           />
-        ))
-      }
+        ))}
     </div>
   </div>
-);
+)
 
 WebDesignPageTemplate.propTypes = {
   websites: PropTypes.array,
@@ -48,10 +38,7 @@ const WebDesignPage = ({ data }) => {
 
   return (
     <Layout>
-      <WebDesignPageTemplate
-        websites={frontmatter.websites}
-        html={html}
-      />
+      <WebDesignPageTemplate websites={frontmatter.websites} html={html} />
     </Layout>
   )
 }
@@ -69,7 +56,7 @@ export default WebDesignPage
 
 export const query = graphql`
   query WebDesignPage($id: String!) {
-    markdownRemark(id: { eq: $id } ) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         websites {

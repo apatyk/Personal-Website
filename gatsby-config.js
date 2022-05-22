@@ -4,13 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-require('dotenv').config();
+require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
     title: 'Adam Patyk',
-    description:
-      'Personal Website of Adam Patyk',
+    description: 'Personal Website of Adam Patyk',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -83,8 +82,8 @@ module.exports = {
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         resourceType: `image`,
         prefix: `web-portfolio/`,
-        maxResults: 20
-      }
+        maxResults: 20,
+      },
     },
   ],
 }

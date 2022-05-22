@@ -4,7 +4,7 @@ import './Footer.scss'
 
 const Footer = class extends React.Component {
   getYear() {
-    return new Date().getFullYear();
+    return new Date().getFullYear()
   }
 
   render() {

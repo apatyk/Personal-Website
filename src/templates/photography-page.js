@@ -17,31 +17,22 @@ const PhotographyPageTemplate = ({
   portfolioLink,
   details,
   cardPhoto,
-  inspiration
+  inspiration,
 }) => (
   <div className="photography-page">
-    <AboveFoldContent 
-      className="photography-page__content"
-      content={html}>
-      <Button 
-        title='Portfolio' 
-        link={portfolioLink}
-        invert={true}>
-      </Button>
+    <AboveFoldContent className="photography-page__content" content={html}>
+      <Button title="Portfolio" link={portfolioLink} invert={true}></Button>
     </AboveFoldContent>
     <PhotoBackground clImages={clImages}></PhotoBackground>
-    <Card
-      heading="Gear"
-      details={details}
-      image={cardPhoto}>
-    </Card>
+    <Card heading="Gear" details={details} image={cardPhoto}></Card>
     <Card
       heading="Inspiration"
-      text="I draw inspiration from the amazing world around us and some other incredible photographers.">
-        <PhotoRow elements={inspiration}></PhotoRow>
+      text="I draw inspiration from the amazing world around us and some other incredible photographers."
+    >
+      <PhotoRow elements={inspiration}></PhotoRow>
     </Card>
   </div>
-);
+)
 
 const PhotographyPage = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
@@ -64,11 +55,11 @@ PhotographyPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       html: PropTypes.object,
-      frontmatter: PropTypes.object
+      frontmatter: PropTypes.object,
     }),
     allCloudinaryMedia: PropTypes.shape({
-      clImages: PropTypes.array
-    })
+      clImages: PropTypes.array,
+    }),
   }),
 }
 
@@ -76,7 +67,7 @@ export default PhotographyPage
 
 export const query = graphql`
   query PhotographyPage($id: String!, $page: String! = "web-portfolio/*") {
-    markdownRemark(id: { eq: $id } ) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         portfolioLink
@@ -85,28 +76,23 @@ export const query = graphql`
         }
         cardPhoto {
           childImageSharp {
-            gatsbyImageData(
-              width: 640
-              quality: 50
-              placeholder: TRACED_SVG
-            )
+            gatsbyImageData(width: 640, quality: 50, placeholder: TRACED_SVG)
           }
         }
         inspiration {
           image {
             childImageSharp {
-              gatsbyImageData(
-                width: 500
-                quality: 50
-                placeholder: TRACED_SVG
-              )
+              gatsbyImageData(width: 500, quality: 50, placeholder: TRACED_SVG)
             }
           }
           caption
         }
       }
     }
-    allCloudinaryMedia(sort: {order: ASC, fields: secure_url}, filter: {public_id: {glob: $page}}) {
+    allCloudinaryMedia(
+      sort: { order: ASC, fields: secure_url }
+      filter: { public_id: { glob: $page } }
+    ) {
       edges {
         node {
           secure_url

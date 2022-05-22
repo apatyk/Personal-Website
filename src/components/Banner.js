@@ -2,14 +2,10 @@ import React from 'react'
 
 import './Banner.scss'
 
-const Banner = ({
-  children
-}) => {
+const Banner = ({ children }) => {
   return (
     <>
-    <div className="banner">
-    {children}
-    </div>
+      <div className="banner">{children}</div>
     </>
   )
 }
