@@ -15,7 +15,7 @@ export const SocialMediaRow = ({ socialMedia, className }) =>
         >
           <img
             className="social-media-row__icon"
-            src={icon.publicURL}
+            src={icon?.publicURL}
             alt="Social Media Icon"
           />
         </a>
