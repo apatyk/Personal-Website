@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import './Card.scss'
+import './Card.scss';
 
-import Skill from './Skill.js'
-import Image from './Image.js'
+import Skill from './Skill.js';
+import Image from './Image.js';
 
 const Card = ({
   content,
@@ -28,12 +28,12 @@ const Card = ({
               </>
             ) : null}
             {details &&
-              details.map(({ line }) => (
+              details.map(({line}) => (
                 <p className="card__details">{line}</p>
               ))}
           </div>
           {skills &&
-            skills.map(({ skillName, rating }) => (
+            skills.map(({skillName, rating}) => (
               <Skill skillName={skillName} rating={rating} />
             ))}
           {!!image ? (
@@ -42,7 +42,7 @@ const Card = ({
           {!!children ? <>{children}</> : null}
         </div>
       </div>
-    )
+    );
   } else {
     return (
       <div className="card-container">
@@ -51,13 +51,13 @@ const Card = ({
         ) : (
           <div
             className="card"
-            dangerouslySetInnerHTML={{ __html: content }}
+            dangerouslySetInnerHTML={{__html: content}}
           ></div>
         )}
       </div>
-    )
+    );
   }
-}
+};
 
 Card.propTypes = {
   content: PropTypes.object,
@@ -67,6 +67,7 @@ Card.propTypes = {
   image: PropTypes.object,
   imageAltText: PropTypes.string,
   skills: PropTypes.array,
-}
+  children: PropTypes.node,
+};
 
-export default Card
+export default Card;

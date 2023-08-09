@@ -1,16 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {graphql} from 'gatsby';
 
-import AboveFoldContent from '../components/AboveFoldContent'
-import Banner from '../components/Banner'
-import Button from '../components/Button'
-import Card from '../components/Card'
-import FullWidthAccentContent from '../components/FullWidthAccentContent'
-import Layout from '../components/Layout'
-import SocialMediaRow from '../components/SocialMediaRow'
+import AboveFoldContent from '../components/AboveFoldContent';
+import Banner from '../components/Banner';
+import Button from '../components/Button';
+import Card from '../components/Card';
+import FullWidthAccentContent from '../components/FullWidthAccentContent';
+import Layout from '../components/Layout';
+import SocialMediaRow from '../components/SocialMediaRow';
 
-import './index-page.scss'
+import './index-page.scss';
 
 const IndexPageTemplate = ({
   html,
@@ -26,13 +26,13 @@ const IndexPageTemplate = ({
     ></AboveFoldContent>
     <Banner>
       {buttons &&
-        buttons.map(({ buttonTitle, buttonLink }) => (
+        buttons.map(({buttonTitle, buttonLink}) => (
           <Button title={buttonTitle} link={buttonLink}></Button>
         ))}
     </Banner>
     <FullWidthAccentContent title={contentTitle}>
       {cards &&
-        cards.map(({ heading, text, details, image, imageAltText }) => (
+        cards.map(({heading, text, details, image, imageAltText}) => (
           <Card
             heading={heading}
             text={text}
@@ -49,17 +49,18 @@ const IndexPageTemplate = ({
       </Card>
     </FullWidthAccentContent>
   </div>
-)
+);
 
 IndexPageTemplate.propTypes = {
+  html: PropTypes.object,
   buttons: PropTypes.array,
   contentTitle: PropTypes.string,
   cards: PropTypes.array,
   socialMedia: PropTypes.array,
-}
+};
 
-const IndexPage = ({ data }) => {
-  const { html, frontmatter } = data.markdownRemark
+const IndexPage = ({data}) => {
+  const {html, frontmatter} = data.markdownRemark;
 
   return (
     <Layout>
@@ -71,8 +72,8 @@ const IndexPage = ({ data }) => {
         socialMedia={frontmatter.socialMedia}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -81,9 +82,9 @@ IndexPage.propTypes = {
       html: PropTypes.object,
     }),
   }),
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query IndexPage($id: String!) {
@@ -103,7 +104,9 @@ export const query = graphql`
           }
           image {
             childImageSharp {
-              gatsbyImageData(width: 800, quality: 75, placeholder: DOMINANT_COLOR)
+              gatsbyImageData(
+                width: 800, quality: 75, placeholder: DOMINANT_COLOR
+              )
             }
           }
           imageAltText
@@ -118,4 +121,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

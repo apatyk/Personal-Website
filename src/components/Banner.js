@@ -1,13 +1,16 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import './Banner.scss'
+import './Banner.scss';
 
-const Banner = ({ children }) => {
+const Banner = ({children}) => {
   return (
     <>
       <div className="banner">{children}</div>
     </>
-  )
-}
+  );
+};
 
-export default Banner
+Banner.propTypes = {children: PropTypes.node};
+
+export default Banner;

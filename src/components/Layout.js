@@ -1,14 +1,15 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {Helmet} from 'react-helmet';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import useSiteMetadata from './SiteMetadata';
+import {withPrefix} from 'gatsby';
 
-import './Layout.scss'
+import './Layout.scss';
 
-const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+const TemplateWrapper = ({children}) => {
+  const {title, description} = useSiteMetadata();
   return (
     <div className="whole-page">
       <Helmet>
@@ -53,7 +54,9 @@ const TemplateWrapper = ({ children }) => {
       <div className="page-content">{children}</div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default TemplateWrapper
+TemplateWrapper.propTypes = {children: PropTypes.node};
+
+export default TemplateWrapper;

@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import './Footer.scss'
+import './Footer.scss';
 
 const Footer = class extends React.Component {
   getYear() {
-    return new Date().getFullYear()
+    return new Date().getFullYear();
   }
 
   render() {
@@ -12,8 +12,10 @@ const Footer = class extends React.Component {
       <footer className="footer">
         <p className="footer__content">Adam Patyk &copy; {this.getYear()}</p>
       </footer>
-    )
+    );
   }
-}
+};
 
-export default Footer
+Footer.displayName = 'Footer';
+
+export default Footer;

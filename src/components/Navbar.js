@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
-import HamburgerMenu from 'react-hamburger-menu'
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
-import { Location } from '@reach/router'
+import React, {Component} from 'react';
+import HamburgerMenu from 'react-hamburger-menu';
+import {Link} from 'gatsby';
+import {StaticImage} from 'gatsby-plugin-image';
+import {Location} from '@reach/router';
 
-import './Navbar.scss'
+import './Navbar.scss';
 
 class Navbar extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       open: false,
-    }
+    };
   }
 
   render() {
@@ -25,7 +25,7 @@ class Navbar extends Component {
         <div className={`navbar__hamburger-menu`}>
           <HamburgerMenu
             isOpen={this.state.open}
-            menuClicked={() => this.setState({ open: !this.state.open })}
+            menuClicked={() => this.setState({open: !this.state.open})}
             width={32}
             height={20}
             strokeWidth={3}
@@ -35,7 +35,7 @@ class Navbar extends Component {
           />
         </div>
         <Location>
-          {({ location: { pathname } }) => (
+          {({location: {pathname}}) => (
             <div className={`container ${this.state.open && 'open'}`}>
               <div className="navbar__brand">
                 <Link to="/" className="navbar__item" title="Logo">
@@ -75,8 +75,8 @@ class Navbar extends Component {
           )}
         </Location>
       </nav>
-    )
+    );
   }
 }
 
-export default Navbar
+export default Navbar;
