@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import './Button.scss'
+import './Button.scss';
 
-const Button = ({ title, link, invert }) => {
+const Button = ({title, link, invert}) => {
   return (
     <div className="button-container">
       <a
@@ -15,13 +15,13 @@ const Button = ({ title, link, invert }) => {
         {title}
       </a>
     </div>
-  )
-}
+  );
+};
 
 Button.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   invert: PropTypes.bool,
-}
+};
 
-export default Button
+export default Button;

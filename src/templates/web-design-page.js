@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {graphql} from 'gatsby';
 
-import AboveFoldContent from '../components/AboveFoldContent'
-import DisplayCard from '../components/DisplayCard'
-import Layout from '../components/Layout'
+import AboveFoldContent from '../components/AboveFoldContent';
+import DisplayCard from '../components/DisplayCard';
+import Layout from '../components/Layout';
 
-import './web-design-page.scss'
+import './web-design-page.scss';
 
-const WebDesignPageTemplate = ({ websites, html }) => (
+const WebDesignPageTemplate = ({websites, html}) => (
   <div className="web-design-page">
     <AboveFoldContent
       className="web-design-page__content"
@@ -16,7 +16,7 @@ const WebDesignPageTemplate = ({ websites, html }) => (
     ></AboveFoldContent>
     <div className="web-design-page__gallery">
       {websites &&
-        websites.map(({ title, image, link, accentColor, newTab }) => (
+        websites.map(({title, image, link, accentColor, newTab}) => (
           <DisplayCard
             title={title}
             image={image}
@@ -27,21 +27,22 @@ const WebDesignPageTemplate = ({ websites, html }) => (
         ))}
     </div>
   </div>
-)
+);
 
 WebDesignPageTemplate.propTypes = {
   websites: PropTypes.array,
-}
+  html: PropTypes.object,
+};
 
-const WebDesignPage = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark
+const WebDesignPage = ({data}) => {
+  const {frontmatter, html} = data.markdownRemark;
 
   return (
     <Layout>
       <WebDesignPageTemplate websites={frontmatter.websites} html={html} />
     </Layout>
-  )
-}
+  );
+};
 
 WebDesignPage.propTypes = {
   data: PropTypes.shape({
@@ -50,9 +51,9 @@ WebDesignPage.propTypes = {
       html: PropTypes.object,
     }),
   }),
-}
+};
 
-export default WebDesignPage
+export default WebDesignPage;
 
 export const query = graphql`
   query WebDesignPage($id: String!) {
@@ -78,4 +79,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

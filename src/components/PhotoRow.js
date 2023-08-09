@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import './PhotoRow.scss'
-import Image from './Image'
+import './PhotoRow.scss';
+import Image from './Image';
 
-const PhotoRow = ({ elements }) => {
+const PhotoRow = ({elements}) => {
   return (
     <div className="photo-row">
-      {elements.map(({ image, caption }) => (
+      {elements.map(({image, caption}) => (
         <div className="photo-row__element">
           <Image
             className="photo-row__element__image"
@@ -18,11 +18,9 @@ const PhotoRow = ({ elements }) => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-PhotoRow.propTypes = {
-  elements: PropTypes.array.isRequired,
-}
+PhotoRow.propTypes = {elements: PropTypes.array.isRequired};
 
-export default PhotoRow
+export default PhotoRow;

@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import './SocialMediaRow.scss'
+import './SocialMediaRow.scss';
 
-export const SocialMediaRow = ({ socialMedia, className }) =>
+export const SocialMediaRow = ({socialMedia, className}) =>
   socialMedia && (
     <div className={`social-media-row ${className}`}>
-      {socialMedia.map(({ icon, link, newTab }) => (
+      {socialMedia.map(({icon, link, newTab}) => (
         <a
           key={link}
           href={link}
@@ -21,10 +21,11 @@ export const SocialMediaRow = ({ socialMedia, className }) =>
         </a>
       ))}
     </div>
-  )
+  );
 
 SocialMediaRow.propTypes = {
   socialMedia: PropTypes.array.isRequired,
-}
+  className: PropTypes.string,
+};
 
-export default SocialMediaRow
+export default SocialMediaRow;

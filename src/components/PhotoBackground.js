@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-import './PhotoBackground.scss'
+import './PhotoBackground.scss';
 
 const randomGenerator = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
-const PhotoBackground = ({ clImages }) => {
-  if (!clImages) return <></>
+const PhotoBackground = ({clImages}) => {
+  if (!clImages) return <></>;
 
-  const randomPos = randomGenerator(0, clImages.length - 1)
-  const randomImage = clImages[randomPos]
+  const randomPos = randomGenerator(0, clImages.length - 1);
+  const randomImage = clImages[randomPos];
 
   return (
     <div className="photo-background">
@@ -20,6 +20,6 @@ const PhotoBackground = ({ clImages }) => {
         alt={randomImage.node.resource_type}
       />
     </div>
-  )
-}
-export default PhotoBackground
+  );
+};
+export default PhotoBackground;

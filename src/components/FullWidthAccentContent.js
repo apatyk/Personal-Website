@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import './FullWidthAccentContent.scss'
+import './FullWidthAccentContent.scss';
 
-const FullWidthAccentContent = ({ title, children, ...props }) => {
+const FullWidthAccentContent = ({title, children, ...props}) => {
   return (
     <>
       <div className={`full-width-content ${props.className}`}>
@@ -10,7 +11,12 @@ const FullWidthAccentContent = ({ title, children, ...props }) => {
         {children}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default FullWidthAccentContent
+FullWidthAccentContent.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node,
+};
+
+export default FullWidthAccentContent;

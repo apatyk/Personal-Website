@@ -1,15 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {graphql} from 'gatsby';
 
-import AboveFoldContent from '../components/AboveFoldContent'
-import Button from '../components/Button'
-import Card from '../components/Card'
-import Layout from '../components/Layout'
-import PhotoRow from '../components/PhotoRow'
-import PhotoBackground from '../components/PhotoBackground'
+import AboveFoldContent from '../components/AboveFoldContent';
+import Button from '../components/Button';
+import Card from '../components/Card';
+import Layout from '../components/Layout';
+import PhotoRow from '../components/PhotoRow';
+import PhotoBackground from '../components/PhotoBackground';
 
-import './photography-page.scss'
+import './photography-page.scss';
 
 const PhotographyPageTemplate = ({
   clImages,
@@ -27,15 +27,25 @@ const PhotographyPageTemplate = ({
     <Card heading="Gear" details={details} image={cardPhoto}></Card>
     <Card
       heading="Inspiration"
-      text="I draw inspiration from the amazing world around us and some other incredible photographers."
+      text="I draw inspiration from the amazing world around \
+        us and some other incredible photographers."
     >
       <PhotoRow elements={inspiration}></PhotoRow>
     </Card>
   </div>
-)
+);
 
-const PhotographyPage = ({ data }) => {
-  const { html, frontmatter } = data.markdownRemark
+PhotographyPageTemplate.propTypes = {
+  clImages: PropTypes.array,
+  html: PropTypes.object,
+  portfolioLink: PropTypes.string,
+  details: PropTypes.object,
+  cardPhoto: PropTypes.object,
+  inspiration: PropTypes.array,
+};
+
+const PhotographyPage = ({data}) => {
+  const {html, frontmatter} = data.markdownRemark;
 
   return (
     <Layout>
@@ -48,8 +58,8 @@ const PhotographyPage = ({ data }) => {
         inspiration={frontmatter.inspiration}
       />
     </Layout>
-  )
-}
+  );
+};
 
 PhotographyPage.propTypes = {
   data: PropTypes.shape({
@@ -58,12 +68,12 @@ PhotographyPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
     allCloudinaryMedia: PropTypes.shape({
-      clImages: PropTypes.array,
+      edges: PropTypes.array,
     }),
   }),
-}
+};
 
-export default PhotographyPage
+export default PhotographyPage;
 
 export const query = graphql`
   query PhotographyPage($id: String!, $page: String! = "web-portfolio/*") {
@@ -76,13 +86,17 @@ export const query = graphql`
         }
         cardPhoto {
           childImageSharp {
-            gatsbyImageData(width: 640, quality: 50, placeholder: TRACED_SVG)
+            gatsbyImageData(
+              width: 640, quality: 50, placeholder: DOMINANT_COLOR
+            )
           }
         }
         inspiration {
           image {
             childImageSharp {
-              gatsbyImageData(width: 500, quality: 50, placeholder: TRACED_SVG)
+              gatsbyImageData(
+                width: 500, quality: 50, placeholder: DOMINANT_COLOR
+              )
             }
           }
           caption
@@ -101,4 +115,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
