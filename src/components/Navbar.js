@@ -43,7 +43,7 @@ class Navbar extends Component {
                     src="../img/logo.svg"
                     alt="A."
                     loading="eager"
-                    placeholder="tracedSVG"
+                    placeholder="blurred"
                   />
                 </Link>
               </div>

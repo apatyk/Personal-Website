@@ -103,7 +103,7 @@ export const query = graphql`
           }
           image {
             childImageSharp {
-              gatsbyImageData(width: 800, quality: 75, placeholder: TRACED_SVG)
+              gatsbyImageData(width: 800, quality: 75, placeholder: DOMINANT_COLOR)
             }
           }
           imageAltText

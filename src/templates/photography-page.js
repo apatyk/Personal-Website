@@ -76,13 +76,13 @@ export const query = graphql`
         }
         cardPhoto {
           childImageSharp {
-            gatsbyImageData(width: 640, quality: 50, placeholder: TRACED_SVG)
+            gatsbyImageData(width: 640, quality: 50, placeholder: DOMINANT_COLOR)
           }
         }
         inspiration {
           image {
             childImageSharp {
-              gatsbyImageData(width: 500, quality: 50, placeholder: TRACED_SVG)
+              gatsbyImageData(width: 500, quality: 50, placeholder: DOMINANT_COLOR)
             }
           }
           caption
