@@ -7,6 +7,7 @@ details:
 - line: Canon RF 35mm f/1.8 IS Macro
 - line: Canon RF 50mm f/1.8
 - line: Canon RF 70-200mm f/4L
+- line: Fujifilm X100F
 - line: DJI Mavic Mini 2
 cardPhoto: ../../img/ProfilePhoto.jpg
 inspiration:
