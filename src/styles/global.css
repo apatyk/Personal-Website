@@ -50,6 +50,10 @@ h1 {
   }
 }
 
+.home-page-content h1 {
+  line-height: 1.2em;
+}
+
 h2 {
   font-size: 16pt;
 
@@ -156,4 +160,17 @@ th {
     color: #2E2E2E;
     background-color: #F3F4F6;
   }
+}
+
+.photography-page-container {
+  height: 100vh;
+  height: calc(100vh - 2.5rem);
+}
+
+.home-page-container {
+  height: 100vh;
+  height: calc(100vh - 2.5rem);
+
+  display: flex;
+  flex-direction: column;
 }

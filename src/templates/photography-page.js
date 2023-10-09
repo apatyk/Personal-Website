@@ -1,13 +1,58 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, withPrefix } from 'gatsby';
 
+import useSiteMetadata from '../components/SiteMetadata';
 import AboveFoldContent from '../components/AboveFoldContent';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import Layout from '../components/Layout';
 import PhotoRow from '../components/PhotoRow';
 import PhotoBackground from '../components/PhotoBackground';
+
+export function Head() {
+  const { title, description } = useSiteMetadata();
+  return (
+    <>
+      <html lang="en" />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href={`${withPrefix('/')}img/apple-touch-icon.png`}
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        href={`${withPrefix('/')}img/favicon-32x32.png`}
+        sizes="32x32"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        href={`${withPrefix('/')}img/favicon-16x16.png`}
+        sizes="16x16"
+      />
+
+      <link
+        rel="mask-icon"
+        href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
+        color="#205F48"
+      />
+      <meta name="theme-color" content="#205F48" />
+
+      <meta property="og:type" content="business.business" />
+      <meta property="og:title" content={title} />
+      <meta property="og:url" content="/" />
+      <meta
+        property="og:image"
+        content={`${withPrefix('/')}img/og-image.jpg`}
+      />
+    </>
+  );
+}
 
 const PhotographyPageTemplate = ({
   clImages,
@@ -18,11 +63,11 @@ const PhotographyPageTemplate = ({
   inspiration,
 }) => (
   <div className="photography-page">
-    <div className="h-screen -mb-8">
-    <AboveFoldContent className="photography-page-content" content={html}>
-      <Button title="Portfolio" link={portfolioLink}></Button>
-    </AboveFoldContent>
-    <PhotoBackground clImages={clImages}></PhotoBackground>
+    <div className="photography-page-container">
+      <AboveFoldContent className="photography-page-content" content={html}>
+        <Button title="Portfolio" link={portfolioLink}></Button>
+      </AboveFoldContent>
+      <PhotoBackground clImages={clImages}></PhotoBackground>
     </div>
     <Card heading="Gear" details={details} image={cardPhoto}></Card>
     <Card
@@ -108,7 +153,7 @@ export const query = graphql`
       }
     }
     allCloudinaryMedia(
-      sort: { order: ASC, fields: secure_url }
+      sort: { secure_url: ASC }
       filter: { public_id: { glob: $page } }
     ) {
       edges {

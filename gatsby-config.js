@@ -12,8 +12,6 @@ module.exports = {
     description: 'Personal Website of Adam Patyk',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
     {
