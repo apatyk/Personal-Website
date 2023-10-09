@@ -1,8 +1,8 @@
 const path = require('path');
-const {createFilePath} = require('gatsby-source-filesystem');
+const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.createSchemaCustomization = ({actions}) => {
-  const {createTypes} = actions;
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
   const typeDefs = `
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
@@ -17,8 +17,8 @@ exports.createSchemaCustomization = ({actions}) => {
   createTypes(typeDefs);
 };
 
-exports.createPages = ({actions, graphql}) => {
-  const {createPage} = actions;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
   return graphql(`
     {
@@ -49,7 +49,7 @@ exports.createPages = ({actions, graphql}) => {
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(
-            `src/templates/${String(edge.node.frontmatter.templateKey)}.js`,
+          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
         context: {
@@ -60,11 +60,11 @@ exports.createPages = ({actions, graphql}) => {
   });
 };
 
-exports.onCreateNode = ({node, actions, getNode}) => {
-  const {createNodeField} = actions;
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({node, getNode});
+    const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
       node,

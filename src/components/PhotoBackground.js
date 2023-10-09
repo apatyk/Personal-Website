@@ -1,21 +1,19 @@
 import React from 'react';
 
-import './PhotoBackground.scss';
-
 const randomGenerator = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-const PhotoBackground = ({clImages}) => {
+const PhotoBackground = ({ clImages }) => {
   if (!clImages) return <></>;
 
   const randomPos = randomGenerator(0, clImages.length - 1);
   const randomImage = clImages[randomPos];
 
   return (
-    <div className="photo-background">
+    <div className="photo-background w-full h-full overflow-hidden absolute top-0">
       <img
-        className="photo-background__image"
+        className="object-cover w-full h-full"
         src={randomImage.node.secure_url}
         alt={randomImage.node.resource_type}
       />

@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './FullWidthAccentContent.scss';
-
-const FullWidthAccentContent = ({title, children, ...props}) => {
+const FullWidthAccentContent = ({ title, children, ...props }) => {
   return (
     <>
-      <div className={`full-width-content ${props.className}`}>
-        <h1 className="full-width-content__title">{title}</h1>
+      <div
+        className={`full-width-content p-2 bg-primary-600 ${props.className}`}
+      >
+        <h1 className="full-width-content-title leading-tight text-white px-8 py-2 md:p-inherit">
+          {title}
+        </h1>
         {children}
       </div>
     </>

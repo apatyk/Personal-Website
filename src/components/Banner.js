@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Banner.scss';
-
-const Banner = ({children}) => {
+const Banner = ({ children }) => {
   return (
     <>
-      <div className="banner">{children}</div>
+      <div className="banner flex flex-col justify-center h-[60vh] bg-offwhite bg-[url('../../static/img/trees.svg')] bg-no-repeat bg-top bg-cover">
+        {children}
+      </div>
     </>
   );
 };
 
-Banner.propTypes = {children: PropTypes.node};
+Banner.propTypes = { children: PropTypes.node };
 
 export default Banner;
