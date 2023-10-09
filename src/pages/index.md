@@ -8,7 +8,7 @@ buttons:
 contentTitle: About Me.
 cards:
 - heading: Hello, I'm Adam!
-  text: I’m a photographer, software engineer, and outdoor enthusiast from upstate South Carolina now living in Colorado. When I’m not behind a computer, you can find me hiking or exploring with a camera in my hand. I have a goal to visit all 50 states before I'm 25 and I'm getting pretty close. Track my progress on the map below.
+  text: I’m a photographer, software engineer, and outdoor enthusiast from upstate South Carolina now living in Colorado. When I’m not behind a computer, you can find me hiking or exploring the great outdoors with a camera in my hand. I recently finished visiting all 48 contiguous United States (plus Puerto Rico) before turning 25. Now, as I look to the next chapter in my life, I'm setting my sights on our National Parks!
 - heading: Adventure Stats
   details: 
   - item: 'U.S. States Visited: 48/50'
