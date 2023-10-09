@@ -146,7 +146,7 @@ export const query = graphql`
           heading
           text
           details {
-            line
+            item
           }
           image {
             childImageSharp {

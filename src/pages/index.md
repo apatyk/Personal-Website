@@ -11,9 +11,9 @@ cards:
   text: I’m a photographer, software engineer, and outdoor enthusiast from upstate South Carolina now living in Colorado. When I’m not behind a computer, you can find me hiking or exploring with a camera in my hand. I have a goal to visit all 50 states before I'm 25 and I'm getting pretty close. Track my progress on the map below.
 - heading: Adventure Stats
   details: 
-  - line: 'U.S. States Visited: 48/50'
-  - line: 'U.S. National Parks Visited: 29/63'
-  - line: 'Countries Visited: 3/196'
+  - item: 'U.S. States Visited: 48/50'
+  - item: 'U.S. National Parks Visited: 29/63'
+  - item: 'Countries Visited: 3/196'
 - image: ../img/StatesVisited.png
   imageAltText: Shaded map of the United States of states I have visited.
 socialMedia:

@@ -32,9 +32,9 @@ const Card = ({
 
             {details && (
               <ul className="list-disc list-inside">
-                {details.map(({ line, index }) => (
+                {details.map(({ item, index }) => (
                   <li key={index} className="card-details leading-loose">
-                    {line}
+                    {item}
                   </li>
                 ))}
               </ul>

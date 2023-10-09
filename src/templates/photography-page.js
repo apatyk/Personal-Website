@@ -54,14 +54,7 @@ export function Head() {
   );
 }
 
-const PhotographyPageTemplate = ({
-  clImages,
-  html,
-  portfolioLink,
-  details,
-  cardPhoto,
-  inspiration,
-}) => (
+const PhotographyPageTemplate = ({ clImages, html, portfolioLink, cards }) => (
   <div className="photography-page">
     <div className="photography-page-container">
       <AboveFoldContent className="photography-page-content" content={html}>
@@ -69,14 +62,19 @@ const PhotographyPageTemplate = ({
       </AboveFoldContent>
       <PhotoBackground clImages={clImages}></PhotoBackground>
     </div>
-    <Card heading="Gear" details={details} image={cardPhoto}></Card>
-    <Card
-      heading="Inspiration"
-      text="I draw inspiration from the amazing world around
-        us and some other incredible photographers."
-    >
-      <PhotoRow elements={inspiration}></PhotoRow>
-    </Card>
+    {cards &&
+      cards.map(
+        ({ cardHeading, cardText, cardPhoto, cardDetails, photoRow }) => (
+          <Card
+            heading={cardHeading}
+            text={cardText}
+            details={cardDetails}
+            image={cardPhoto}
+          >
+            {photoRow ? <PhotoRow elements={photoRow}></PhotoRow> : ''}
+          </Card>
+        )
+      )}
   </div>
 );
 
@@ -84,9 +82,7 @@ PhotographyPageTemplate.propTypes = {
   clImages: PropTypes.array,
   html: PropTypes.object,
   portfolioLink: PropTypes.string,
-  details: PropTypes.object,
-  cardPhoto: PropTypes.object,
-  inspiration: PropTypes.array,
+  cards: PropTypes.array,
 };
 
 const PhotographyPage = ({ data }) => {
@@ -97,10 +93,8 @@ const PhotographyPage = ({ data }) => {
       <PhotographyPageTemplate
         html={html}
         clImages={data.allCloudinaryMedia.edges}
-        details={frontmatter.details}
         portfolioLink={frontmatter.portfolioLink}
-        cardPhoto={frontmatter.cardPhoto}
-        inspiration={frontmatter.inspiration}
+        cards={frontmatter.cards}
       />
     </Layout>
   );
@@ -126,29 +120,33 @@ export const query = graphql`
       html
       frontmatter {
         portfolioLink
-        details {
-          line
-        }
-        cardPhoto {
-          childImageSharp {
-            gatsbyImageData(
-              width: 640
-              quality: 50
-              placeholder: DOMINANT_COLOR
-            )
+        cards {
+          cardHeading
+          cardText
+          cardDetails {
+            item
           }
-        }
-        inspiration {
-          image {
+          cardPhoto {
             childImageSharp {
               gatsbyImageData(
-                width: 500
+                width: 640
                 quality: 50
                 placeholder: DOMINANT_COLOR
               )
             }
           }
-          caption
+          photoRow {
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 500
+                  quality: 50
+                  placeholder: DOMINANT_COLOR
+                )
+              }
+            }
+            caption
+          }
         }
       }
     }
