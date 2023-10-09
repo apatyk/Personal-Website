@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 
 import AboveFoldContent from '../components/AboveFoldContent';
 import Button from '../components/Button';
@@ -8,8 +8,6 @@ import Card from '../components/Card';
 import Layout from '../components/Layout';
 import PhotoRow from '../components/PhotoRow';
 import PhotoBackground from '../components/PhotoBackground';
-
-import './photography-page.scss';
 
 const PhotographyPageTemplate = ({
   clImages,
@@ -20,14 +18,16 @@ const PhotographyPageTemplate = ({
   inspiration,
 }) => (
   <div className="photography-page">
-    <AboveFoldContent className="photography-page__content" content={html}>
-      <Button title="Portfolio" link={portfolioLink} invert={true}></Button>
+    <div className="h-screen -mb-8">
+    <AboveFoldContent className="photography-page-content" content={html}>
+      <Button title="Portfolio" link={portfolioLink}></Button>
     </AboveFoldContent>
     <PhotoBackground clImages={clImages}></PhotoBackground>
+    </div>
     <Card heading="Gear" details={details} image={cardPhoto}></Card>
     <Card
       heading="Inspiration"
-      text="I draw inspiration from the amazing world around \
+      text="I draw inspiration from the amazing world around
         us and some other incredible photographers."
     >
       <PhotoRow elements={inspiration}></PhotoRow>
@@ -44,8 +44,8 @@ PhotographyPageTemplate.propTypes = {
   inspiration: PropTypes.array,
 };
 
-const PhotographyPage = ({data}) => {
-  const {html, frontmatter} = data.markdownRemark;
+const PhotographyPage = ({ data }) => {
+  const { html, frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
@@ -87,7 +87,9 @@ export const query = graphql`
         cardPhoto {
           childImageSharp {
             gatsbyImageData(
-              width: 640, quality: 50, placeholder: DOMINANT_COLOR
+              width: 640
+              quality: 50
+              placeholder: DOMINANT_COLOR
             )
           }
         }
@@ -95,7 +97,9 @@ export const query = graphql`
           image {
             childImageSharp {
               gatsbyImageData(
-                width: 500, quality: 50, placeholder: DOMINANT_COLOR
+                width: 500
+                quality: 50
+                placeholder: DOMINANT_COLOR
               )
             }
           }

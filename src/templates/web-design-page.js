@@ -1,23 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 
 import AboveFoldContent from '../components/AboveFoldContent';
 import DisplayCard from '../components/DisplayCard';
 import Layout from '../components/Layout';
 
-import './web-design-page.scss';
-
-const WebDesignPageTemplate = ({websites, html}) => (
+const WebDesignPageTemplate = ({ websites, html }) => (
   <div className="web-design-page">
     <AboveFoldContent
-      className="web-design-page__content"
+      className="web-design-page-content"
       content={html}
     ></AboveFoldContent>
-    <div className="web-design-page__gallery">
+    <div className="web-design-page-gallery">
       {websites &&
-        websites.map(({title, image, link, accentColor, newTab}) => (
+        websites.map(({ title, image, link, accentColor, newTab }) => (
           <DisplayCard
+            key={title}
             title={title}
             image={image}
             link={link}
@@ -34,8 +33,8 @@ WebDesignPageTemplate.propTypes = {
   html: PropTypes.object,
 };
 
-const WebDesignPage = ({data}) => {
-  const {frontmatter, html} = data.markdownRemark;
+const WebDesignPage = ({ data }) => {
+  const { frontmatter, html } = data.markdownRemark;
 
   return (
     <Layout>

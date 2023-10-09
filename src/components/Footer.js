@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './Footer.scss';
-
 const Footer = class extends React.Component {
   getYear() {
     return new Date().getFullYear();
@@ -9,8 +7,10 @@ const Footer = class extends React.Component {
 
   render() {
     return (
-      <footer className="footer">
-        <p className="footer__content">Adam Patyk &copy; {this.getYear()}</p>
+      <footer className="footer flex align-center justify-center w-full bg-primary-600 text-white">
+        <p className="footer-content py-2 m-0">
+          Adam Patyk &copy; {this.getYear()}
+        </p>
       </footer>
     );
   }

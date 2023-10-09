@@ -1,0 +1,159 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background-color: #F5F5F5;
+}
+
+body,
+main {
+  display: flex !important;
+  flex-direction: column;
+  z-index: 0;
+}
+
+a {
+  text-decoration: none;
+
+  transition: none 200ms ease-out;
+  transition-property: background-color, background-image, color, fill;
+}
+
+p {
+  font-size: 13pt;
+}
+
+h1 {
+  color: #2E2E2E;
+  margin: 0;
+  font-size: 23pt;
+  font-weight: bold;
+  line-height: 1.5em;
+
+  @media (min-width: 374px) {
+    font-size: 27pt;
+  }
+
+  @media (min-width: 576px) {
+    font-size: 36pt;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 56pt;
+  }
+
+  @media (min-width: 925px) {
+    font-size: 72pt;
+  }
+}
+
+h2 {
+  font-size: 16pt;
+
+  @media (min-width: 768px) {
+    font-size: 24pt;
+  } 
+}
+
+table, th, td {
+  border: 1px solid #6a6a6a;
+  border-collapse: collapse;
+  padding: 0.5rem;
+}
+
+th {
+  background: #F5F5F5;
+}
+
+.display-card::before {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 0;
+  
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.display-card-image::after {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  pointer-events: none;
+
+  background: transparent url('../../static/img/open.svg') no-repeat center center;
+  background-size: 0px;
+}
+
+.display-card-link:hover .display-card-image::after {
+  background: rgba(0, 0, 0, 0.6) url('../../static/img/open.svg') no-repeat center center;
+  background-size: 6rem;
+}
+
+.navbar.open + div {
+  overflow-y: hidden;
+  height: 90vh;
+}
+
+.navbar .container.open {
+  right: 0;
+}
+
+.navbar .container.open::after {
+  right: 0;
+}
+
+.navbar .container::after {
+  content: "";
+  position: fixed;
+  right: calc(-100vw - 2rem);
+  top: 0;
+
+  pointer-events: none;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: inherit;
+
+  background: rgba(250, 250, 250, 0.8);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+
+  transition-property: right;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@media (min-width: 768px) {
+  .navbar.open + div {
+    overflow: auto;
+    height: auto;
+  }
+
+  .navbar .container::after {
+    display: none;
+  }
+}
+
+.navbar-item.active {
+  color: #FFFFFF;
+  background-color: #205F48;
+}
+
+@media (min-width: 768px) {
+  .navbar-item.active {
+    color: #2E2E2E;
+    background-color: #F3F4F6;
+  }
+}

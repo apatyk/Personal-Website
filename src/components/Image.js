@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {GatsbyImage, getImage} from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 // NEEDED TO SUPPORT BOTH RASTER (GATSBY-IMAGE) AND VECTOR (SVG) IMAGES
 
-const Image = ({image, alt, ...props}) => {
+const Image = ({ image, alt, ...props }) => {
   if (!image.childImageSharp && image.extension === 'svg') {
     return <img src={image.publicURL} alt={alt} {...props} />;
   } else {

@@ -3,12 +3,16 @@ env:
   es2021: true
 extends:
   - 'plugin:react/recommended'
+  - 'eslint:recommended'
+  - 'plugin:prettier/recommended'
+  - 'plugin:tailwindcss/recommended'
   - google
 parserOptions:
   ecmaFeatures:
     jsx: true
-  ecmaVersion: 12
+  ecmaVersion: 2021
   sourceType: module
 plugins:
   - react
+  - tailwindcss
 rules: {"require-jsdoc" : 0}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 
 import AboveFoldContent from '../components/AboveFoldContent';
 import Banner from '../components/Banner';
@@ -10,8 +10,6 @@ import FullWidthAccentContent from '../components/FullWidthAccentContent';
 import Layout from '../components/Layout';
 import SocialMediaRow from '../components/SocialMediaRow';
 
-import './index-page.scss';
-
 const IndexPageTemplate = ({
   html,
   buttons,
@@ -20,19 +18,22 @@ const IndexPageTemplate = ({
   socialMedia,
 }) => (
   <div className="home-page">
-    <AboveFoldContent
-      className="home-page__content"
-      content={html ? html : null}
-    ></AboveFoldContent>
-    <Banner>
-      {buttons &&
-        buttons.map(({buttonTitle, buttonLink}) => (
-          <Button title={buttonTitle} link={buttonLink}></Button>
-        ))}
-    </Banner>
+    <div className="h-screen flex flex-col">
+      <AboveFoldContent
+        fullWidth={true}
+        className="home-page-content"
+        content={html ? html : null}
+      ></AboveFoldContent>
+      <Banner>
+        {buttons &&
+          buttons.map(({ buttonTitle, buttonLink }) => (
+            <Button title={buttonTitle} link={buttonLink}></Button>
+          ))}
+      </Banner>
+    </div>
     <FullWidthAccentContent title={contentTitle}>
       {cards &&
-        cards.map(({heading, text, details, image, imageAltText}) => (
+        cards.map(({ heading, text, details, image, imageAltText }) => (
           <Card
             heading={heading}
             text={text}
@@ -43,7 +44,7 @@ const IndexPageTemplate = ({
         ))}
       <Card>
         <SocialMediaRow
-          className="home-page__content__social-media"
+          className="home-page-content-social-media"
           socialMedia={socialMedia}
         />
       </Card>
@@ -59,8 +60,8 @@ IndexPageTemplate.propTypes = {
   socialMedia: PropTypes.array,
 };
 
-const IndexPage = ({data}) => {
-  const {html, frontmatter} = data.markdownRemark;
+const IndexPage = ({ data }) => {
+  const { html, frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
@@ -105,7 +106,9 @@ export const query = graphql`
           image {
             childImageSharp {
               gatsbyImageData(
-                width: 800, quality: 75, placeholder: DOMINANT_COLOR
+                width: 800
+                quality: 75
+                placeholder: DOMINANT_COLOR
               )
             }
           }
