@@ -13,7 +13,7 @@ const PhotoBackground = ({ clImages }) => {
   return (
     <div className="photo-background w-full h-full overflow-hidden absolute top-0">
       <img
-        className="object-cover h-full"
+        className="object-cover w-full h-full"
         src={randomImage.node.secure_url}
         alt={randomImage.node.resource_type}
       />

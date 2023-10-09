@@ -24,7 +24,7 @@ class Navbar extends Component {
         aria-label="main-navigation"
       >
         <div
-          className={`w-8 m-2 px-2 py-[0.6rem] cursor-pointer transition z-20 md:hidden`}
+          className={`w-8 m-2 mr-4 px-2 py-[0.6rem] cursor-pointer transition z-20 md:hidden`}
         >
           <HamburgerMenu
             isOpen={this.state.open}
