@@ -73,7 +73,7 @@ const PhotographyPageTemplate = ({ clImages, html, portfolioLink, cards }) => (
           >
             {photoRow ? <PhotoRow elements={photoRow}></PhotoRow> : ''}
           </Card>
-        )
+        ),
       )}
   </div>
 );
