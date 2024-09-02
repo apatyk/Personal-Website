@@ -12,7 +12,6 @@ module.exports = {
     description: 'Personal Website of Adam Patyk',
   },
   plugins: [
-    'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
     {
       resolve: 'gatsby-source-filesystem',
