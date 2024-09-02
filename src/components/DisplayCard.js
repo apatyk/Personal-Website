@@ -12,13 +12,25 @@ export const DisplayCard = ({ image, title, link, accentColor, newTab }) => {
       <h2 className="display-card-text w-full h-min px-8 py-4 self-center text-center text-white text-xl md:w-1/2 z-10 font-medium">
         {title}
       </h2>
-      <a href={link} target={newTab && '_blank'} className="display-card-link">
+      {link ? (
+        <a
+          href={link}
+          target={newTab && '_blank'}
+          className="display-card-link"
+        >
+          <Image
+            className="display-card-image z-10 after:block after:transition-all after:z-20"
+            image={image}
+            alt={title}
+          />
+        </a>
+      ) : (
         <Image
           className="display-card-image z-10 after:block after:transition-all after:z-20"
           image={image}
           alt={title}
         />
-      </a>
+      )}
     </div>
   );
 };

@@ -12,15 +12,11 @@ websites:
     accentColor: 11754F
     newTab: true
   - title: Mount Dora Community Trust
-    link: https://mountdoracommunitytrust.com
     accentColor: 8FB254
     image: ../../img/MDCTWebsite.png
-    newTab: true
   - title: Clemson University Vocal Arts
-    link: http://www.clemsonchoirs.com
     image: ../../img/ClemsonVocalArtsWebsite.png
     accentColor: 3C224E
-    newTab: true
 ---
 # Web Design.
 
