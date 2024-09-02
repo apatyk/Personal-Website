@@ -17,7 +17,7 @@ class Navbar extends Component {
   render() {
     return (
       <nav
-        className={`navbar fixed top-0 left-0 w-full h-14 z-20 flex justify-end bg-white shadow-lg z-50 ${
+        className={`navbar fixed top-0 left-0 w-full h-14 flex justify-end bg-white shadow-lg z-50 ${
           this.state.open && 'open'
         }`}
         role="navigation"
