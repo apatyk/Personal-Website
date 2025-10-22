@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import HamburgerMenu from "react-hamburger-menu";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
