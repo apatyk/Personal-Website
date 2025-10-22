@@ -12,5 +12,9 @@ I started this as a personal project in November 2014 to learn web design throug
 * [Netlify](https://www.netlify.com)
 
 ## Development
+1. This repo uses [pre-commit](https://pre-commit.com). To install pre-commit:
+   1. First [install `uv`](https://docs.astral.sh/uv/getting-started/installation/) if you have not already
+   1. Run `uv tool install pre-commit && uv tool update-shell`
+   1. Install the pre-commit hooks for this repo with `pre-commit install`
 1. To get started running locally, first run `npm install`
 1. Then run, `npm run dev` to get everything running locally
