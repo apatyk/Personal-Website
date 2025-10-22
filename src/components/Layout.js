@@ -1,8 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import useSiteMetadata from './SiteMetadata';
+import PropTypes from "prop-types";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import useSiteMetadata from "./SiteMetadata";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();

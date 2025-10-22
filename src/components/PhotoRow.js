@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import Image from './Image';
+import Image from "./Image";
 
 const PhotoRow = ({ elements }) => {
   return (

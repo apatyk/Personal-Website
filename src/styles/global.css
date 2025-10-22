@@ -5,7 +5,7 @@ body {
   padding: 0;
   margin: 0;
   -webkit-font-smoothing: subpixel-antialiased;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 body,
@@ -27,7 +27,7 @@ p {
 }
 
 h1 {
-  color: #2E2E2E;
+  color: #2e2e2e;
   margin: 0;
   font-size: 23pt;
   font-weight: bold;
@@ -62,14 +62,16 @@ h2 {
   }
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid #6a6a6a;
   border-collapse: collapse;
   padding: 0.5rem;
 }
 
 th {
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 
 .display-card::before {
@@ -95,12 +97,14 @@ th {
 
   pointer-events: none;
 
-  background: transparent url('../../static/img/open.svg') no-repeat center center;
+  background: transparent url("../../static/img/open.svg") no-repeat center
+    center;
   background-size: 0px;
 }
 
 .display-card-link:hover .display-card-image::after {
-  background: rgba(0, 0, 0, 0.6) url('../../static/img/open.svg') no-repeat center center;
+  background: rgba(0, 0, 0, 0.6) url("../../static/img/open.svg") no-repeat
+    center center;
   background-size: 6rem;
 }
 
@@ -151,14 +155,14 @@ th {
 }
 
 .navbar-item.active {
-  color: #FFFFFF;
-  background-color: #205F48;
+  color: #ffffff;
+  background-color: #205f48;
 }
 
 @media (min-width: 768px) {
   .navbar-item.active {
-    color: #2E2E2E;
-    background-color: #E5E7EB;
+    color: #2e2e2e;
+    background-color: #e5e7eb;
   }
 }
 

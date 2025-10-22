@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import Image from './Image.js';
+import Image from "./Image.js";
 
 const Card = ({
   content,
@@ -17,7 +16,7 @@ const Card = ({
       {heading || image ? (
         <div
           className={`card z-10 m-0 p-8 rounded-xl bg-white shadow-xl w-full md:max-w-prose overflow-hidden ${
-            heading && image && 'md:flex md:justify-between'
+            heading && image && "md:flex md:justify-between"
           }`}
         >
           <div className="card-content">
@@ -43,7 +42,7 @@ const Card = ({
           {!!image ? (
             <Image
               className={`card-image ${
-                heading && image && 'md:w-1/2 md:-mr-8 md:-my-8'
+                heading && image && "md:w-1/2 md:-mr-8 md:-my-8"
               }`}
               image={image}
               alt={imageAltText}

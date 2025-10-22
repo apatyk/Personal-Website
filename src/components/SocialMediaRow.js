@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export const SocialMediaRow = ({ socialMedia, className }) =>
   socialMedia && (
@@ -10,7 +9,7 @@ export const SocialMediaRow = ({ socialMedia, className }) =>
         <a
           key={link}
           href={link}
-          target={newTab && '_blank'}
+          target={newTab && "_blank"}
           className="social-media-row-link transition-transform hover:scale-110 active:scale-100 "
         >
           <img

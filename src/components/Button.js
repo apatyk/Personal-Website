@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Button = ({ title, link, invert }) => {
   return (
@@ -8,8 +7,8 @@ const Button = ({ title, link, invert }) => {
         href={link}
         className={`button rounded-full py-4 min-w-[14rem] text-center font-bold shadow-xl z-10 ${
           invert
-            ? 'bg-primary-400 text-white hover:bg-primary-500 active:bg-primary-600'
-            : 'bg-white text-darkgray hover:bg-primary-300 hover:text-white active:bg-primary-400'
+            ? "bg-primary-400 text-white hover:bg-primary-500 active:bg-primary-600"
+            : "bg-white text-darkgray hover:bg-primary-300 hover:text-white active:bg-primary-400"
         }`}
         target="_blank"
         rel="noreferrer"

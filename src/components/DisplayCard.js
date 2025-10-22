@@ -1,13 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import Image from './Image';
+import Image from "./Image";
 
 export const DisplayCard = ({ image, title, link, accentColor, newTab }) => {
   return (
     <div
       className="display-card my-4 md:m-8 relative flex flex-col-reverse md:flex-row md:even:flex-row-reverse overflow-hidden shadow-xl sm:rounded-xl before:block before:bg-black/30"
-      style={{ backgroundColor: '#' + accentColor }}
+      style={{ backgroundColor: "#" + accentColor }}
     >
       <h2 className="display-card-text w-full h-min px-8 py-4 self-center text-center text-white text-xl md:w-1/2 z-10 font-medium">
         {title}
@@ -15,7 +14,7 @@ export const DisplayCard = ({ image, title, link, accentColor, newTab }) => {
       {link ? (
         <a
           href={link}
-          target={newTab && '_blank'}
+          target={newTab && "_blank"}
           className="display-card-link"
         >
           <Image
@@ -37,7 +36,7 @@ export const DisplayCard = ({ image, title, link, accentColor, newTab }) => {
 
 DisplayCard.defaultProps = {
   newTab: true,
-  accentColor: 'FFFFFF',
+  accentColor: "FFFFFF",
 };
 
 DisplayCard.propTypes = {
