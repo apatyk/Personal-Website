@@ -61,7 +61,6 @@ const Card = ({
               dangerouslySetInnerHTML={{ __html: content }}
             ></div>
           )}
-          å
         </>
       )}
     </div>

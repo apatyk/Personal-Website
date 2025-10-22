@@ -17,12 +17,6 @@ cards:
 - image: ../img/StatesVisited.png
   imageAltText: Shaded map of the United States of states I have visited.
 socialMedia:
-- icon: ../img/logos/facebook.svg
-  link: https://www.facebook.com/adam.patyk.18
-  newTab: true
-- icon: ../img/logos/twitter.svg
-  link: https://twitter.com/adam_patyk
-  newTab: true
 - icon: ../img/logos/instagram.svg
   link: https://www.instagram.com/adam.patyk/
   newTab: true
