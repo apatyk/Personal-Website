@@ -2,10 +2,10 @@ env:
   browser: true
   es2021: true
 extends:
-  - 'plugin:react/recommended'
-  - 'eslint:recommended'
-  - 'plugin:prettier/recommended'
-  - 'plugin:tailwindcss/recommended'
+  - "plugin:react/recommended"
+  - "eslint:recommended"
+  - "plugin:prettier/recommended"
+  - "plugin:tailwindcss/recommended"
   - google
 parserOptions:
   ecmaFeatures:
@@ -15,4 +15,4 @@ parserOptions:
 plugins:
   - react
   - tailwindcss
-rules: {"require-jsdoc" : 0}
+rules: { "require-jsdoc": 0 }

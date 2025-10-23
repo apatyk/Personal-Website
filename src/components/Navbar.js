@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import HamburgerMenu from 'react-hamburger-menu';
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import { Location } from '@reach/router';
-import NavLink from './NavLink';
+import React, { Component } from "react";
+import HamburgerMenu from "react-hamburger-menu";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import { Location } from "@reach/router";
+import NavLink from "./NavLink";
 
 class Navbar extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class Navbar extends Component {
     return (
       <nav
         className={`navbar fixed top-0 left-0 w-full h-14 flex justify-end bg-white shadow-lg z-50 ${
-          this.state.open && 'open'
+          this.state.open && "open"
         }`}
         role="navigation"
         aria-label="main-navigation"
@@ -41,7 +41,7 @@ class Navbar extends Component {
           {({ location: { pathname } }) => (
             <div
               className={`container w-full mt-8 p-4 -z-10 -right-[100vw] fixed flex flex-col transition-[right] md:left-0 md:top-0 md:m-0 md:p-0 md:flex-row ${
-                this.state.open && 'open'
+                this.state.open && "open"
               }`}
             >
               <div className="flex justify-center w-8 m-4 fixed top-0 left-0 z-20 md:relative">

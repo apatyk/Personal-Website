@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql, withPrefix } from 'gatsby';
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql, withPrefix } from "gatsby";
 
-import useSiteMetadata from '../components/SiteMetadata';
-import AboveFoldContent from '../components/AboveFoldContent';
-import DisplayCard from '../components/DisplayCard';
-import Layout from '../components/Layout';
+import useSiteMetadata from "../components/SiteMetadata";
+import AboveFoldContent from "../components/AboveFoldContent";
+import DisplayCard from "../components/DisplayCard";
+import Layout from "../components/Layout";
 
 export function Head() {
   const { title, description } = useSiteMetadata();
@@ -18,24 +18,24 @@ export function Head() {
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href={`${withPrefix('/')}img/apple-touch-icon.png`}
+        href={`${withPrefix("/")}img/apple-touch-icon.png`}
       />
       <link
         rel="icon"
         type="image/png"
-        href={`${withPrefix('/')}img/favicon-32x32.png`}
+        href={`${withPrefix("/")}img/favicon-32x32.png`}
         sizes="32x32"
       />
       <link
         rel="icon"
         type="image/png"
-        href={`${withPrefix('/')}img/favicon-16x16.png`}
+        href={`${withPrefix("/")}img/favicon-16x16.png`}
         sizes="16x16"
       />
 
       <link
         rel="mask-icon"
-        href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
+        href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
         color="#205F48"
       />
       <meta name="theme-color" content="#205F48" />
@@ -45,7 +45,7 @@ export function Head() {
       <meta property="og:url" content="/" />
       <meta
         property="og:image"
-        content={`${withPrefix('/')}img/og-image.jpg`}
+        content={`${withPrefix("/")}img/og-image.jpg`}
       />
     </>
   );

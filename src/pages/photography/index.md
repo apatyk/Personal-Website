@@ -3,7 +3,7 @@ templateKey: photography-page
 portfolioLink: https://adampatyk.myportfolio.com/
 cards:
 - cardHeading: Gear
-  cardPhoto: ../../img/ProfilePhoto.jpg 
+  cardPhoto: ../../img/ProfilePhoto.jpg
   cardDetails:
   - item: Canon EOS R6ii
   - item: Canon EOS RP

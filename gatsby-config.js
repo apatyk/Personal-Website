@@ -4,57 +4,58 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-require('dotenv').config();
+require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: 'Adam Patyk',
-    description: 'Personal Website of Adam Patyk',
+    title: "Adam Patyk",
+    description: "Personal Website of Adam Patyk",
   },
   plugins: [
     `gatsby-plugin-image`,
+    "gatsby-plugin-postcss",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/static/img`,
-        name: 'uploads',
+        name: "uploads",
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
+        name: "pages",
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/img`,
-        name: 'images',
+        name: "images",
       },
     },
     {
-      resolve: 'gatsby-plugin-sharp',
+      resolve: "gatsby-plugin-sharp",
       options: {
         useMozJpeg: true,
         stripMetadata: true,
         defaultQuality: 100,
       },
     },
-    'gatsby-transformer-sharp',
+    "gatsby-transformer-sharp",
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-relative-images',
+            resolve: "gatsby-remark-relative-images",
             options: {
-              name: 'uploads',
+              name: "uploads",
             },
           },
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
@@ -63,9 +64,9 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-copy-linked-files',
+            resolve: "gatsby-remark-copy-linked-files",
             options: {
-              destinationDir: 'static',
+              destinationDir: "static",
             },
           },
         ],
