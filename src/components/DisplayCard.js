@@ -9,9 +9,9 @@ export const DisplayCard = ({ image, title, link, accentColor, newTab }) => {
       className="display-card my-4 md:m-8 relative flex flex-col-reverse md:flex-row md:even:flex-row-reverse overflow-hidden shadow-xl sm:rounded-xl before:block before:bg-black/30"
       style={{ backgroundColor: "#" + accentColor }}
     >
-      <h2 className="display-card-text w-full h-min px-8 py-4 self-center text-center text-white text-xl md:w-1/2 z-10 font-medium">
+      <h3 className="display-card-text w-full h-min px-8 py-4 self-center text-center text-white text-xl md:w-1/2 z-10 font-medium">
         {title}
-      </h2>
+      </h3>
       {link ? (
         <a
           href={link}
